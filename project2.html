@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name - Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      line-height: 1.6;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin-top: -60px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #f37021;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-column button:hover {
+      transform: scale(1.05);
+    }
+
+    .orange-section {
+      background-color: #f37021;
+      color: black;
+      padding: 60px 20px 100px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .button-redhat {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .project-hero {
+      position: relative;
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .project-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .project-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .project-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .project-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .content-section {
+      margin-bottom: 60px;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #0a0a0a;
+    }
+
+    .content-section h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .highlight-box {
+      background: #f8f9fa;
+      border-left: 5px solid #f37021;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 10px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f37021;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .gallery-item {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .team-section {
+      background: #f8f9fa;
+      padding: 60px 20px;
+      margin: 80px -20px 0;
+      border-radius: 20px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-member h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .team-member p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .project-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .project-hero p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <h1>MLS Tactical Formation Analysis</h1>
+      <p>Deep dive into Major League Soccer tactical trends, analyzing formation effectiveness and strategic evolution across multiple seasons.</p>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <div class="project-content">
+    
+    <!-- Overview Section -->
+    <section class="content-section">
+      <h2>Project Overview</h2>
+      <p>This comprehensive analysis examines tactical formations and strategic patterns across Major League Soccer, utilizing match data, player positioning analytics, and performance metrics to understand how tactical approaches impact team success. Our research covers formation popularity, effectiveness ratings, and the evolution of tactical trends in American professional soccer.</p>
+      
+      <div class="highlight-box">
+        <h3>Key Discovery</h3>
+        <p>Teams utilizing a 4-2-3-1 formation with high defensive pressing showed 34% better performance in possession recovery and 18% higher win rates compared to traditional 4-4-2 setups, revolutionizing MLS tactical approaches.</p>
+      </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="content-section">
+      <h2>Research Highlights</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">28</div>
+          <div class="stat-label">Teams Analyzed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">350+</div>
+          <div class="stat-label">Matches Studied</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Formation Types</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">MLS Seasons</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="content-section">
+      <h2>Research Methodology</h2>
+      <h3>Data Sources</h3>
+      <p>We aggregated data from multiple sources including MLS official statistics, Opta Sports data, and manual tactical observation. Our dataset included formation usage, player heat maps, passing networks, and match outcomes across three complete MLS seasons (2022-2024).</p>
+      
+      <h3>Analytical Framework</h3>
+      <p>Using advanced statistical modeling and machine learning algorithms, we developed predictive models to assess formation effectiveness. Our approach combined traditional soccer analytics with innovative spatial analysis techniques to map tactical patterns and their correlation with team performance.</p>
+      
+      <h3>Performance Metrics</h3>
+      <p>We evaluated formations based on goals scored/conceded, possession percentage, pass completion rates, defensive actions, and overall match results. Each metric was weighted according to its historical correlation with long-term team success.</p>
+    </section>
+
+    <!-- Visual Evidence -->
+    <section class="content-section">
+      <h2>Tactical Visualizations</h2>
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Formation Analysis">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Heat Map Analysis">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Performance Metrics">
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2 style="text-align: center; margin-bottom: 40px;">Research Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Diego Martinez</h4>
+          <p>Tactical Analysis Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Emma Thompson</h4>
+          <p>Data Visualization Specialist</p>
+        </div>
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Ryan Sullivan</h4>
+          <p>Statistical Modeling Expert</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Results -->
+    <section class="content-section">
+      <h2>Impact & Applications</h2>
+      <p>Our findings have significant implications for MLS coaching staffs and front offices. The tactical insights provide a data-driven foundation for formation selection, player recruitment, and in-game strategic adjustments. Several MLS academies have expressed interest in incorporating our methodology into their youth development programs.</p>
+      
+      <p>Future research will expand to include player-specific tactical roles, set-piece analysis, and real-time tactical adaptation patterns to create a comprehensive tactical intelligence platform for professional soccer.</p>
+      
+      <div class="highlight-box">
+        <h3>Professional Recognition</h3>
+        <p>This research was presented at the 2024 MIT Sloan Sports Analytics Conference and has been referenced by three MLS technical directors in their tactical planning processes.</p>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

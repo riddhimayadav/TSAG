@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .contact-container {
+      background-color: #f8f8f8;
+      padding: 80px 40px 120px 40px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-content {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .contact-header {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    .contact-subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .contact-title {
+      font-size: 64px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      padding: 15px 0;
+      border: none;
+      border-bottom: 2px solid #e0e0e0;
+      background: transparent;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+      color: #333;
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-bottom-color: #f37021;
+    }
+
+    .form-textarea {
+      padding: 20px 0;
+      border: none;
+      border-bottom: 2px solid #e0e0e0;
+      background: transparent;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+      color: #333;
+      resize: none;
+      min-height: 120px;
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+
+    .form-textarea:focus {
+      border-bottom-color: #f37021;
+    }
+
+    .form-textarea::placeholder {
+      color: #999;
+    }
+
+    .phone-container {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .country-select {
+      padding: 15px 10px;
+      border: none;
+      border-bottom: 2px solid #e0e0e0;
+      background: transparent;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+      color: #333;
+      min-width: 80px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .phone-input {
+      flex: 1;
+    }
+
+    .submit-btn {
+      background: #111;
+      color: white;
+      padding: 18px 60px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Red Hat Display', sans-serif;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 40px;
+    }
+
+    .submit-btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin: -60px auto 0;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #f37021;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .contact-title {
+        font-size: 48px;
+      }
+      
+      .contact-form {
+        padding: 40px 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-title {
+        font-size: 36px;
+      }
+      
+      .contact-container {
+        padding: 40px 20px 80px 20px;
+      }
+      
+      .contact-form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <div class="contact-content">
+      <div class="contact-header">
+        <div class="contact-subtitle">READY TO GET STARTED?</div>
+        <h1 class="contact-title">Let's Build Together.<br>Join Now.</h1>
+      </div>
+      
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First name *</label>
+            <input type="text" id="firstName" name="firstName" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last name *</label>
+            <input type="text" id="lastName" name="lastName" class="form-input" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone *</label>
+            <div class="phone-container">
+              <select class="country-select" name="countryCode">
+                <option value="+1">🇺🇸</option>
+                <option value="+44">🇬🇧</option>
+                <option value="+33">🇫🇷</option>
+                <option value="+49">🇩🇪</option>
+                <option value="+86">🇨🇳</option>
+                <option value="+81">🇯🇵</option>
+                <option value="+91">🇮🇳</option>
+              </select>
+              <input type="tel" id="phone" name="phone" class="form-input phone-input" required>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label class="form-label" for="message">Message *</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here" required></textarea>
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(event.target);
+      const data = {
+        firstName: formData.get('firstName'),
+        lastName: formData.get('lastName'),
+        email: formData.get('email'),
+        phone: formData.get('countryCode') + formData.get('phone'),
+        message: formData.get('message')
+      };
+      
+      // Here you would typically send the data to your server
+      console.log('Form submitted:', data);
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>

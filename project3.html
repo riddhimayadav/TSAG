@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name - Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      line-height: 1.6;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin-top: -60px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #f37021;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-column button:hover {
+      transform: scale(1.05);
+    }
+
+    .orange-section {
+      background-color: #f37021;
+      color: black;
+      padding: 60px 20px 100px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .button-redhat {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .project-hero {
+      position: relative;
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .project-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .project-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .project-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .project-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .content-section {
+      margin-bottom: 60px;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #0a0a0a;
+    }
+
+    .content-section h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .highlight-box {
+      background: #f8f9fa;
+      border-left: 5px solid #f37021;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 10px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f37021;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .gallery-item {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .team-section {
+      background: #f8f9fa;
+      padding: 60px 20px;
+      margin: 80px -20px 0;
+      border-radius: 20px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-member h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .team-member p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .project-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .project-hero p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <h1>College Football Recruiting Analytics</h1>
+      <p>Comprehensive analysis of recruiting patterns, player development trajectories, and success prediction models for NCAA Division I football programs.</p>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <div class="project-content">
+    
+    <!-- Overview Section -->
+    <section class="content-section">
+      <h2>Project Overview</h2>
+      <p>This extensive research project analyzes college football recruiting strategies and their correlation with on-field success. By examining recruiting rankings, player development patterns, and team performance metrics across multiple seasons, we developed predictive models to identify recruiting inefficiencies and optimal talent acquisition strategies for NCAA programs.</p>
+      
+      <div class="highlight-box">
+        <h3>Critical Finding</h3>
+        <p>Programs that prioritized recruiting players from specific geographic regions and high school systems showed 27% better player retention rates and 31% higher four-year graduation rates, challenging traditional star-rating focused recruiting approaches.</p>
+      </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="content-section">
+      <h2>Research Data</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">130</div>
+          <div class="stat-label">FBS Programs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15,000+</div>
+          <div class="stat-label">Recruits Tracked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Recruiting Cycles</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">85%</div>
+          <div class="stat-label">Prediction Accuracy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="content-section">
+      <h2>Research Framework</h2>
+      <h3>Data Collection</h3>
+      <p>We compiled comprehensive datasets from recruiting services (247Sports, Rivals, ESPN), NCAA transfer portal data, academic records, and on-field performance statistics. Our analysis covered eight complete recruiting cycles (2016-2024) across all 130 FBS programs, tracking over 15,000 individual recruit trajectories.</p>
+      
+      <h3>Analytical Approach</h3>
+      <p>Using machine learning algorithms and regression analysis, we developed multi-factor models predicting recruit success probability. Our framework incorporated academic metrics, geographic factors, high school competition level, physical measurables, and socioeconomic indicators to create comprehensive player profiles.</p>
+      
+      <h3>Success Metrics</h3>
+      <p>We defined success through multiple lenses: on-field production (starts, statistics, awards), academic achievement (graduation rates, GPA), program retention, and NFL draft outcomes. This holistic approach provides a more complete picture of recruiting effectiveness than traditional win-loss records alone.</p>
+    </section>
+
+    <!-- Visual Evidence -->
+    <section class="content-section">
+      <h2>Data Insights</h2>
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Recruiting Analytics">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Performance Tracking">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Success Prediction Models">
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2 style="text-align: center; margin-bottom: 40px;">Research Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Jake Williams</h4>
+          <p>Recruiting Data Analyst</p>
+        </div>
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Sophia Davis</h4>
+          <p>Predictive Modeling Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Team Member">
+          <h4>Michael Chang</h4>
+          <p>Performance Analytics Expert</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Results -->
+    <section class="content-section">
+      <h2>Impact & Future Applications</h2>
+      <p>Our research provides actionable insights for college football programs seeking to optimize their recruiting strategies. The predictive models help identify undervalued prospects while highlighting potential red flags in highly-rated recruits. Several Power 5 programs have begun incorporating our methodology into their recruiting evaluation processes.</p>
+      
+      <p>Future iterations will expand to include NIL (Name, Image, Likeness) impact analysis, transfer portal optimization strategies, and real-time recruiting trend monitoring to create a comprehensive recruiting intelligence platform for collegiate athletics.</p>
+      
+      <div class="highlight-box">
+        <h3>Industry Impact</h3>
+        <p>This research contributed to policy discussions at the NCAA level regarding recruiting transparency and has been cited in three academic papers on sports economics and player development in collegiate athletics.</p>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

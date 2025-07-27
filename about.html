@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      background: white;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 80px 20px;
+      background: white;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .about-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      color: #333;
+      font-weight: 400;
+      max-width: 900px;
+      margin-left: 0;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: #f37021;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .cta-button:hover {
+      background: #e55a0f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(243, 112, 33, 0.3);
+    }
+
+    /* People Section */
+    .people-section {
+      background: #f5f5f5;
+      padding: 80px 20px;
+      width: 100vw;
+      max-width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .people-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+      color: #111;
+    }
+
+    .subsection-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #111;
+      text-align: center;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    .person-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .person-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .person-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .person-details {
+      background: #111;
+      color: white;
+      padding: 0px 20px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .person-details h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .person-details p {
+      margin: 4px 0;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #ccc;
+    }
+
+    .person-details p:first-of-type {
+      font-size: 16px;
+      font-weight: 600;
+      color: #f37021;
+      margin-bottom: 12px;
+    }
+
+    .person-details p b {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Orange Call to Action - Updated to match index.html */
+    .orange-section {
+      background-color: #f37021;
+      color: black;
+      padding: 60px 20px 100px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      max-width: 100%;
+      margin: -60px auto 0;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .button-redhat {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    /* Footer */
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin: -60px auto 0;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #f37021;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .footer-column input[type="email"]::placeholder {
+      color: #ccc;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Red Hat Display', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .footer-column button:hover {
+      background: #f37021;
+      color: white;
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .person-image {
+    height: 350px;
+  }
+      
+      .about-title {
+        font-size: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .subsection-title {
+        font-size: 1.6rem;
+      }
+
+      .people-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-section,
+      .people-section {
+        padding: 60px 20px;
+      }
+
+      .about-title {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- About Section -->
+  <div id="about" class="about-section fade-in">
+    <h1 class="about-title">ABOUT US</h1>
+    <p class="about-text">
+      Newly founded in 2025, the Texas Sports Analytics Group (TSAG) is The University of Texas at Austin's premier sports business and analytics student organization and the official student organization of the Analytics and Business of Sports minor within the McCombs School of Business. Born from a shared passion for sports, data, and innovation, TSAG brings together driven students from diverse academic backgrounds who are united by a mission to transform the way we understand and influence the world of sports.
+    </p>
+    <p class="about-text">
+      TSAG was established to bridge the gap between raw data and real-world decision-making in the sports industry. By leveraging cutting-edge analytics, statistical modeling, and research methodologies, our members develop strategic insights that drive performance on the field/court/track and value off of it. We aim to make a measurable impact across all areas of the sports business landscape.
+    </p>
+    <p class="about-text">
+      Our work does not stop at theory—we aspire to deliver hands-on experiences for our members, working directly with professional teams, collegiate programs, representative agencies, startups, and beyond through consulting projects, case competitions, and collaborative research. At TSAG, we are not just analyzing sports—we are helping shape their future.
+    </p>
+    <button onclick="document.getElementById('our-people').scrollIntoView({ behavior: 'smooth' });" class="cta-button">
+      Our People →
+    </button>
+  </div>
+
+  <!-- Our People -->
+  <div id="our-people" class="people-section">
+    <div class="people-container">
+      <h2 class="section-title fade-in">OUR PEOPLE</h2>
+
+      <h3 class="subsection-title fade-in">Officers</h3>
+      <div class="people-grid">
+        <!-- Officer cards -->
+        <a href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com%2Fin%2Fbasuashish&sa=D&sntz=1&usg=AOvVaw2BKoJHmfLp83by4P4x1mHa" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o1.jpg" alt="Ashish Basu" class="person-image"/>
+            <div class="person-details">
+              <h4>Ashish Basu</h4>
+              <p>President</p>
+              <p><b>Major:</b> Business Analytics + Psychology</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Liverpool FC</p>
+              <p><b>Career Interest:</b> Consulting/Healthcare Administration</p>
+            </div>
+          </div>
+        </a>
+        <a href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com%2Fin%2Fgurdaskakar%2F&sa=D&sntz=1&usg=AOvVaw3bN4qKb1OJLj-IxIBoZm4s" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o2.jpeg" alt="Gurdas Kakar" class="person-image" />
+            <div class="person-details">
+              <h4>Gurdas Kakar</h4>
+              <p>External Vice President</p>
+              <p><b>Major:</b> Mathematics</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> Dallas Cowboys</p>
+              <p><b>Career Interest:</b> Consulting/NFL Operations</p>
+            </div>
+          </div>
+        </a>
+        <a href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com%2Fin%2Fharshdigantpatel%2F&sa=D&sntz=1&usg=AOvVaw3u6jqlxKhFgLqou-vCLKxU" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o3.JPG" alt="Harsh Patel" class="person-image" />
+            <div class="person-details">
+              <h4>Harsh Patel</h4>
+              <p>Internal Vice President</p>
+              <p><b>Major:</b> Finance</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Manchester City</p>
+              <p><b>Career Interest:</b> Financial Law</p>
+            </div>
+          </div>
+        </a>
+        <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.linkedin.com%2Fin%2Falejandramerodio&sa=D&sntz=1&usg=AOvVaw0aH9yBDt93IRsIKbnm1xtQ" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o4.png" alt="Alejandra Merodio" class="person-image"/>
+            <div class="person-details">
+              <h4>Alejandra Merodio</h4>
+              <p>Research Director</p>
+              <p><b>Major:</b> Corporate Communications + Psychology</p>
+              <p><b>Year:</b> Senior (2026)</p>
+              <p><b>Favorite Team:</b> Scuderia Ferrari</p>
+              <p><b>Career Interest:</b> Consulting/Sports Marketing</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdouglascebrito%2F&sa=D&sntz=1&usg=AOvVaw27tGYHautcznamVw5stQXR" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o5.png" alt="Douglas Brito" class="person-image" />
+            <div class="person-details">
+              <h4>Douglas Brito</h4>
+              <p>Education Director</p>
+              <p><b>Major:</b> Economics</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Chelsea FC</p>
+              <p><b>Career Interest:</b> Quantitative Finance</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvinayrajgopal%2F&sa=D&sntz=1&usg=AOvVaw31sdklqedv2lXw_WWHlCm1" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o6.png" alt="Vinay Rajgopal" class="person-image"/>
+            <div class="person-details">
+              <h4>Vinay Rajgopal</h4>
+              <p>Consulting Director</p>
+              <p><b>Major:</b> CBHP + Finance</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> Seattle Seahawks</p>
+              <p><b>Career Interest:</b> Consulting/Sports Media</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/riddhimayadav/" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o7.jpg" alt="Riddhima Yadav" class="person-image" />
+            <div class="person-details">
+              <h4>Riddhima Yadav</h4>
+              <p>Technical Director</p>
+              <p><b>Major:</b> Computer Science</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> San Antonio Spurs</p>
+              <p><b>Career Interest:</b> Software Engineering</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdavit-hakobyan-052771291%2F&sa=D&sntz=1&usg=AOvVaw3buHgDa7HJC0J-0l6yqkdH" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o8.jpg" alt="Davit Hakobyan" class="person-image" />
+            <div class="person-details">
+              <h4>Davit Hakobyan</h4>
+              <p>Financial Director</p>
+              <p><b>Major:</b> International Relations + Finance</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> FC Barcelona</p>
+              <p><b>Career Interest:</b> Corporate Law</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fanjalibandi%2F&sa=D&sntz=1&usg=AOvVaw1wC0GcEmUNAVTc2yOXVCRY" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o9.jpeg" alt="Anjali Bandi" class="person-image" />
+            <div class="person-details">
+              <h4>Anjali Bandi</h4>
+              <p>Marketing Director</p>
+              <p><b>Major:</b> Economics</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> UConn Huskies WBB</p>
+              <p><b>Career Interest:</b> Sustainability Accounting</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fluciaolaechea%2F&sa=D&sntz=1&usg=AOvVaw1b8KbsRLdvPG4-Chf5P7wO" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="o10.png" alt="Lucia Olaechea" class="person-image"/>
+            <div class="person-details">
+              <h4>Lucia Olaechea</h4>
+              <p>Social Director</p>
+              <p><b>Major:</b> Economics</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> Dallas Mavericks</p>
+              <p><b>Career Interest:</b> International Law</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="subsection-title fade-in">Project Managers</h3>
+      <div class="people-grid">
+        <!-- PM cards -->
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fhenok-befekadu%2F&sa=D&sntz=1&usg=AOvVaw3uderSrSauM6ll0e2FOkim" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm1.jpg" alt="Henok Befekadu" class="person-image">
+            <div class="person-details">
+              <h4>Henok Befekadu</h4>
+              <p>Research Project Manager</p>
+              <p><b>Major:</b> Economics</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> Newcastle United FC</p>
+              <p><b>Career Interest:</b> Investment Management/Global Macro</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbradsiegel%2F&sa=D&sntz=1&usg=AOvVaw1IcwU82kar1OBOCp0R_1yk" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm2.png" alt="Brad Siegel" class="person-image">
+            <div class="person-details">
+              <h4>Brad Siegel</h4>
+              <p>Research Project Manager</p>
+              <p><b>Major:</b> Canfield Business Honors + Plan II Honors</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Texas Longhorns</p>
+              <p><b>Career Interest:</b> Consulting/Wealth Management</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvarun-ramanathan%2F&sa=D&sntz=1&usg=AOvVaw2TBcBx6Iz8_W-YXhDIAGwx" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm3.png" alt="Varun Ramanathan" class="person-image">
+            <div class="person-details">
+              <h4>Varun Ramanathan</h4>
+              <p>Research Project Manager</p>
+              <p><b>Major:</b> Statistics and Data Science + Plan II Honors</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> San Antonio Spurs</p>
+              <p><b>Career Interest:</b> Football Analytics</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvivianlorch%2F&sa=D&sntz=1&usg=AOvVaw394NvSQYAZiucHIF8f2ArR" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm4.png" alt="Vivian Lorch" class="person-image">
+            <div class="person-details">
+              <h4>Vivian Lorch</h4>
+              <p>Consulting Project Manager</p>
+              <p><b>Major:</b> Sport Management + Business</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Texas Longhorns</p>
+              <p><b>Career Interest:</b> Women's Sports Management</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fricardo-v%25C3%25A1zquez-rv%2F&sa=D&sntz=1&usg=AOvVaw1iWJsH75XyIem57Natb056" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm5.jpg" alt="Ricardo Vazquez" class="person-image">
+            <div class="person-details">
+              <h4>Ricardo Vazquez</h4>
+              <p>Consulting Project Manager</p>
+              <p><b>Major:</b> Sport Management + Economics</p>
+              <p><b>Year:</b> Junior (2027)</p>
+              <p><b>Favorite Team:</b> Real Madrid CF</p>
+              <p><b>Career Interest:</b> Development Studies/Consulting</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjash-bhalani%2F&sa=D&sntz=1&usg=AOvVaw2daoTpM4TpBRDmEHkrcEgu" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="pm6.png" alt="Jash Bhalani" class="person-image">
+            <div class="person-details">
+              <h4>Jash Bhalani</h4>
+              <p>Consulting Project Manager</p>
+              <p><b>Major:</b> Biomedical Engineering</p>
+              <p><b>Year:</b> Sophomore (2028)</p>
+              <p><b>Favorite Team:</b> Liverpool FC</p>
+              <p><b>Career Interest:</b> Cardiothoracic Surgery</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fade-in animation on scroll
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

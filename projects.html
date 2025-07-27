@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin-top: -60px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #f37021;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .orange-section {
+      background-color: #f37021;
+      color: black;
+      padding: 60px 20px 100px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      max-width: 100%;
+      margin: -60px auto 0;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .button-redhat {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .category-buttons {
+        gap: 8px;
+        padding: 0 10px;
+      }
+      
+      .category-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: 70px;
+      }
+      
+      .projects-header {
+        font-size: 28px;
+      }
+      
+      .projects-container {
+        gap: 20px;
+      }
+      
+      .project-card {
+        width: 280px;
+      }
+    }
+
+    /* Project Page Styles */
+    .projects-section {
+      padding: 40px 20px 100px 20px;
+      flex: 1;
+    }
+
+    .projects-header {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .project-card {
+      width: 300px;
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .project-card h3 {
+      margin: 15px 0 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .project-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .category-buttons {
+      text-align: center;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+    }
+
+    .category-button {
+      padding: 12px 20px;
+      background-color: #0a0a0a;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      flex-shrink: 0;
+      min-width: 80px;
+    }
+
+    .category-button:hover,
+    .category-button.active {
+      background-color: #f37021;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .no-projects-message {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #555;
+      width: 100%;
+      padding: 40px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Projects Section -->
+  <div class="projects-section">
+    <h2 class="projects-header">Our Projects</h2>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button class="category-button active" onclick="filterProjects('all', this)">All</button>
+      <button class="category-button" onclick="filterProjects('basketball', this)">Basketball</button>
+      <button class="category-button" onclick="filterProjects('soccer', this)">Soccer</button>
+      <button class="category-button" onclick="filterProjects('football', this)">Football</button>
+      <button class="category-button" onclick="filterProjects('baseball', this)">Baseball</button>
+    </div>
+
+    <!-- Project Cards Container -->
+    <div class="projects-container" id="projects-list">
+      <!-- Project 1 -->
+      <div class="project-card basketball" onclick="window.location.href='project1.html'">
+        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 1">
+        <h3>Project Name 01</h3>
+        <p>This is a paragraph. It is connected to a CMS collection through a dataset.</p>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project-card soccer" onclick="window.location.href='project2.html'">
+        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 2">
+        <h3>Project Name 02</h3>
+        <p>This is a paragraph. It is connected to a CMS collection through a dataset.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card football" onclick="window.location.href='project3.html'">
+        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 3">
+        <h3>Project Name 03</h3>
+        <p>This is a paragraph. It is connected to a CMS collection through a dataset.</p>
+      </div>
+
+      <!-- No Projects Message -->
+      <div id="no-projects-message" class="no-projects-message hidden">Coming soon...</div>
+    </div>
+  </div>
+
+  <script>
+    // Filter Projects by Category
+    function filterProjects(category, button) {
+      const projects = document.querySelectorAll('.project-card');
+      const noProjectsMessage = document.getElementById('no-projects-message');
+      const buttons = document.querySelectorAll('.category-button');
+      let visibleProjects = 0;
+
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      projects.forEach(project => {
+        if (category === 'all') {
+          project.classList.remove('hidden');
+          visibleProjects++;
+        } else {
+          if (project.classList.contains(category)) {
+            project.classList.remove('hidden');
+            visibleProjects++;
+          } else {
+            project.classList.add('hidden');
+          }
+        }
+      });
+
+      if (visibleProjects === 0) {
+        noProjectsMessage.classList.remove('hidden');
+      } else {
+        noProjectsMessage.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
