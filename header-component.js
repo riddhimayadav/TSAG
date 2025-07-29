@@ -31,7 +31,7 @@ function loadHeader() {
         <style>
             /* Navigation hover effects */
             header nav a:hover {
-                color: #f37021 !important;
+                color: #B45F06 !important;
             }
             
             /* Hamburger menu styles */
@@ -56,11 +56,15 @@ function loadHeader() {
             
             /* Menu item hover effects */
             #nav-menu a:hover {
-                background-color: #f37021 !important;
+                background-color: #B45F06 !important;
                 color: white !important;
             }
             
-            /* Responsive adjustments */
+            #nav-menu a:last-child:hover {
+                border-bottom-left-radius: 15px !important;
+                border-bottom-right-radius: 15px !important;
+            }
+            
             @media (max-width: 600px) {
                 header h1 {
                     font-size: 14px !important;
@@ -100,31 +104,71 @@ function loadHeader() {
     `;
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
     
-    // Add hamburger menu functionality
+    // Detect if device supports touch
+    function isTouchDevice() {
+        return (('ontouchstart' in window) ||
+                (navigator.maxTouchPoints > 0) ||
+                (navigator.msMaxTouchPoints > 0));
+    }
+    
+    // Hamburger menu functionality
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
     
     if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', function() {
-            hamburgerBtn.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        const isTouch = isTouchDevice();
+        let hoverTimeout;
         
-        // Close menu when clicking on a link
+        if (isTouch) {
+            // Touch device: use click events
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                hamburgerBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!hamburgerBtn.contains(event.target) && !navMenu.contains(event.target)) {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        } else {
+            // Non-touch device: use hover events on hamburger button only
+            hamburgerBtn.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+                hamburgerBtn.classList.add('active');
+                navMenu.classList.add('active');
+            });
+            
+            hamburgerBtn.addEventListener('mouseleave', function() {
+                hoverTimeout = setTimeout(() => {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }, 200);
+            });
+            
+            // Keep menu open when hovering over the nav menu itself
+            navMenu.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+            });
+            
+            navMenu.addEventListener('mouseleave', function() {
+                hoverTimeout = setTimeout(() => {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }, 200);
+            });
+        }
+        
+        // Close menu when clicking on a link (for both touch and non-touch)
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 hamburgerBtn.classList.remove('active');
                 navMenu.classList.remove('active');
             });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!hamburgerBtn.contains(event.target) && !navMenu.contains(event.target)) {
-                hamburgerBtn.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
         });
     }
 }
