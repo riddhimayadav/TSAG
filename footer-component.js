@@ -44,7 +44,6 @@ function loadFooter() {
                     <div class="footer-column">
                         <p style="font-weight: 600;">CONTACT</p>
                         <p>TXSportsAnalytics@Gmail.com</p>
-                        <p>123-456-7890</p>
                     </div>
                 </div>
             </div>
