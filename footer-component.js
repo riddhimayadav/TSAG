@@ -23,7 +23,8 @@ function loadFooter() {
                         <p style="font-weight: 600;">QUICK LINKS</p>
                         <a href="index.html" class="footer-link">Home</a>
                         <a href="about.html" class="footer-link">About</a>
-                        <a href="projects.html" class="footer-link">Projects</a>
+                        <span class="footer-disabled">Projects</span>
+                        <span class="footer-disabled">Recruitment</span>
                         <a href="contact.html" class="footer-link">Contact</a>
                     </div>
                     <div class="footer-column">
@@ -112,6 +113,14 @@ function loadFooter() {
                 color: white;
                 text-decoration: none;
                 transition: color 0.3s ease;
+            }
+
+            .footer-disabled {
+                display: block;
+                margin: 0 0 10px;
+                color: #666;
+                cursor: not-allowed;
+                text-decoration: none;
             }
 
             .footer-column p:hover,
