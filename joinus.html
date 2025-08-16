@@ -1,0 +1,346 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>Recruitment - Texas Sports Analytics Group</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .recruitment-container {
+      background-color: #f8f8f8;
+      padding: 80px 40px 120px 40px;
+      min-height: 100vh;
+    }
+
+    .recruitment-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .recruitment-header {
+      text-align: left;
+      margin-bottom: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+
+    .recruitment-subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .recruitment-title {
+      font-size: 64px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.1;
+      margin: 0 0 30px 0;
+    }
+
+    .recruitment-description {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .requirements-section, .application-section {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 30px 0;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #B45F06;
+    }
+
+    .requirements-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .requirement-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .requirement-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .requirement-icon {
+      width: 24px;
+      height: 24px;
+      background: #B45F06;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .requirement-icon::after {
+      content: "✓";
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .requirement-text {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .requirement-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .requirement-description {
+      color: #666;
+    }
+
+    .application-info {
+      text-align: center;
+    }
+
+    .application-text {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .application-btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 18px 50px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Red Hat Display', sans-serif;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .application-btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .application-note {
+      font-size: 14px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .calendar-section {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .calendar-embed {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 40px 0 60px 0;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: #B45F06;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 1000px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .recruitment-title {
+        font-size: 48px;
+      }
+      
+      .requirements-section, .application-section, .calendar-section {
+        padding: 40px 30px;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .recruitment-title {
+        font-size: 36px;
+      }
+      
+      .recruitment-container {
+        padding: 40px 20px 80px 20px;
+      }
+      
+      .requirements-section, .application-section, .calendar-section {
+        padding: 30px 20px;
+      }
+      
+      .calendar-embed {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="recruitment-container">
+    <div class="recruitment-content">
+      <div class="recruitment-header">
+        <div class="recruitment-subtitle">Join Our Team</div>
+        <h1 class="recruitment-title">Shape the Future<br>of Sports Analytics.</h1>
+        <p class="recruitment-description">
+          TSAG is looking for passionate students who want to dive deep into the world of sports analytics. 
+          Join a community of data enthusiasts, statisticians, and sports lovers who are revolutionizing 
+          how we understand and analyze athletic performance.
+        </p>
+      </div>
+
+
+
+      <div class="content-grid">
+        <div class="requirements-section">
+          <h2 class="section-title">Application Requirements</h2>
+          <ul class="requirements-list">
+            <li class="requirement-item">
+              <div class="requirement-icon"></div>
+              <div class="requirement-text">
+                <div class="requirement-title">Attend an Info Session</div>
+                <div class="requirement-description">Join one of our information sessions to learn about TSAG and what we do</div>
+              </div>
+            </li>
+            <li class="requirement-item">
+              <div class="requirement-icon"></div>
+              <div class="requirement-text">
+                <div class="requirement-title">Coffee Chat</div>
+                <div class="requirement-description">Have a casual conversation with current members to learn more about the organization</div>
+              </div>
+            </li>
+            <li class="requirement-item">
+              <div class="requirement-icon"></div>
+              <div class="requirement-text">
+                <div class="requirement-title">Visit Our Tabling</div>
+                <div class="requirement-description">Stop by our table during recruitment events to meet the team and ask questions</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="application-section">
+          <h2 class="section-title">Ready to Apply?</h2>
+          <div class="application-info">
+            <p class="application-text">
+              Our application process is designed to identify passionate students who are eager to learn 
+              and contribute to cutting-edge sports analytics research. We're looking for diverse 
+              perspectives and fresh ideas.
+            </p>
+            <p class="application-text">
+              The application includes a brief questionnaire about your background, interests, and goals to showcase your analytical thinking.
+            </p>
+            <a href="#" class="application-btn">Apply Now</a>
+            <p class="application-note">
+              Reach out to txsportsanalytics@gmail.com for further questions!<br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="calendar-section">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p style="color: #666; margin-bottom: 30px; text-align: center;">
+          Stay updated with our latest meetings, workshops, and networking events. Mark your calendar for opportunities to learn and connect!
+        </p>
+        
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=txsportsanalytics%40gmail.com&ctz=America%2FChicago"
+          class="calendar-embed">
+        </iframe>
+        
+        <div style="text-align: center; margin-top: 20px;">
+          <p style="font-size: 14px; color: #888;">
+            Can't see the calendar? <a href="https://calendar.google.com/calendar/u/4?cid=dHhzcG9ydHNhbmFseXRpY3NAZ21haWwuY29t" style="color: #B45F06; text-decoration: none;">Click here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

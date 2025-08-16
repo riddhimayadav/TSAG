@@ -24,8 +24,8 @@ function loadFooter() {
                         <a href="index.html" class="footer-link">Home</a>
                         <a href="about.html" class="footer-link">About</a>
                         <span class="footer-disabled">Projects</span>
-                        <span class="footer-disabled">Recruitment</span>
-                        <a href="contact.html" class="footer-link">Contact</a>
+                        <a href="joinus.html" class="footer-link">Join Us</a>
+                        <a href="contact.html" class="footer-link">Sponsor Us</a>
                     </div>
                     <div class="footer-column">
                         <p style="font-weight: 600;">SOCIAL</p>
