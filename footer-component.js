@@ -17,7 +17,7 @@ function loadFooter() {
         <!-- Footer Section -->
         <footer class="footer-container rounded-section">
             <div class="footer-inner">
-                <h1 class="footer-logo">TSAG</h1>
+                <h1 class="footer-logo">BOSSO</h1>
                 <div class="footer-grid">
                     <div class="footer-column">
                         <p style="font-weight: 600;">QUICK LINKS</p>
@@ -55,7 +55,7 @@ function loadFooter() {
             }
 
             .orange-section {
-                background-color: #B45F06;
+                background-color: #bf5700;
                 color: black;
                 padding: 60px 20px 100px 20px;
                 font-family: 'Red Hat Display', sans-serif;
@@ -125,7 +125,7 @@ function loadFooter() {
 
             .footer-column p:hover,
             .footer-link:hover {
-                color: #B45F06;
+                color: #bf5700;
                 cursor: pointer;
             }
 

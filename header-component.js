@@ -7,7 +7,7 @@ function loadHeader() {
                     <img src="logo.png" alt="TSAG Logo" style="height: 50px; width: auto; flex-shrink: 0; cursor: pointer;">
                 </a>
                 <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <h1 style="font-size: 20px; font-weight: 700; color: white; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;">Texas Sports Analytics Group</h1>
+                    <h1 style="font-size: 20px; font-weight: 700; color: white; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;">Business of Sports Student Organization</h1>
                 </a>
             </div>
             
@@ -31,7 +31,7 @@ function loadHeader() {
         <style>
             /* Navigation hover effects */
             header nav a:hover {
-                color: #B45F06 !important;
+                color: #bf5700 !important;
             }
             
             /* Hamburger menu styles */
@@ -56,7 +56,7 @@ function loadHeader() {
             
             /* Menu item hover effects */
             #nav-menu a:hover {
-                background-color: #B45F06 !important;
+                background-color: #bf5700 !important;
                 color: white !important;
             }
             
