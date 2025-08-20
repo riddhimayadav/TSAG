@@ -9,7 +9,7 @@ function loadFooter() {
                     Interested in joining the founding class of the premier sports business group at UT? Follow us on Instagram (<b>@TXSportsAnalytics</b>) to stay up to date!
                 </p>
                 <button class="button-redhat" style="margin-top: 30px; background: white; color: black; padding: 12px 25px; font-size: 1rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                    Contact Us →
+                    Join Now →
                 </button>
             </div>
         </section>
@@ -152,7 +152,7 @@ function loadFooter() {
     const contactButton = document.querySelector('.orange-section button');
     if (contactButton) {
         contactButton.addEventListener('click', function() {
-            window.location.href = 'contact.html';
+            window.location.href = 'joinus.html';
         });
     }
 }
