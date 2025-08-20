@@ -157,6 +157,11 @@
       display: block;
     }
 
+    /* Fix specifically for Kirk's image */
+    .person-image.kirk-image {
+      object-position: center top;
+    }
+
     .person-details {
       background: #111;
       color: white;
@@ -377,17 +382,30 @@
     <p class="about-text">
       Our work does not stop at theory—we aspire to deliver hands-on experiences for our members, working directly with professional teams, collegiate programs, representative agencies, startups, and beyond through consulting projects, education outreach, and collaborative research. At BOSSO, we are not just analyzing sports—we are helping shape their future.
     <button onclick="document.getElementById('our-people').scrollIntoView({ behavior: 'smooth' });" class="cta-button">
-      Our People →
+      Our Team →
     </button>
   </div>
 
-  <!-- Our People -->
+  <!-- Our Team -->
   <div id="our-people" class="people-section">
     <div class="people-container">
-      <h2 class="section-title fade-in">OUR PEOPLE</h2>
+      <h2 class="section-title fade-in">OUR TEAM</h2>
 
-      <h3 class="subsection-title fade-in">Officers</h3>
       <div class="people-grid">
+        <!-- Kirk Goldsberry - Faculty Advisor -->
+        <a href="https://experts.utexas.edu/kirk_goldsberry" target="_blank" class="card-link">
+          <div class="person-card fade-in">
+            <img src="kirk.jpeg" alt="Kirk Goldsberry" class="person-image kirk-image"/>
+            <div class="person-details">
+              <h4>Kirk Goldsberry</h4>
+              <p>Faculty Advisor</p>
+              <p><b>Title:</b> Clinical Assistant Professor</p>
+              <p><b>Department:</b> Management, Red McCombs School of Business</p>
+              <p><b>Social Media:</b> X(Twitter), Instagram</p>
+            </div>
+          </div>
+        </a>
+
         <!-- Officer cards -->
         <a href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com%2Fin%2Fbasuashish&sa=D&sntz=1&usg=AOvVaw2BKoJHmfLp83by4P4x1mHa" target="_blank" class="card-link">
           <div class="person-card fade-in">
