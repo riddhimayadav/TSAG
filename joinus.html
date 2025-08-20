@@ -60,6 +60,50 @@
       margin-bottom: 20px;
     }
 
+    .interest-form-section {
+      background: linear-gradient(135deg, #bf5700, #d16600);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 40px auto 60px auto;
+      box-shadow: 0 15px 40px rgba(191, 87, 0, 0.3);
+      max-width: 800px;
+    }
+
+    .interest-form-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 15px 0;
+    }
+
+    .interest-form-description {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .interest-form-btn {
+      display: inline-block;
+      background: white;
+      color: #bf5700;
+      padding: 18px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Red Hat Display', sans-serif;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .interest-form-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      background: #f8f8f8;
+    }
+
     .content-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -238,6 +282,11 @@
         grid-template-columns: 1fr;
         gap: 20px;
       }
+
+      .interest-form-section {
+        padding: 30px 25px;
+        margin: 30px 20px 50px 20px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -256,6 +305,20 @@
       .calendar-embed {
         height: 400px;
       }
+
+      .interest-form-section {
+        padding: 25px 20px;
+        margin: 20px 10px 40px 10px;
+      }
+
+      .interest-form-title {
+        font-size: 24px;
+      }
+
+      .interest-form-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -273,11 +336,20 @@
         </p>
       </div>
 
-
+      <div class="interest-form-section">
+        <h2 class="interest-form-title">Interest Form Fall 2025</h2>
+        <p class="interest-form-description">
+          Interested in joining BOSSO? Start by filling out our interest form! This quick form helps us gauge interest and keep you informed about upcoming recruitment events, info sessions, and application deadlines.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRB6Rfph1vrUxvNRX_7ALHWnmSSvS7zcs8AwxVcJefDnrAWQ/viewform" target="_blank" class="interest-form-btn">Fill Out Interest Form</a>
+      </div>
 
       <div class="content-grid">
         <div class="requirements-section">
           <h2 class="section-title">Application Requirements</h2>
+          <p style="margin: 0 0 25px 0; font-size: 16px; color: #666; line-height: 1.5;">
+            You must attend <strong>either</strong> an info session or profit share, but we'd love for you to attend as many as you can!
+          </p>
           <ul class="requirements-list">
             <li class="requirement-item">
               <div class="requirement-icon"></div>
@@ -289,18 +361,18 @@
             <li class="requirement-item">
               <div class="requirement-icon"></div>
               <div class="requirement-text">
-                <div class="requirement-title">Coffee Chat</div>
-                <div class="requirement-description">Have a casual conversation with current members to learn more about the organization</div>
-              </div>
-            </li>
-            <li class="requirement-item">
-              <div class="requirement-icon"></div>
-              <div class="requirement-text">
-                <div class="requirement-title">Visit Our Tabling</div>
-                <div class="requirement-description">Stop by our table during recruitment events to meet the team and ask questions</div>
+                <div class="requirement-title">Profit Share</div>
+                <div class="requirement-description">Have a casual conversation with current members during our profit share sessions to learn more about the organization</div>
               </div>
             </li>
           </ul>
+          
+          <div style="margin-top: 30px; padding: 20px; background: #f8f8f8; border-radius: 10px; border-left: 4px solid #bf5700;">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600; color: #111;">We Also Encourage You To:</h3>
+            <p style="margin: 0; font-size: 16px; color: #555; line-height: 1.5;">
+              <strong>Visit our table</strong> during recruitment events to meet the team and learn more about what we do!
+            </p>
+          </div>
         </div>
 
         <div class="application-section">
@@ -313,6 +385,9 @@
             </p>
             <p class="application-text">
               The application includes a brief questionnaire about your background, interests, and goals to showcase your analytical thinking.
+            </p>
+            <p class="application-text">
+              Once you've completed the requirements above, you'll be ready to submit your application and take the next step in joining our community of sports analytics enthusiasts.
             </p>
             <a href="#" class="application-btn">Apply Now</a>
             <p class="application-note">
