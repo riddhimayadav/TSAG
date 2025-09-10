@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/logo.png">
-  <title>Contact - BOSSO</title>
+  <title>Partnerships - BOSSO</title>
   <script src="header-component.js"></script>
   <script src="footer-component.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -29,47 +29,448 @@
       display: block;
     }
 
-    .contact-container {
+    .partnerships-container {
       background-color: #f8f8f8;
-      padding: 80px 40px 120px 40px;
+      padding: 80px 40px 40px 40px;
       min-height: 80vh;
+    }
+
+    .partnerships-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .partnerships-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .partnerships-subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #bf5700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .partnerships-title {
+      font-size: 64px;
+      font-weight: 800;
+      color: #111;
+      line-height: 1.1;
+      margin: 0 0 30px 0;
+      background: linear-gradient(135deg, #111 0%, #333 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .partnerships-description {
+      font-size: 20px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .why-partner-section {
+      background: linear-gradient(135deg, #bf5700 0%, #d16600 100%);
+      color: white;
+      padding: 80px 60px;
+      border-radius: 25px;
+      margin: 60px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(191, 87, 0, 0.2);
+    }
+
+    .why-partner-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      transform: translate(30%, -30%);
+    }
+
+    .why-partner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .section-description {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .quote-section {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      border: 2px solid #bf5700;
+      margin-top: 40px;
+      box-shadow: 0 10px 25px rgba(191, 87, 0, 0.15);
+    }
+
+    .quote-text {
+      font-size: 22px;
+      font-style: italic;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .quote-author {
+      font-size: 16px;
+      font-weight: 600;
+      color: #bf5700;
+    }
+
+    .impact-section {
+      background: white;
+      padding: 80px 60px;
+      border-radius: 25px;
+      margin: 60px 0;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .impact-description {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 50px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: #bf5700;
+      box-shadow: 0 15px 40px rgba(191, 87, 0, 0.15);
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 800;
+      color: #bf5700;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .demographics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin: 60px 0;
+    }
+
+    .breakdown-container {
+      background: rgba(191, 87, 0, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(191, 87, 0, 0.1);
+    }
+
+    .breakdown-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .breakdown-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .breakdown-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .breakdown-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      min-width: 120px;
+      text-align: left;
+    }
+
+    .breakdown-bar {
+      flex: 1;
+      height: 12px;
+      background: #f0f0f0;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .breakdown-fill {
+      height: 100%;
+      border-radius: 6px;
+      transition: width 0.8s ease;
+      position: relative;
+    }
+
+    .breakdown-percent {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      min-width: 35px;
+      text-align: right;
+    }
+
+    .events-section {
+      background: white;
+      padding: 80px 60px;
+      border-radius: 25px;
+      margin: 60px 0;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .events-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .events-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    .events-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .events-timeline {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 220px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: #bf5700;
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-weight: 700;
+      color: #bf5700;
+      font-size: 18px;
+      min-width: 220px;
+      text-align: right;
+      padding-right: 60px;
+    }
+
+    .timeline-description {
+      color: #333;
+      font-size: 18px;
+      flex: 1;
+      margin-left: 60px;
+    }
+
+    .gift-levels-section {
+      background: white;
+      padding: 80px 60px;
+      border-radius: 25px;
+      margin: 60px 0;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .gift-levels-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .gift-level {
+      border: 2px solid #f0f0f0;
+      border-radius: 20px;
+      padding: 50px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gift-level:hover {
+      border-color: #bf5700;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(191, 87, 0, 0.1);
+    }
+
+    .gift-level:last-child {
+      margin-bottom: 0;
+    }
+
+    .gift-level-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .gift-level-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .gift-level-price {
+      background: linear-gradient(135deg, #bf5700, #d16600);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 20px;
+      box-shadow: 0 5px 15px rgba(191, 87, 0, 0.3);
+    }
+
+    .gift-level-description {
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .gift-level-benefits {
+      list-style: none;
+      padding: 0;
+    }
+
+    .gift-level-benefits li {
+      padding: 12px 0;
+      padding-left: 35px;
+      position: relative;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .gift-level-benefits li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #bf5700;
+      font-weight: bold;
+      font-size: 18px;
+      width: 25px;
+      height: 25px;
+      background: rgba(191, 87, 0, 0.1);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .contact-content {
-      max-width: 900px;
-      width: 100%;
+    .contact-form-section {
+      background: white;
+      padding: 80px 60px;
+      border-radius: 25px;
+      margin: 60px 0 120px 0;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
-    .contact-header {
-      text-align: left;
-      margin-bottom: 60px;
+    .contact-form-header {
+      text-align: center;
+      margin-bottom: 50px;
     }
 
-    .contact-subtitle {
-      font-size: 16px;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .contact-form-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #111;
       margin-bottom: 20px;
     }
 
-    .contact-title {
-      font-size: 64px;
-      font-weight: 700;
-      color: #111;
-      line-height: 1.1;
-      margin: 0;
+    .contact-form-description {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .contact-form {
-      background: white;
-      padding: 60px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .form-row {
@@ -89,14 +490,14 @@
     }
 
     .form-label {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       color: #333;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .form-input {
-      padding: 15px 0;
+      padding: 18px 0;
       border: none;
       border-bottom: 2px solid #e0e0e0;
       background: transparent;
@@ -135,12 +536,12 @@
 
     .phone-container {
       display: flex;
-      gap: 10px;
+      gap: 15px;
       align-items: flex-end;
     }
 
     .country-select {
-      padding: 15px 10px;
+      padding: 18px 15px;
       border: none;
       border-bottom: 2px solid #e0e0e0;
       background: transparent;
@@ -157,10 +558,10 @@
     }
 
     .submit-btn {
-      background: #111;
+      background: linear-gradient(135deg, #bf5700, #d16600);
       color: white;
-      padding: 18px 60px;
-      font-size: 16px;
+      padding: 20px 60px;
+      font-size: 18px;
       font-weight: 600;
       font-family: 'Red Hat Display', sans-serif;
       border: none;
@@ -169,12 +570,12 @@
       transition: all 0.3s ease;
       margin-top: 40px;
       position: relative;
+      box-shadow: 0 10px 25px rgba(191, 87, 0, 0.3);
     }
 
     .submit-btn:hover {
-      background: #333;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(191, 87, 0, 0.4);
     }
 
     .submit-btn:disabled {
@@ -204,11 +605,12 @@
     }
 
     .success-message, .error-message {
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
       font-weight: 600;
       display: none;
+      text-align: center;
     }
 
     .success-message {
@@ -224,30 +626,96 @@
     }
 
     @media (max-width: 900px) {
+      .demographics-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 20px;
       }
       
-      .contact-title {
+      .partnerships-title {
         font-size: 48px;
       }
       
-      .contact-form {
-        padding: 40px 30px;
+      .why-partner-section, .impact-section, .events-section, .gift-levels-section, .contact-form-section {
+        padding: 60px 40px;
+      }
+
+      .gift-level-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .timeline-item::before {
+        position: relative;
+        left: auto;
+        margin: 15px auto;
+      }
+
+      .timeline-date {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .timeline-description {
+        margin-left: 0;
+      }
+
+      .breakdown-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .breakdown-label {
+        min-width: auto;
+        text-align: center;
+      }
+
+      .breakdown-percent {
+        text-align: center;
+        min-width: auto;
       }
     }
 
     @media (max-width: 600px) {
-      .contact-title {
+      .partnerships-title {
         font-size: 36px;
       }
       
-      .contact-container {
-        padding: 40px 20px 80px 20px;
+      .partnerships-container {
+        padding: 40px 20px 20px 20px;
       }
       
-      .contact-form {
+      .why-partner-section, .impact-section, .events-section, .gift-levels-section, .contact-form-section {
+        padding: 40px 30px;
+      }
+
+      .section-title, .impact-title, .events-title, .gift-levels-title, .contact-form-title {
+        font-size: 32px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .breakdown-container {
         padding: 30px 20px;
       }
     }
@@ -255,71 +723,300 @@
 </head>
 <body>
 
-  <!-- Contact Section -->
-  <div class="contact-container">
-    <div class="contact-content">
-      <div class="contact-header">
-        <div class="contact-subtitle">Want to get involved?</div>
-        <h1 class="contact-title">Let's Build Together.<br>Sponsor Us.</h1>
-        <br>
-        Thank you so much for your interest in BOSSO! <br><br>
-        Kindly fill out your contact information so we can reach out to you.
+  <!-- Partnerships Section -->
+  <div class="partnerships-container">
+    <div class="partnerships-content">
+      <!-- Header -->
+      <div class="partnerships-header">
+        <div class="partnerships-subtitle">Partner with BOSSO</div>
+        <h1 class="partnerships-title">Partnerships</h1>
+        <p class="partnerships-description">
+          Partner to build the <strong style="color: #bf5700;">future</strong> of technology & business
+        </p>
       </div>
       
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="firstName">Your name *</label>
-            <input type="text" id="firstName" name="firstName" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="lastName">Company Name *</label>
-            <input type="text" id="lastName" name="lastName" class="form-input" required>
-          </div>
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="email">Email *</label>
-            <input type="email" id="email" name="email" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="phone">Phone</label>
-            <div class="phone-container">
-              <select class="country-select" name="countryCode">
-                <option value="+1">🇺🇸</option>
-                <option value="+44">🇬🇧</option>
-                <option value="+33">🇫🇷</option>
-                <option value="+49">🇩🇪</option>
-                <option value="+86">🇨🇳</option>
-                <option value="+81">🇯🇵</option>
-                <option value="+91">🇮🇳</option>
-              </select>
-              <input type="tel" id="phone" name="phone" class="form-input phone-input">
+      <!-- Why Partner Section -->
+      <div class="why-partner-section">
+        <div class="why-partner-content">
+          <h2 class="section-title">WHY PARTNER WITH US</h2>
+          <p class="section-description">
+            Partnering with the Business of Sports Student Organization connects your organization 
+            to a talented pipeline of students trained in advanced analytics and business strategy. 
+            BOSSO's mission—delivering real-world consulting, impactful research, and industry-focused education—aligns with the growing demand for data-driven decision-making 
+            across all sectors of business. Partnering with BOSSO gives your business direct access to 
+            top student talent, innovative data-driven insights, and unique brand exposure within a 
+            passionate and growing sports tech community.
+          </p>
+
+          <div class="quote-section">
+            <div class="quote-text">
+              "Data and statistics are a great equalizer, giving the smartest teams an edge."
+            </div>
+            <div class="quote-author">
+              - Michael Lewis, Author of Moneyball
             </div>
           </div>
         </div>
-        
-        <div class="form-row">
-          <div class="form-group full-width">
-            <label class="form-label" for="message">Message *</label>
-            <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here" required></textarea>
+      </div>
+
+      <!-- Ways to Make Impact -->
+      <div class="impact-section">
+        <h2 class="impact-title">WAYS TO MAKE AN IMPACT</h2>
+        <p class="impact-description">
+          BOSSO drives impact by equipping students with hands-on skills through consulting 
+          projects, research, and weekly workshops. Key events—case competitions, speaker 
+          series, and networking—connect students with industry leaders. Your partnership fuels 
+          this mission—expanding access to real-world experiences, elevating student 
+          engagement with industry, and shaping the next generation of leaders in sports 
+          analytics and beyond. Together, we can create opportunities that ripple across campus, 
+          inspiring collaboration, advancing research, and shaping the future of sports analytics.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Total Members</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Majors/Minors</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">75%</div>
+            <div class="stat-label">Technical Background</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">85%</div>
+            <div class="stat-label">Job Placement Rate</div>
           </div>
         </div>
-        
-        <button type="submit" class="submit-btn" id="submitBtn">
-          <span class="btn-text">Send</span>
-          <div class="loading" id="loading"></div>
-        </button>
-        
-        <div class="success-message" id="successMessage">
-          Thank you for your message! We'll get back to you soon.
+
+        <h3 style="font-size: 32px; font-weight: 700; color: #111; text-align: center; margin: 60px 0 40px 0;">MEMBER BREAKDOWN</h3>
+        <div class="demographics-grid">
+          <div class="breakdown-container">
+            <h4 class="breakdown-title">Academic Background</h4>
+            <div class="breakdown-bars">
+              <div class="breakdown-item">
+                <div class="breakdown-label">Business Analytics</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 24%; background: #bf5700;"></div>
+                </div>
+                <div class="breakdown-percent">24%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Finance</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 20%; background: #3498db;"></div>
+                </div>
+                <div class="breakdown-percent">20%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Economics</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 18%; background: #2c3e50;"></div>
+                </div>
+                <div class="breakdown-percent">18%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Communications</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 16%; background: #e74c3c;"></div>
+                </div>
+                <div class="breakdown-percent">16%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Sports Management</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 12%; background: #9b59b6;"></div>
+                </div>
+                <div class="breakdown-percent">12%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Other</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 10%; background: #34495e;"></div>
+                </div>
+                <div class="breakdown-percent">10%</div>
+              </div>
+            </div>
+          </div>
+          <div class="breakdown-container">
+            <h4 class="breakdown-title">Class Standing</h4>
+            <div class="breakdown-bars">
+              <div class="breakdown-item">
+                <div class="breakdown-label">Juniors (2027)</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 45%; background: #bf5700;"></div>
+                </div>
+                <div class="breakdown-percent">45%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Sophomores (2028)</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 35%; background: #3498db;"></div>
+                </div>
+                <div class="breakdown-percent">35%</div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-label">Seniors (2026)</div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill" style="width: 20%; background: #2c3e50;"></div>
+                </div>
+                <div class="breakdown-percent">20%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journey/Events Section -->
+      <div class="events-section">
+        <div class="events-header">
+          <h2 class="events-title">OUR JOURNEY / EVENTS</h2>
+          <p class="events-subtitle">Milestones and upcoming opportunities to engage with our community</p>
         </div>
         
-        <div class="error-message" id="errorMessage">
-          Sorry, there was an error sending your message. Please try again.
+        <div class="events-timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">Spring 2025</span>
+            <span class="timeline-description">BOSSO officially founded</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Fall 2025</span>
+            <span class="timeline-description">Inaugural speaker series launch</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Fall 2026</span>
+            <span class="timeline-description">Sports business consulting case competition</span>
+          </div>
         </div>
-      </form>
+      </div>
+
+      <!-- Gift Levels Section -->
+      <div class="gift-levels-section">
+        <h2 class="gift-levels-title">GIFT LEVELS</h2>
+        
+        <div class="gift-level">
+          <div class="gift-level-header">
+            <h3 class="gift-level-title">HALL OF FAME</h3>
+            <div class="gift-level-price">$2500+</div>
+          </div>
+          <p class="gift-level-description">
+            Position your brand at the forefront of sports analytics innovation. As a Hall of Fame partner, you 
+            will co-lead initiatives that shape the future of data-driven sports. This tier is ideal for 
+            organizations seeking talent pipelines, thought leadership, and high-visibility collaboration.
+          </p>
+          <p class="gift-level-description"><strong>Includes all All-Star and Major League benefits, plus:</strong></p>
+          <ul class="gift-level-benefits">
+            <li>Exclusive co-branding on flagship events like our annual showcase and speaker series</li>
+            <li>Priority access to BOSSO student talent for internships, recruitment, and mentorship</li>
+            <li>Co-designed case competitions, research, or analytics projects aligned with your goals</li>
+            <li>Strategic input into BOSSO's long-term vision and programming as a thought partner</li>
+            <li>Workshop hosting and design tailored to your tech stack, challenges, or vertical</li>
+          </ul>
+        </div>
+
+        <div class="gift-level">
+          <div class="gift-level-header">
+            <h3 class="gift-level-title">ALL-STAR</h3>
+            <div class="gift-level-price">$1,000</div>
+          </div>
+          <p class="gift-level-description">
+            Join us in building immersive experiences that bring industry and academia closer together. This 
+            tier is ideal for companies looking to connect meaningfully with emerging analytics talent.
+          </p>
+          <p class="gift-level-description"><strong>Includes all Major League benefits, plus:</strong></p>
+          <ul class="gift-level-benefits">
+            <li>Exclusive coffee chats with student leaders and top project team members</li>
+            <li>Co-hosting opportunities for skill-building workshops or panels</li>
+            <li>Company site visits that give your team direct access to future hires</li>
+            <li>Spotlight features in BOSSO social media and community update</li>
+          </ul>
+        </div>
+
+        <div class="gift-level">
+          <div class="gift-level-header">
+            <h3 class="gift-level-title">MAJOR LEAGUE</h3>
+            <div class="gift-level-price">$500</div>
+          </div>
+          <p class="gift-level-description">
+            Get direct access to student talent and support our mission to expand analytics education in 
+            sports. This is ideal for organizations seeking campus visibility and early recruiting touchpoints.
+          </p>
+          <p class="gift-level-description"><strong>Benefits include:</strong></p>
+          <ul class="gift-level-benefits">
+            <li>BOSSO resume book featuring all active members and project consultants</li>
+            <li>Guest speaking or project mentorship opportunities throughout the semester</li>
+            <li>Brand exposure through BOSSO newsletters and social media spotlights</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Form Section -->
+      <div class="contact-form-section">
+        <div class="contact-form-header">
+          <h2 class="contact-form-title">Let's Build Together</h2>
+          <p class="contact-form-description">
+            Thank you so much for your interest in BOSSO! Kindly fill out your contact information so we can reach out to you.
+          </p>
+        </div>
+        
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">Your name *</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Company Name *</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone</label>
+              <div class="phone-container">
+                <select class="country-select" name="countryCode">
+                  <option value="+1">🇺🇸</option>
+                  <option value="+44">🇬🇧</option>
+                  <option value="+33">🇫🇷</option>
+                  <option value="+49">🇩🇪</option>
+                  <option value="+86">🇨🇳</option>
+                  <option value="+81">🇯🇵</option>
+                  <option value="+91">🇮🇳</option>
+                </select>
+                <input type="tel" id="phone" name="phone" class="form-input phone-input">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here" required></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Send</span>
+            <div class="loading" id="loading"></div>
+          </button>
+          
+          <div class="success-message" id="successMessage">
+            Thank you for your message! We'll get back to you soon.
+          </div>
+          
+          <div class="error-message" id="errorMessage">
+            Sorry, there was an error sending your message. Please try again.
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
