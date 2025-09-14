@@ -28,7 +28,7 @@
     }
 
     .recruitment-header {
-      text-align: left;
+      text-align: center;
       margin-bottom: 60px;
       max-width: 900px;
       margin-left: auto;
@@ -60,9 +60,9 @@
       margin-bottom: 20px;
     }
 
-    .interest-form-section {
+    .closed-notice-section {
       background: linear-gradient(135deg, #bf5700, #d16600);
-      padding: 40px;
+      padding: 50px 40px;
       border-radius: 20px;
       text-align: center;
       margin: 40px auto 60px auto;
@@ -70,48 +70,36 @@
       max-width: 800px;
     }
 
-    .interest-form-title {
-      font-size: 28px;
+    .closed-notice-title {
+      font-size: 32px;
       font-weight: 700;
       color: white;
-      margin: 0 0 15px 0;
+      margin: 0 0 20px 0;
     }
 
-    .interest-form-description {
-      font-size: 16px;
+    .closed-notice-description {
+      font-size: 18px;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 25px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .interest-form-btn {
-      display: inline-block;
-      background: white;
-      color: #bf5700;
-      padding: 18px 40px;
-      font-size: 18px;
+    .spring-notice {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .spring-notice-text {
+      font-size: 20px;
       font-weight: 600;
-      font-family: 'Red Hat Display', sans-serif;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: white;
+      margin: 0;
     }
 
-    .interest-form-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      background: #f8f8f8;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .requirements-section, .application-section {
+    .calendar-section {
       background: white;
       padding: 50px;
       border-radius: 20px;
@@ -127,105 +115,6 @@
       border-bottom: 3px solid #bf5700;
     }
 
-    .requirements-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .requirement-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 20px;
-      padding: 15px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .requirement-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-    }
-
-    .requirement-icon {
-      width: 24px;
-      height: 24px;
-      background: #bf5700;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 15px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .requirement-icon::after {
-      content: "✓";
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .requirement-text {
-      font-size: 16px;
-      color: #333;
-      line-height: 1.5;
-      flex: 1;
-    }
-
-    .requirement-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    .requirement-description {
-      color: #666;
-    }
-
-    .application-info {
-      text-align: center;
-    }
-
-    .application-text {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .application-btn {
-      display: inline-block;
-      background: #111;
-      color: white;
-      padding: 18px 50px;
-      font-size: 18px;
-      font-weight: 600;
-      font-family: 'Red Hat Display', sans-serif;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      margin-bottom: 30px;
-    }
-
-    .application-btn:hover {
-      background: #333;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .application-note {
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-    }
-
-    .calendar-section {
-      background: white;
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
     .calendar-embed {
       width: 100%;
       height: 600px;
@@ -234,58 +123,62 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin: 40px 0 60px 0;
-    }
-
-    .stat-card {
+    .stay-updated-section {
       background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       text-align: center;
+      margin-bottom: 40px;
     }
 
-    .stat-number {
-      font-size: 36px;
-      font-weight: 800;
+    .stay-updated-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 20px 0;
+    }
+
+    .stay-updated-text {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #bf5700;
+    }
+
+    .contact-info p {
+      margin: 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .contact-info strong {
       color: #bf5700;
-      margin-bottom: 10px;
-    }
-
-    .stat-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     @media (max-width: 1000px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
       .recruitment-title {
         font-size: 48px;
       }
       
-      .requirements-section, .application-section, .calendar-section {
+      .calendar-section, .stay-updated-section {
         padding: 40px 30px;
       }
-      
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+
+      .closed-notice-section {
+        padding: 40px 30px;
+        margin: 30px 20px 50px 20px;
       }
 
-      .interest-form-section {
-        padding: 30px 25px;
-        margin: 30px 20px 50px 20px;
+      .closed-notice-title {
+        font-size: 28px;
       }
     }
 
@@ -298,7 +191,7 @@
         padding: 40px 20px 80px 20px;
       }
       
-      .requirements-section, .application-section, .calendar-section {
+      .calendar-section, .stay-updated-section {
         padding: 30px 20px;
       }
       
@@ -306,18 +199,21 @@
         height: 400px;
       }
 
-      .interest-form-section {
-        padding: 25px 20px;
+      .closed-notice-section {
+        padding: 30px 20px;
         margin: 20px 10px 40px 10px;
       }
 
-      .interest-form-title {
+      .closed-notice-title {
         font-size: 24px;
       }
 
-      .interest-form-btn {
-        padding: 15px 30px;
+      .closed-notice-description {
         font-size: 16px;
+      }
+
+      .spring-notice-text {
+        font-size: 18px;
       }
     }
   </style>
@@ -330,77 +226,25 @@
         <div class="recruitment-subtitle">Join Our Team</div>
         <h1 class="recruitment-title">Shape the Future<br>of Sports Analytics.</h1>
         <p class="recruitment-description">
-          BOSSO is looking for passionate students who want to dive deep into the world of sports analytics. 
-          Join a community of data enthusiasts, statisticians, and sports lovers who are revolutionizing 
-          how we understand and analyze athletic performance.
+          BOSSO is a community of data enthusiasts, statisticians, and sports lovers who are revolutionizing 
+          how we understand and analyze athletic performance. Thank you for your interest in joining our team!
         </p>
       </div>
 
-      <div class="interest-form-section">
-        <h2 class="interest-form-title">Interest Form Fall 2025</h2>
-        <p class="interest-form-description">
-          Interested in joining BOSSO? Start by filling out our interest form! This quick form helps us gauge interest and keep you informed about upcoming recruitment events, info sessions, and application deadlines.
+      <div class="closed-notice-section">
+        <h2 class="closed-notice-title">Fall 2025 Applications Closed</h2>
+        <p class="closed-notice-description">
+          Thank you to everyone who showed interest in joining BOSSO this semester! Our Fall 2025 recruitment period has ended and we are no longer accepting applications.
         </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRB6Rfph1vrUxvNRX_7ALHWnmSSvS7zcs8AwxVcJefDnrAWQ/viewform" target="_blank" class="interest-form-btn">Fill Out Interest Form</a>
-      </div>
-
-      <div class="content-grid">
-        <div class="requirements-section">
-          <h2 class="section-title">Application Requirements</h2>
-          <p style="margin: 0 0 25px 0; font-size: 16px; color: #666; line-height: 1.5;">
-            You must attend <strong>either</strong> an info session or  coffee chat, but we'd love for you to attend as many as you can!
-          </p>
-          <ul class="requirements-list">
-            <li class="requirement-item">
-              <div class="requirement-icon"></div>
-              <div class="requirement-text">
-                <div class="requirement-title">Attend an Info Session</div>
-                <div class="requirement-description">Join one of our information sessions to learn about BOSSO and what we do.</div>
-              </div>
-            </li>
-            <li class="requirement-item">
-              <div class="requirement-icon"></div>
-              <div class="requirement-text">
-                <div class="requirement-title">Coffee Chat</div>
-                <div class="requirement-description">Have a casual conversation with current members during our coffee chats to learn more about the organization.</div>
-              </div>
-            </li>
-          </ul>
-          
-          <div style="margin-top: 30px; padding: 20px; background: #f8f8f8; border-radius: 10px; border-left: 4px solid #bf5700;">
-            <h3 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600; color: #111;">We Also Encourage You To:</h3>
-            <p style="margin: 0; font-size: 16px; color: #555; line-height: 1.5;">
-              <strong>Visit our table</strong> during recruitment events to meet the team and learn more about what we do!
-            </p>
-          </div>
-        </div>
-
-        <div class="application-section">
-          <h2 class="section-title">Ready to Apply?</h2>
-          <div class="application-info">
-            <p class="application-text">
-              Our application process is designed to identify passionate students who are eager to learn 
-              and contribute to cutting-edge sports analytics research. We're looking for diverse 
-              perspectives and fresh ideas.
-            </p>
-            <p class="application-text">
-              The application includes a brief questionnaire about your background, interests, and goals to showcase your analytical thinking.
-            </p>
-            <p class="application-text">
-              Once you've completed the requirements above, you'll be ready to submit your application and take the next step in joining our community of sports analytics enthusiasts.
-            </p>
-            <a href="https://forms.gle/u1UuAYzVEvcFtGQi7" class="application-btn">Apply Now</a>
-            <p class="application-note">
-              Reach out to txsportsanalytics@gmail.com for further questions!<br>
-            </p>
-          </div>
+        <div class="spring-notice">
+          <p class="spring-notice-text">Check back in Spring 2026 for our next recruitment cycle!</p>
         </div>
       </div>
 
       <div class="calendar-section">
         <h2 class="section-title">Upcoming Events</h2>
         <p style="color: #666; margin-bottom: 30px; text-align: center;">
-          Stay updated with our latest meetings, workshops, and networking events. Mark your calendar for opportunities to learn and connect!
+          Stay updated with our latest meetings, workshops, and networking events. Even though recruitment is closed, you're welcome to attend our public events!
         </p>
         
         <iframe 

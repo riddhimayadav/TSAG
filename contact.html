@@ -15,6 +15,7 @@
       overflow-x: hidden;
       font-family: 'Red Hat Display', sans-serif;
       background-color: #f8f8f8;
+      scroll-behavior: smooth;
     }
 
     .rounded-section {
@@ -72,7 +73,29 @@
       color: #666;
       line-height: 1.6;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
+    }
+
+    .quick-action-btn {
+      background: linear-gradient(135deg, #bf5700, #d16600);
+      color: white;
+      padding: 18px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Red Hat Display', sans-serif;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 8px 20px rgba(191, 87, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    .quick-action-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(191, 87, 0, 0.4);
     }
 
     .why-partner-section {
@@ -733,6 +756,7 @@
         <p class="partnerships-description">
           Partner to build the <strong style="color: #bf5700;">future</strong> of technology & business
         </p>
+        <a href="#contact-form" class="quick-action-btn">Get Started Today</a>
       </div>
       
       <!-- Why Partner Section -->
@@ -954,7 +978,7 @@
       </div>
 
       <!-- Contact Form Section -->
-      <div class="contact-form-section">
+      <div class="contact-form-section" id="contact-form">
         <div class="contact-form-header">
           <h2 class="contact-form-title">Let's Build Together</h2>
           <p class="contact-form-description">
