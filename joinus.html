@@ -60,7 +60,7 @@
       margin-bottom: 20px;
     }
 
-    .closed-notice-section {
+    .join-today-section {
       background: linear-gradient(135deg, #bf5700, #d16600);
       padding: 50px 40px;
       border-radius: 20px;
@@ -70,33 +70,52 @@
       max-width: 800px;
     }
 
-    .closed-notice-title {
+    .join-today-title {
       font-size: 32px;
       font-weight: 700;
       color: white;
       margin: 0 0 20px 0;
     }
 
-    .closed-notice-description {
+    .join-today-description {
       font-size: 18px;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 25px;
       line-height: 1.6;
     }
 
-    .spring-notice {
+    .membership-form-notice {
       background: rgba(255, 255, 255, 0.15);
-      padding: 20px;
+      padding: 25px;
       border-radius: 15px;
-      margin-top: 20px;
+      margin-top: 25px;
       border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
-    .spring-notice-text {
-      font-size: 20px;
+    .membership-form-text {
+      font-size: 18px;
       font-weight: 600;
       color: white;
-      margin: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .form-link-button {
+      display: inline-block;
+      background: white;
+      color: #bf5700;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-link-button:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
     }
 
     .calendar-section {
@@ -172,12 +191,12 @@
         padding: 40px 30px;
       }
 
-      .closed-notice-section {
+      .join-today-section {
         padding: 40px 30px;
         margin: 30px 20px 50px 20px;
       }
 
-      .closed-notice-title {
+      .join-today-title {
         font-size: 28px;
       }
     }
@@ -199,21 +218,26 @@
         height: 400px;
       }
 
-      .closed-notice-section {
+      .join-today-section {
         padding: 30px 20px;
         margin: 20px 10px 40px 10px;
       }
 
-      .closed-notice-title {
+      .join-today-title {
         font-size: 24px;
       }
 
-      .closed-notice-description {
+      .join-today-description {
         font-size: 16px;
       }
 
-      .spring-notice-text {
-        font-size: 18px;
+      .membership-form-text {
+        font-size: 16px;
+      }
+
+      .form-link-button {
+        padding: 12px 25px;
+        font-size: 15px;
       }
     }
   </style>
@@ -231,20 +255,21 @@
         </p>
       </div>
 
-      <div class="closed-notice-section">
-        <h2 class="closed-notice-title">Fall 2025 Applications Closed</h2>
-        <p class="closed-notice-description">
-          Thank you to everyone who showed interest in joining BOSSO this semester! Our Fall 2025 recruitment period has ended and we are no longer accepting applications.
+      <div class="join-today-section">
+        <h2 class="join-today-title">Join BOSSO Today!</h2>
+        <p class="join-today-description">
+          We're excited to welcome new members to our community! Ready to dive into data-driven sports analysis and connect with like-minded individuals?
         </p>
-        <div class="spring-notice">
-          <p class="spring-notice-text">Check back in Spring 2026 for our next recruitment cycle!</p>
+        <div class="membership-form-notice">
+          <p class="membership-form-text">To confirm your membership, please submit our Member Profile Form:</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScK4GOrnyz_Gh5L7wo2BV-BfvQPfEdbSFPVm4RRKluXKalzvA/viewform" target="_blank" class="form-link-button">Complete Member Profile Form</a>
         </div>
       </div>
 
       <div class="calendar-section">
         <h2 class="section-title">Upcoming Events</h2>
         <p style="color: #666; margin-bottom: 30px; text-align: center;">
-          Stay updated with our latest meetings, workshops, and networking events. Even though recruitment is closed, you're welcome to attend our public events!
+          Stay updated with our latest meetings, workshops, and networking events. Join us to learn, collaborate, and grow your sports analytics skills!
         </p>
         
         <iframe 
