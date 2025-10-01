@@ -6,7 +6,7 @@ function loadFooter() {
             <div style="max-width: 900px; margin: auto;">
                 <h1 style="font-size: 2.5rem; font-weight: 600;">Ready to get started?</h1>
                 <p style="font-size: 1.2rem; margin-top: 20px;">
-                    Interested in joining the founding class of the premier sports business group at UT? Follow us on Instagram (<b>@TXBOSSO</b>) to stay up to date!
+                    Interested in joining the founding class of the premier sports business group at UT? Follow us on Instagram (<b>@TXBosso</b>) to stay up to date!
                 </p>
                 <button class="button-redhat" style="margin-top: 30px; background: white; color: black; padding: 12px 25px; font-size: 1rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                     Join Now →
