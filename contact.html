@@ -32,7 +32,7 @@
 
     .partnerships-container {
       background-color: #f8f8f8;
-      padding: 80px 40px 40px 40px;
+      padding: 40px 40px 20px 40px;
       min-height: 80vh;
     }
 
@@ -44,7 +44,7 @@
 
     .partnerships-header {
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 40px;
     }
 
     .partnerships-subtitle {
@@ -101,9 +101,9 @@
     .why-partner-section {
       background: linear-gradient(135deg, #bf5700 0%, #d16600 100%);
       color: white;
-      padding: 80px 60px;
+      padding: 50px 60px;
       border-radius: 25px;
-      margin: 60px 0;
+      margin: 40px 0;
       position: relative;
       overflow: hidden;
       box-shadow: 0 25px 50px rgba(191, 87, 0, 0.2);
@@ -165,9 +165,9 @@
 
     .impact-section {
       background: white;
-      padding: 80px 60px;
+      padding: 50px 60px;
       border-radius: 25px;
-      margin: 60px 0;
+      margin: 40px 0;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
@@ -242,6 +242,9 @@
       padding: 40px;
       border-radius: 20px;
       border: 1px solid rgba(191, 87, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .breakdown-title {
@@ -252,55 +255,18 @@
       text-align: center;
     }
 
-    .breakdown-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .breakdown-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .breakdown-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: #333;
-      min-width: 120px;
-      text-align: left;
-    }
-
-    .breakdown-bar {
-      flex: 1;
-      height: 12px;
-      background: #f0f0f0;
-      border-radius: 6px;
-      overflow: hidden;
+    .pie-chart-container {
+      width: 100%;
+      max-width: 350px;
+      height: 350px;
       position: relative;
-    }
-
-    .breakdown-fill {
-      height: 100%;
-      border-radius: 6px;
-      transition: width 0.8s ease;
-      position: relative;
-    }
-
-    .breakdown-percent {
-      font-size: 14px;
-      font-weight: 700;
-      color: #333;
-      min-width: 35px;
-      text-align: right;
     }
 
     .events-section {
       background: white;
-      padding: 80px 60px;
+      padding: 50px 60px;
       border-radius: 25px;
-      margin: 60px 0;
+      margin: 40px 0;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
@@ -369,9 +335,9 @@
 
     .gift-levels-section {
       background: white;
-      padding: 80px 60px;
+      padding: 50px 60px;
       border-radius: 25px;
-      margin: 60px 0;
+      margin: 40px 0;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
@@ -465,9 +431,9 @@
 
     .contact-form-section {
       background: white;
-      padding: 80px 60px;
+      padding: 50px 60px;
       border-radius: 25px;
-      margin: 60px 0 120px 0;
+      margin: 40px 0 80px 0;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
@@ -669,7 +635,7 @@
       }
       
       .why-partner-section, .impact-section, .events-section, .gift-levels-section, .contact-form-section {
-        padding: 60px 40px;
+        padding: 40px 40px;
       }
 
       .gift-level-header {
@@ -699,20 +665,9 @@
         margin-left: 0;
       }
 
-      .breakdown-item {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-
-      .breakdown-label {
-        min-width: auto;
-        text-align: center;
-      }
-
-      .breakdown-percent {
-        text-align: center;
-        min-width: auto;
+      .pie-chart-container {
+        max-width: 300px;
+        height: 300px;
       }
     }
 
@@ -722,11 +677,11 @@
       }
       
       .partnerships-container {
-        padding: 40px 20px 20px 20px;
+        padding: 30px 20px 20px 20px;
       }
       
       .why-partner-section, .impact-section, .events-section, .gift-levels-section, .contact-form-section {
-        padding: 40px 30px;
+        padding: 30px 30px;
       }
 
       .section-title, .impact-title, .events-title, .gift-levels-title, .contact-form-title {
@@ -799,96 +754,35 @@
         <!-- Stats Grid -->
         <div class="stats-grid">
           <div class="stat-card">
-            <div class="stat-number">200+</div>
+            <div class="stat-number">130</div>
             <div class="stat-label">Total Members</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">25+</div>
-            <div class="stat-label">Majors/Minors</div>
+            <div class="stat-number">35+</div>
+            <div class="stat-label">Unique Majors</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">75%</div>
-            <div class="stat-label">Technical Background</div>
+            <div class="stat-number">55%</div>
+            <div class="stat-label">Have Minor/Certificate</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">85%</div>
-            <div class="stat-label">Job Placement Rate</div>
+            <div class="stat-number">8.5%</div>
+            <div class="stat-label">Analytics & Sports Minor</div>
           </div>
         </div>
 
         <h3 style="font-size: 32px; font-weight: 700; color: #111; text-align: center; margin: 60px 0 40px 0;">MEMBER BREAKDOWN</h3>
         <div class="demographics-grid">
           <div class="breakdown-container">
-            <h4 class="breakdown-title">Academic Background</h4>
-            <div class="breakdown-bars">
-              <div class="breakdown-item">
-                <div class="breakdown-label">Business Analytics</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 24%; background: #bf5700;"></div>
-                </div>
-                <div class="breakdown-percent">24%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Finance</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 20%; background: #3498db;"></div>
-                </div>
-                <div class="breakdown-percent">20%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Economics</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 18%; background: #2c3e50;"></div>
-                </div>
-                <div class="breakdown-percent">18%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Communications</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 16%; background: #e74c3c;"></div>
-                </div>
-                <div class="breakdown-percent">16%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Sports Management</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 12%; background: #9b59b6;"></div>
-                </div>
-                <div class="breakdown-percent">12%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Other</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 10%; background: #34495e;"></div>
-                </div>
-                <div class="breakdown-percent">10%</div>
-              </div>
+            <h4 class="breakdown-title">Academic Background (Top Majors)</h4>
+            <div class="pie-chart-container">
+              <canvas id="majorsPieChart"></canvas>
             </div>
           </div>
           <div class="breakdown-container">
             <h4 class="breakdown-title">Class Standing</h4>
-            <div class="breakdown-bars">
-              <div class="breakdown-item">
-                <div class="breakdown-label">Juniors (2027)</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 45%; background: #bf5700;"></div>
-                </div>
-                <div class="breakdown-percent">45%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Sophomores (2028)</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 35%; background: #3498db;"></div>
-                </div>
-                <div class="breakdown-percent">35%</div>
-              </div>
-              <div class="breakdown-item">
-                <div class="breakdown-label">Seniors (2026)</div>
-                <div class="breakdown-bar">
-                  <div class="breakdown-fill" style="width: 20%; background: #2c3e50;"></div>
-                </div>
-                <div class="breakdown-percent">20%</div>
-              </div>
+            <div class="pie-chart-container">
+              <canvas id="classStandingPieChart"></canvas>
             </div>
           </div>
         </div>
@@ -1043,6 +937,108 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script>
+  // Initialize pie charts
+  window.addEventListener('load', function() {
+    // Majors Pie Chart
+    const majorsCtx = document.getElementById('majorsPieChart');
+    if (majorsCtx) {
+      new Chart(majorsCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Finance', 'Economics', 'Statistics & Data Science', 'Physical Culture & Sports', 'Sport Management', 'Other (30+ Majors)'],
+          datasets: [{
+            data: [19, 13, 8.5, 7, 5.4, 47],
+            backgroundColor: [
+              '#bf5700',
+              '#3498db',
+              '#2c3e50',
+              '#e74c3c',
+              '#9b59b6',
+              '#34495e'
+            ],
+            borderWidth: 2,
+            borderColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                padding: 15,
+                font: {
+                  size: 12,
+                  family: "'Red Hat Display', sans-serif"
+                },
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' + context.parsed + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Class Standing Pie Chart
+    const classCtx = document.getElementById('classStandingPieChart');
+    if (classCtx) {
+      new Chart(classCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Freshmen (2029)', 'Sophomores (2028)', 'Juniors (2027)', 'Seniors (2026)'],
+          datasets: [{
+            data: [38, 32, 23, 8],
+            backgroundColor: [
+              '#bf5700',
+              '#3498db',
+              '#2c3e50',
+              '#e74c3c'
+            ],
+            borderWidth: 2,
+            borderColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                padding: 15,
+                font: {
+                  size: 12,
+                  family: "'Red Hat Display', sans-serif"
+                },
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' + context.parsed + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+  });
+  </script>
 
   <script>
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyk01nYUzFeBc3E7FuptAruUBcze2rQIjNeikl-MxVbMwWYX42JM2XnGNc5s6VE37YJ/exec';
