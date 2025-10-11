@@ -78,7 +78,7 @@
 
     .footer-column p:hover,
     .footer-link:hover {
-      color: #B45F06;
+      color: #bf5700;
       cursor: pointer;
     }
 
@@ -110,7 +110,7 @@
     }
 
     .orange-section {
-      background-color: #B45F06;
+      background-color: #bf5700;
       color: black;
       padding: 60px 20px 100px 20px;
       font-family: 'Red Hat Display', sans-serif;
@@ -160,7 +160,8 @@
       }
       
       .project-card {
-        width: 280px;
+        width: 100%;
+        max-width: 350px;
       }
     }
 
@@ -187,32 +188,33 @@
 
     .project-card {
       width: 300px;
-      background-color: #f5f5f5;
-      padding: 15px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      padding: 30px;
+      border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
       cursor: pointer;
+      border-left: 4px solid #bf5700;
     }
 
     .project-card:hover {
       transform: translateY(-10px);
-    }
-
-    .project-card img {
-      width: 100%;
-      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(191, 87, 0, 0.3);
+      border-left-width: 6px;
     }
 
     .project-card h3 {
-      margin: 15px 0 10px;
+      margin: 0 0 15px;
       font-size: 22px;
       font-weight: 700;
+      color: #0a0a0a;
     }
 
     .project-card p {
       font-size: 16px;
       color: #555;
+      line-height: 1.6;
+      margin: 0;
     }
 
     .category-buttons {
@@ -240,7 +242,7 @@
 
     .category-button:hover,
     .category-button.active {
-      background-color: #B45F06;
+      background-color: #bf5700;
     }
 
     .hidden {
@@ -273,25 +275,34 @@
 
     <!-- Project Cards Container -->
     <div class="projects-container" id="projects-list">
-      <!-- Project 1 -->
-      <div class="project-card research" onclick="window.location.href='project1.html'">
-        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 1">
-        <h3>NBA Player Efficiency Analysis</h3>
-        <p>A comprehensive study examining advanced metrics and performance indicators to identify undervalued players in the current NBA landscape.</p>
+      <!-- Project 1: Sporting Real Estate Investment -->
+      <div class="project-card consulting" onclick="window.location.href='project1.html'">
+        <h3>Sporting Real Estate Investment Viability</h3>
+        <p>Data-driven framework to identify the most viable sporting real estate assets for renovation and adjacent land development.</p>
       </div>
       
-      <!-- Project 2 -->
-      <div class="project-card research" onclick="window.location.href='project2.html'">
-        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 2">
-        <h3>MLS Tactical Formation Analysis</h3>
-        <p>Deep dive into Major League Soccer tactical trends, analyzing formation effectiveness and strategic evolution across multiple seasons.</p>
+      <!-- Project 2: Athletes Unlimited Softball -->
+      <div class="project-card consulting" onclick="window.location.href='project2.html'">
+        <h3>Athletes Unlimited Fan Engagement</h3>
+        <p>Comprehensive fan engagement and retention strategy to help Athletes Unlimited Softball grow its audience heading into season two.</p>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Project 3: First Touch Soccer Academy -->
       <div class="project-card consulting" onclick="window.location.href='project3.html'">
-        <img src="https://www.shutterstock.com/shutterstock/videos/1109881183/thumb/5.jpg?ip=x480" alt="Project 3">
-        <h3>College Football Recruiting Analytics</h3>
-        <p>Comprehensive analysis of recruiting patterns, player development trajectories, and success prediction models for NCAA Division I football programs.</p>
+        <h3>First Touch Soccer Academy</h3>
+        <p>Strategic marketing and comprehensive website optimization to transform a local youth soccer program into a digitally-driven powerhouse.</p>
+      </div>
+
+      <!-- Project 4: MLB Draft Prediction -->
+      <div class="project-card research" onclick="window.location.href='project4.html'">
+        <h3>MLB Draft Signing Bonus Prediction</h3>
+        <p>Predictive model using college performance metrics to forecast MLB Draft signing bonuses for Texas Baseball recruiting.</p>
+      </div>
+
+      <!-- Project 5: NFL Psychological Prediction -->
+      <div class="project-card research" onclick="window.location.href='project5.html'">
+        <h3>Predicting NFL Success Through Psychology</h3>
+        <p>Using NLP and machine learning to analyze player interviews and forecast NFL success based on psychological and behavioral traits.</p>
       </div>
 
       <!-- No Projects Message -->
