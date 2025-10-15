@@ -1,16 +1,16 @@
 // footer-component.js
 function loadFooter() {
     const footerHTML = `
-        <!-- Orange Call to Action Section -->
-        <section class="orange-section rounded-section">
-            <div style="max-width: 900px; margin: auto;">
-                <h1 style="font-size: 2.5rem; font-weight: 600;">Ready to get started?</h1>
-                <p style="font-size: 1.2rem; margin-top: 20px;">
-                    Interested in joining the founding class of the premier sports business group at UT? Follow us on Instagram (<b>@TXBosso</b>) to stay up to date!
+        <!-- Newsletter Section -->
+        <section class="newsletter-section rounded-section">
+            <div style="max-width: 900px; margin: auto; text-align: center;">
+                <h1 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 20px;">Stay in the Loop</h1>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
+                    Subscribe to our newsletter for updates on events, opportunities, and insights from the world of sports analytics.
                 </p>
-                <button class="button-redhat" style="margin-top: 30px; background: white; color: black; padding: 12px 25px; font-size: 1rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                    Join Now →
-                </button>
+                <a href="https://docs.google.com/forms/d/1jMR-KpWR46873mDVbxaI9najP-QKDfgtN4dNEGWJAOg/viewform" target="_blank" class="button-redhat" style="display: inline-block; background: white; color: #bf5700; padding: 15px 40px; font-size: 1.1rem; font-weight: 600; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    Subscribe to Newsletter →
+                </a>
             </div>
         </section>
 
@@ -32,6 +32,7 @@ function loadFooter() {
                         <a href="https://utexas.campuslabs.com/engage/organization/txsportsanalytics" target="_blank" class="footer-link">HornsLink</a>
                         <a href="https://linktr.ee/txbosso" target="_blank" class="footer-link">LinkTree</a>
                         <a href="https://www.instagram.com/txbosso/" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://www.linkedin.com/company/txbosso/" target="_blank" class="footer-link">LinkedIn</a>
                     </div>
                     <div class="footer-column">
                         <p style="font-weight: 600;">CONTACT</p>
@@ -54,9 +55,9 @@ function loadFooter() {
                 display: block;
             }
 
-            .orange-section {
-                background-color: #bf5700;
-                color: black;
+            .newsletter-section {
+                background: linear-gradient(135deg, #bf5700 0%, #d66a00 100%);
+                color: white;
                 padding: 60px 20px 100px 20px;
                 font-family: 'Red Hat Display', sans-serif;
                 width: 100vw;
@@ -68,6 +69,12 @@ function loadFooter() {
                 border-top-right-radius: 30px;
                 box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
                 box-sizing: border-box;
+            }
+
+            .newsletter-section a:hover {
+                background: #f0f0f0 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             }
 
             .footer-container {
@@ -135,18 +142,19 @@ function loadFooter() {
                 .footer-grid {
                     grid-template-columns: 1fr;
                 }
+                
+                .newsletter-section h1 {
+                    font-size: 2rem !important;
+                }
+                
+                .newsletter-section p {
+                    font-size: 1rem !important;
+                }
             }
         </style>
     `;
     
     document.body.insertAdjacentHTML('beforeend', footerHTML);
-    
-    const contactButton = document.querySelector('.orange-section button');
-    if (contactButton) {
-        contactButton.addEventListener('click', function() {
-            window.location.href = 'joinus.html';
-        });
-    }
 }
 
 // Load footer when DOM is ready
