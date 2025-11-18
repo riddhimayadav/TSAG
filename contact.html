@@ -235,6 +235,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       margin: 60px 0;
+      align-items: flex-start;
     }
 
     .breakdown-container {
@@ -257,16 +258,18 @@
 
     .pie-chart-container {
       width: 100%;
-      max-width: 400px;
-      height: 400px;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
     }
     
     .pie-chart-container canvas {
-      max-height: 400px;
+      width: 100% !important;
+      height: 100% !important;
     }
 
     .events-section {
@@ -674,7 +677,7 @@
 
       .pie-chart-container {
         max-width: 320px;
-        height: 320px;
+        width: 100%;
       }
     }
 
@@ -700,8 +703,17 @@
         gap: 20px;
       }
 
+      .demographics-grid {
+        gap: 30px;
+      }
+
       .breakdown-container {
         padding: 30px 20px;
+      }
+
+      .pie-chart-container {
+        max-width: 260px;
+        width: 100%;
       }
     }
   </style>
@@ -952,7 +964,8 @@
     // Common chart options for consistent sizing
     const commonOptions = {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: 1,
       plugins: {
         legend: {
           position: 'bottom',
