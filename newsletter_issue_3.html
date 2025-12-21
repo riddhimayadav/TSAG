@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>BOSSO Newsletter Issue #3</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #bf5700;
+      --canvas: #f7f7f5;
+      --surface: #ffffff;
+      --text: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.65);
+      --border: rgba(10, 10, 10, 0.08);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+      background: var(--canvas);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1100px;
+      padding: 140px 22px 120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 50px;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
+      display: grid;
+      gap: 18px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 4vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .issue-date {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(191, 87, 0, 0.1);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      border-color: rgba(191, 87, 0, 0.5);
+      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .body {
+      margin-top: 32px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 120px 16px 110px;
+      }
+
+      .hero {
+        padding: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <p class="eyebrow">Issue #3</p>
+      <h1>Mark Pannes lecture + AUSL project launch</h1>
+      <p class="issue-date">Nov 17, 2025</p>
+      <p class="lead">Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
+      <div class="pill-row">
+        <span class="pill">Speaker</span>
+        <span class="pill">Projects</span>
+        <span class="pill">Spotlight</span>
+      </div>
+      <a class="cta" href="newsletter.html">Back to archive</a>
+    </section>
+
+    <div class="body">
+      <article class="card">
+        <h2>Past Events</h2>
+        <p>This week, BOSSO hosted another special speaker who came out to speak on what it takes to build a sports business career, among many other things: Mark Pannes. Mark began his career within the global sports industry, working with the Knicks, AC Roma, Whitecaps, and many other organizations within the NBA and MLS. Currently the managing partner at Inner Market Media and renowned as a global sports media executive, Mark gave insights on the evolution of commercial strategy within pro sports, how teams and leagues drive growth in a rapidly growing market, and the current state of the overall sports media landscape.</p>
+      </article>
+
+      <article class="card">
+        <h2>AUSL Project</h2>
+        <p>In addition, BOSSO has recently launched a fan engagement project in partnership with Athletes Unlimited Softball League (AUSL). In this project, BOSSO is aiming to grow AUSL’s fan engagement by analyzing digital fan behavior, sports consumption trends, and live-game experiences to hone in on strategies that will expand reach and fan retention. With AUSL’s promising brand identity (only pro softball league; ESPN recognized) and the rising interest in women’s softball, the advancement of this project will drive brand new avenues and merchandise improvements within AUSL’s marketing structure. By doing so, unique opportunities such as further channels to feed AUSL’s social media, content differentiation, community engagement, and pushing one of the first big leagues in women’s softball will soon be capitalized on.</p>
+      </article>
+
+      <article class="card">
+        <h2>Member Spotlight</h2>
+        <p>For our next membership spotlight, meet Hudson Harp from Waco, Texas. Hudson is a freshman Communication and Leadership major. Despite being from Texas, Hudson’s favorite sports teams include the Atlanta Falcons, Braves, and Liverpool FC. Hudson is currently a general member working on the football project, focusing on statistical answers to questions about the sport. He is looking forward to networking and learning more from those in professional roles. Hudson’s favorite memory of BOSSO thus far was attending the Business of Sports Summit, where he got to meet many talented people and network. Hudson’s hottest take is that no team should ever go for it on 4th down unless it's absolutely necessary. He believes that being aggressive can be fun when it works out, but ultimately proves more detrimental in the long run.</p>
+      </article>
+
+      <article class="card">
+        <h2>Around UT</h2>
+        <p><strong>Texas Faces Harsh Reality in Blowout Loss vs Georgia:</strong> In an SEC clash between two top-10 teams, Georgia defeated Texas for the third straight year, potentially ending the Longhorns’ playoff hopes.</p>
+        <p><strong>Texas Outlasts Auburn in Electric Away Victory:</strong> Torrey Stafford’s career-high 32 kills lifted the Longhorns to a five-set classic, securing their 20th win of the season.</p>
+        <p><strong>Texas Stays Hot, Rolling Past FDU and Kansas City:</strong> UT’s men’s basketball team stayed perfect at home, moving to 3–0 after blowout wins over FDU and Kansas City that showed improved ball movement and growing depth.</p>
+        <p><strong>Longhorns Start 3–0, Showing Depth and Dominance Early:</strong> Looking to make another deep March Madness run, Texas Women’s Basketball cruised to three dominant victories, winning by an average of 54 points.</p>
+        <p><strong>Texas Takes Second Place at Texas Diving Invitational:</strong> After the three-day invitational, Texas men’s swimming secured multiple individual top finishes, including a seventh-place showing from Jacob Jones, to earn second place overall.</p>
+        <p><strong>Texas Women’s Sweeps the Home Diving Invitational:</strong> Not only did Texas claim the overall title, but the women’s team also captured their crown, highlighted by Sarah Carruthers’ second-place finish in the women’s platform.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

@@ -24,6 +24,7 @@ function loadFooter() {
                         <a href="index.html" class="footer-link">Home</a>
                         <a href="about.html" class="footer-link">About</a>
                         <a href="projects.html" class="footer-link">Projects</a>
+                        <a href="newsletter.html" class="footer-link">Media Hub</a>
                         <a href="joinus.html" class="footer-link">Join Us</a>
                         <a href="contact.html" class="footer-link">Sponsor Us</a>
                     </div>
@@ -36,7 +37,7 @@ function loadFooter() {
                     </div>
                     <div class="footer-column">
                         <p style="font-weight: 600;">CONTACT</p>
-                        <p>TXSportsAnalytics@Gmail.com</p>
+                        <p>external@txbosso.com</p>
                     </div>
                 </div>
             </div>

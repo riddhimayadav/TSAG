@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>BOSSO Newsletter Issue #1</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #bf5700;
+      --canvas: #f7f7f5;
+      --surface: #ffffff;
+      --text: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.65);
+      --border: rgba(10, 10, 10, 0.08);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+      background: var(--canvas);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1100px;
+      padding: 140px 22px 120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 50px;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
+      display: grid;
+      gap: 18px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 4vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .issue-date {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(191, 87, 0, 0.1);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      border-color: rgba(191, 87, 0, 0.5);
+      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .body {
+      margin-top: 32px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 120px 16px 110px;
+      }
+
+      .hero {
+        padding: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <p class="eyebrow">Issue #1</p>
+      <h1>Kickoff issue + Ashish Basu spotlight</h1>
+      <p class="issue-date">Oct 20, 2025</p>
+      <p class="lead">Launch slate of events, Concorde stadium project, Ashish Q&amp;A, and early UT athletics pulse.</p>
+      <div class="pill-row">
+        <span class="pill">Events</span>
+        <span class="pill">Consulting</span>
+        <span class="pill">Spotlight</span>
+      </div>
+      <a class="cta" href="newsletter.html">Back to archive</a>
+    </section>
+
+    <div class="body">
+      <article class="card">
+        <h2>BOSSO News</h2>
+        <p>On October 17th there was the Business of Sports Summit, featuring an impressive lineup of speakers from the LA Sparks, FOX Sports, Apple, and Yahoo Sports. Attendees also heard from a number of high-profile guests, including Chris Bosh, Adrian Wojnarowski (“Woj”), Chris Ogden, Brian Wright, Austin Brown, and Pablo Torre. Each shared valuable insights about their careers, experiences in the sports industry, and perspectives on the future of sports business. The event offered students a unique opportunity to learn directly from some of the most influential voices shaping today’s sports landscape.</p>
+        <p>In the last two weeks, BOSSO has also had guest speakers come out and give talks on their background in working within sports alongside the future of sports. Guests included Connor Hixon, Sasha Murray, Komel Rady, Ben Patterson, and Austin Murphy. Connor Hixon is the video coordinator for the Texas Women’s Basketball Team, having studied math and sports media during his time on the Forty Acres. He also began his career as the Men’s Basketball Student Manager. BOSSO’s other four speakers were representatives of the Austin FC. Sasha Murray is the senior director of sales and service and has previously worked at the San Antonio Spurs, Atlanta Braves, and the Memphis Grizzlies. Komel Rady is the associate general counsel and a graduate of UT Austin and Rice (MBA). He worked in judiciary law for nearly a decade before making his mark in sports law. Ben Patterson is the events coordinator and also a graduate of UT with a major in sports management. He worked for Texas Athletics before heading into his role at Austin FC. Finally, Austin Murphy is the ticket operations coordinator and a graduate of University of Arkansas with a BS/MS in Sports Management. He worked in sports entertainment and Arkansas’ athletic department before heading to Austin FC.</p>
+      </article>
+
+      <article class="card">
+        <h2>Consulting Project</h2>
+        <p>BOSSO’s ongoing project includes a stadium renovation search in Western Europe in partnership with Concorde Sports Partners. This project is using past stadium performance data alongside other indicators to rank development opportunities, and this is done through analyzing over 100 stadiums and then utilizing a statistical scoring model and market analytics as part of the greater investment process. This project is especially promising as the global sports infrastructure market is valued at roughly $270B currently and there is over $60B of opportunity in Europe. Furthermore, it is beneficial as it helps eliminate capital burden for upgrades and drives economic revitalization. BOSSO’s overarching role in this project is to assist in financing stadium upgrades in exchange for long-term leaseholds adjacent to underutilized land. Through this, the mission is to strengthen Concorde’s decision-making and research capabilities through analytics.</p>
+      </article>
+
+      <article class="card">
+        <h2>Member Spotlight</h2>
+        <p>Our member spotlight for this edition is our very own Ashish Basu, BOSSO's President! Our analyst, Landon Chen, sat down with Ashish to ask about his influence in BOSSO and where our organization will go next. Read below to learn more.</p>
+        <p><strong>Landon:</strong> First, could you introduce yourself?</p>
+        <p><strong>Ashish:</strong> My name is Ashish Basu, and I am a third-year student at The University of Texas at Austin pursuing a double major in Business Analytics and Psychology, along with minors in Statistics and Data Science (SDS) and Healthcare Reform and Innovation (HCRI). I am from Naperville, Illinois, and a big Chicago sports fan, although my favorite sports are actually soccer (Liverpool FC), Formula 1 (George Russell / Williams Racing), and tennis (Rafael Nadal, Andy Murray, Emma Raducanu). A few fun facts about me are that I started at UT as an Architecture major, my family has a miniature schnauzer, and I eat ice cream twice a day every day!</p>
+        <p><strong>Landon:</strong> What is your role at BOSSO? How has your role evolved as the organization has grown and have there been any struggles?</p>
+        <p><strong>Ashish:</strong> I am the Founder and President of the Texas Business of Sports Student Organization (BOSSO). In terms of my responsibilities and day-to-day tasks, I like to think that I have the easiest role within the organization. I am fortunate to have the support of an extremely talented and diverse group of officers, project managers, analysts, and general members. My daily work primarily involves providing support wherever I am needed and helping everyone else perform at their best. That said, my overarching responsibility is to oversee the long-term vision and growth of BOSSO.</p>
+        <p><strong>Ashish:</strong> Although we are only halfway through the Fall 2025 semester, I am already planning and looking ahead to Spring 2026, Fall 2026, and beyond across all of our pillars—Consulting, Research, Education, and Media—to ensure the organization’s sustainability and its financial, technical, and operational health.</p>
+        <p><strong>Ashish:</strong> One of the things I really love about my role is the opportunity to meet so many incredible people and build lasting connections. Even though I am already more than halfway through college, it has been amazing to still meet like-minded individuals and form friendships that feel just as meaningful as those I have had since my first year. It is a reminder that there is always room to grow, both professionally and personally, and that is something I really cherish about being in this position. It is also easy to make connections when we already share a common passion for either sports or business. That mutual interest acts as a natural icebreaker, which makes building relationships feel much more organic and rewarding.</p>
+        <p><strong>Ashish:</strong> As for struggles, one challenge has definitely been coming from the ground up—starting an organization from scratch. There has been a lot of trial and error, and it has taken a lot of time and effort to get BOSSO to where it is now. But, seeing how far we have come and knowing that the hard work is paying off makes it all worth it.</p>
+        <p><strong>Landon:</strong> Bosso was just founded; talk to me more about the origins of Bosso and how it came to be.</p>
+        <p><strong>Ashish:</strong> The next few semesters will be crucial in sustaining BOSSO's progress and ensuring our consistent growth. A few key events and milestones I am looking forward to are this week's Business of Sports Summit (BOSS), our upcoming member presentations to see what everyone has learned and taken an interest in from our workshops, the 2026 recruiting cycles, and the establishment of our unofficial Social/Philanthropy pillar (coming soon)!</p>
+        <p><strong>Ashish:</strong> BOSS is a huge opportunity for us this semester because it is our first time officially being a part of the department that hosts the event, and it represents a major chance to attract not only potential new members but also corporate sponsors, faculty, and professional interest.</p>
+        <p><strong>Ashish:</strong> Our upcoming member presentations are also something I am excited about, as they allow us to see how members have grown throughout the semester and which areas of the sports industry have sparked their curiosity.</p>
+        <p><strong>Ashish:</strong> The 2026 recruiting cycles will be another major milestone, as we aim to refine our recruitment process and continue bringing in driven, talented students who can help BOSSO reach new heights.</p>
+        <p><strong>Ashish:</strong> Finally, the launch of our unofficial Social/Philanthropy pillar will be an important step in building a stronger sense of community within BOSSO while also giving back to the UT and Austin communities.</p>
+        <p><strong>Landon:</strong> Was there a moment you remember where you fell in love with sports?</p>
+        <p><strong>Ashish:</strong> Sports have always been a huge part of my life. I have played several sports since I was a child—mainly soccer, but I also dabbled in swimming, tennis, and gymnastics—and I have been watching sports for as long as I can remember. Since retiring from competitive soccer after high school, I have also become addicted to pickleball.</p>
+        <p><strong>Ashish:</strong> My favorite sports memory happened over winter break when I visited Anfield, the home stadium of my favorite soccer team, Liverpool FC. I watched them win a match, and the atmosphere was electric.</p>
+        <p><strong>Landon:</strong> Do you have any hot sports takes?</p>
+        <p><strong>Ashish:</strong> George Russell is a better driver than Lando Norris and will prove it by winning the World Drivers’ Championship in 2026. Russell’s consistency under pressure, his ability to outperform teammates in identical machinery (including taking the number one driver title from Lewis Hamilton, the GOAT, before he left Mercedes for Ferrari), and his elite technical feedback make him a complete driver. While Norris is exciting and aggressive, George’s patience, racecraft, and strategic thinking allow him to maximize points over an entire season. With Mercedes expected to be championship-contending in 2026, Russell has the perfect combination of talent, experience, and machinery to claim his first title.</p>
+        <p><strong>Landon:</strong> Finally, is there any obscure piece of sports trivia you know that you think 90% of BOSSO doesn't?</p>
+        <p><strong>Ashish:</strong> I can name every player from the entire 25-man squad of all 20 English Premier League soccer teams!</p>
+      </article>
+
+      <article class="card">
+        <h2>Around UT</h2>
+        <p><strong>Texas Longhorns football:</strong> The Texas Longhorns football team has had a challenging start to the season, sitting at 5–2. After suffering tough road losses to Florida and Ohio State, the Longhorns bounced back with their first road win against Kentucky and secured a statement victory in the Red River Rivalry — their second straight win over Oklahoma.</p>
+        <p><strong>UT women’s soccer:</strong> Meanwhile, the UT women’s soccer team is looking to turn things around after a difficult 3–11–1 start. They aim to snap a four-game losing streak and earn their second conference win when they face Oklahoma.</p>
+        <p><strong>Women’s volleyball:</strong> The bright spot for Texas athletics this fall has been the women’s volleyball team, which remains dominant. Ranked No. 1 in the nation, the Longhorns are 15–0 overall and 7–0 in conference play, with nine ranked victories — including five against top-10 opponents.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

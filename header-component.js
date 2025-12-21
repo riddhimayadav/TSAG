@@ -23,6 +23,7 @@ function loadHeader() {
                 <a href="index.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Home</a>
                 <a href="about.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">About</a>
                 <a href="projects.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Projects</a>
+                <a href="newsletter.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Media Hub</a>
                 <a href="joinus.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Join Us</a>
                 <a href="contact.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; display: block; text-align: center;">Sponsor Us</a>
             </nav>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>BOSSO Newsletter Issue #4</title>
+  <script src="header-component.js"></script>
+  <script src="footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #bf5700;
+      --canvas: #f7f7f5;
+      --surface: #ffffff;
+      --text: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.65);
+      --border: rgba(10, 10, 10, 0.08);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+      background: var(--canvas);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1100px;
+      padding: 140px 22px 120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 50px;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
+      display: grid;
+      gap: 18px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 4vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .issue-date {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(191, 87, 0, 0.1);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      border-color: rgba(191, 87, 0, 0.5);
+      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .body {
+      margin-top: 32px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 120px 16px 110px;
+      }
+
+      .hero {
+        padding: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <p class="eyebrow">Issue #4</p>
+      <h1>Recruitment season + podcast announcement</h1>
+      <p class="issue-date">Dec 8, 2025</p>
+      <p class="lead">Podcast debut, BOSS Leaders lecture, Texas Baseball project, Lucia spotlight, and UT sports updates.</p>
+      <div class="pill-row">
+        <span class="pill">Podcast</span>
+        <span class="pill">Projects</span>
+        <span class="pill">Community</span>
+      </div>
+      <a class="cta" href="newsletter.html">Back to archive</a>
+    </section>
+
+    <div class="body">
+      <article class="card">
+        <h2>Past Events</h2>
+        <p>On November 17th, we hosted Patrick Ryan as our BOSS Leaders Lecture Speaker. Patrick is the Co-Founder and Managing Director of Eventellect and a Board Member at UT’s Business of Sports (BOSI) Institute. He is also a leader in sports revenue and ticketing strategy, previously having spoken at the MIT Sloan Sports Analytics Conference and the Sports Business Journal (SBJ) Ticketing Symposium.</p>
+      </article>
+
+      <article class="card">
+        <h2>Project Update</h2>
+        <p>Additionally, BOSSO celebrates the culmination of a Texas Baseball research project. This project was completed by Dasha Churmasov, Tara Felux, Sophia Li, Gabrielle Moya, Michael Rees, Brad Siegel. The project specifically examined pitching statistics such as strikeouts, walks, ETAs, and innings pitched of various baseball players alongside the signing bonuses they received within the SEC conference. Congratulations to these BOSSO members for the results of their hard work this semester!</p>
+      </article>
+
+      <article class="card">
+        <h2>Member Spotlight</h2>
+        <p>For our final member spotlight of the semester, meet Lucia! Lucia is a sophomore studying business and economics; her favorite sports team is the Dallas Mavericks. She’s passionate about the intersection of business, economics, and policy. Lucia is also currently training for a half-marathon! Lucia is the social director for BOSSO, which includes organizing social events and fostering member engagement. Creating this community has also been her favorite part of BOSSO. Finally, Lucia believes that UT should’ve been a lock into the college football playoffs after destroying A&amp;M!</p>
+      </article>
+
+      <article class="card">
+        <h2>Around UT</h2>
+        <p><strong>Back-to-Back Lone Star Showdown Victories:</strong> In a dominant second half, Texas beat A&amp;M for the second year in a row, ruining their SEC Championship hopes and may have booked their ticket to the playoffs.</p>
+        <p><strong>Texas Stuns No. 23 NC State in Maui:</strong> UT’s men’s basketball team picked up its first ranked win, 102-97, to finish 5th in the Maui Invitational and now looks to host Virginia on December 3rd.</p>
+        <p><strong>Texas Volleyball Cruises Through First Two Rounds:</strong> Texas Longhorns volleyball opened the NCAA Tournament with a 3-0 sweep of Florida A&amp;M Rattlers, followed by a commanding straight-set win over reigning champions, Penn State Nittany Lions.</p>
+        <p><strong>Texas Women Dominate — Longhorns 79, North Carolina 64:</strong> Texas Longhorns overwhelmed North Carolina Tar Heels 79–64 at home behind a career-high 22 points from Jordan Lee and clutch supporting efforts from Madison Booker and Justice Carlton.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
