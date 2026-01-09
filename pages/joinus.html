@@ -1,0 +1,290 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <title>Recruitment - BOSSO</title>
+  <script src="../assets/js/header-component.js"></script>
+  <script src="../assets/js/footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .recruitment-container {
+      background-color: #f8f8f8;
+      padding: 80px 40px 120px 40px;
+      min-height: 100vh;
+    }
+
+    .recruitment-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .recruitment-header {
+      text-align: center;
+      margin-bottom: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+
+    .recruitment-subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .recruitment-title {
+      font-size: 64px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.1;
+      margin: 0 0 30px 0;
+    }
+
+    .recruitment-description {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .join-today-section {
+      background: linear-gradient(135deg, #bf5700, #d16600);
+      padding: 50px 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 40px auto 60px auto;
+      box-shadow: 0 15px 40px rgba(191, 87, 0, 0.3);
+      max-width: 800px;
+    }
+
+    .join-today-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 20px 0;
+    }
+
+    .join-today-description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .membership-form-notice {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 25px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .membership-form-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      margin: 0 0 15px 0;
+    }
+
+    .form-link-button {
+      display: inline-block;
+      background: white;
+      color: #bf5700;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-link-button:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .calendar-section {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 30px 0;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #bf5700;
+    }
+
+    .calendar-embed {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .stay-updated-section {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .stay-updated-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 20px 0;
+    }
+
+    .stay-updated-text {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #bf5700;
+    }
+
+    .contact-info p {
+      margin: 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .contact-info strong {
+      color: #bf5700;
+    }
+
+    @media (max-width: 1000px) {
+      .recruitment-title {
+        font-size: 48px;
+      }
+      
+      .calendar-section, .stay-updated-section {
+        padding: 40px 30px;
+      }
+
+      .join-today-section {
+        padding: 40px 30px;
+        margin: 30px 20px 50px 20px;
+      }
+
+      .join-today-title {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .recruitment-title {
+        font-size: 36px;
+      }
+      
+      .recruitment-container {
+        padding: 40px 20px 80px 20px;
+      }
+      
+      .calendar-section, .stay-updated-section {
+        padding: 30px 20px;
+      }
+      
+      .calendar-embed {
+        height: 400px;
+      }
+
+      .join-today-section {
+        padding: 30px 20px;
+        margin: 20px 10px 40px 10px;
+      }
+
+      .join-today-title {
+        font-size: 24px;
+      }
+
+      .join-today-description {
+        font-size: 16px;
+      }
+
+      .membership-form-text {
+        font-size: 16px;
+      }
+
+      .form-link-button {
+        padding: 12px 25px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="recruitment-container">
+    <div class="recruitment-content">
+      <div class="recruitment-header">
+        <div class="recruitment-subtitle">Join Our Team</div>
+        <h1 class="recruitment-title">Shape the Future<br>of Sports Analytics.</h1>
+        <p class="recruitment-description">
+          BOSSO is a community of data enthusiasts, statisticians, and sports lovers who are revolutionizing 
+          how we understand and analyze athletic performance. Thank you for your interest in joining our team!
+        </p>
+      </div>
+
+      <div class="join-today-section">
+        <h2 class="join-today-title">Join BOSSO Today!</h2>
+        <p class="join-today-description">
+          We're excited to welcome new members to our community! Ready to dive into data-driven sports analysis and connect with like-minded individuals?
+        </p>
+        <div class="membership-form-notice">
+          <p class="membership-form-text">To confirm your membership, please submit our Member Profile Form:</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScK4GOrnyz_Gh5L7wo2BV-BfvQPfEdbSFPVm4RRKluXKalzvA/viewform" target="_blank" class="form-link-button">Complete Member Profile Form</a>
+        </div>
+      </div>
+
+      <div class="calendar-section">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p style="color: #666; margin-bottom: 30px; text-align: center;">
+          Stay updated with our latest meetings, workshops, and networking events. Join us to learn, collaborate, and grow your sports analytics skills!
+        </p>
+        
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=txsportsanalytics%40gmail.com&ctz=America%2FChicago"
+          class="calendar-embed">
+        </iframe>
+        
+        <div style="text-align: center; margin-top: 20px;">
+          <p style="font-size: 14px; color: #888;">
+            Can't see the calendar? <a href="https://calendar.google.com/calendar/u/4?cid=dHhzcG9ydHNhbmFseXRpY3NAZ21haWwuY29t" style="color: #bf5700; text-decoration: none;">Click here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

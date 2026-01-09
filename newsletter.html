@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/logo.png">
-  <title>BOSSO Media Hub</title>
-  <script src="header-component.js"></script>
-  <script src="footer-component.js"></script>
+
+  <!-- Primary Meta Tags -->
+  <title>BOSSO Portfolio | Sports Analytics Insights from UT Austin</title>
+  <meta name="title" content="BOSSO Portfolio | Sports Analytics Insights from UT Austin">
+  <meta name="description" content="Explore BOSSO's portfolio of sports analytics projects, newsletter insights, and exclusive podcast episodes featuring industry leaders. View consulting and research projects from UT Austin students.">
+  <meta name="keywords" content="sports analytics portfolio, BOSSO podcast, sports business insights, UT Austin sports research, sports consulting projects, Wyatt Mumfrey podcast, sports analytics education">
+  <meta name="author" content="Business of Sports Student Organization">
+  <link rel="canonical" href="https://txbosso.com/newsletter.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://txbosso.com/newsletter.html">
+  <meta property="og:title" content="BOSSO Portfolio | Sports Analytics Insights from UT Austin">
+  <meta property="og:description" content="Explore BOSSO's portfolio including newsletter insights and exclusive podcast episodes featuring industry leaders like Wyatt Mumfrey.">
+  <meta property="og:image" content="https://txbosso.com/assets/images/logo.png">
+  <meta property="og:site_name" content="BOSSO">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://txbosso.com/newsletter.html">
+  <meta name="twitter:title" content="BOSSO Portfolio | Sports Analytics Insights">
+  <meta name="twitter:description" content="Explore BOSSO's portfolio including newsletter insights and exclusive podcast episodes featuring industry leaders.">
+  <meta name="twitter:image" content="https://txbosso.com/assets/images/logo.png">
+
+  <!-- Additional SEO Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#bf5700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <script src="assets/js/header-component.js"></script>
+  <script src="assets/js/footer-component.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data for Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "BOSSO Portfolio - Projects, Newsletter & Podcast",
+    "description": "Portfolio of consulting projects, research work, newsletter archive, and podcast from the Business of Sports Student Organization",
+    "url": "https://txbosso.com/newsletter.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Business of Sports Student Organization",
+      "url": "https://txbosso.com"
+    },
+    "hasPart": [
+      {
+        "@type": "PodcastSeries",
+        "name": "BOSSO Podcast",
+        "description": "Interviews with sports industry leaders and professionals",
+        "url": "https://open.spotify.com/episode/5pwRD3AKI0gP8fpwR2X1Ma"
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --orange: #bf5700;
@@ -28,7 +82,7 @@
 
     .page {
       max-width: 1100px;
-      padding: 140px 22px 130px;
+      padding: 65px 22px 130px;
       margin: 0 auto;
     }
 
@@ -132,6 +186,7 @@
       border-radius: 28px;
       padding: 28px;
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
+      overflow: visible;
     }
 
     .section h2 {
@@ -190,13 +245,177 @@
       gap: 8px;
     }
 
+    /* Projects */
+    .projects-header {
+      margin-bottom: 24px;
+    }
+
+    .projects-header h2 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 18px -28px 0 -28px;
+      padding: 10px 28px;
+    }
+
+    .projects-carousel {
+      overflow-x: hidden;
+      overflow-y: visible;
+      flex: 1;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 18px;
+      transition: transform 0.4s ease;
+      width: 100%;
+    }
+
+    .carousel-track .project-card,
+    .carousel-track .issue-card {
+      flex: 0 0 calc((100% - 36px) / 3);
+      min-width: calc((100% - 36px) / 3);
+      max-width: calc((100% - 36px) / 3);
+      box-sizing: border-box;
+    }
+
+    .carousel-arrow {
+      background: var(--orange);
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(191, 87, 0, 0.3);
+    }
+
+    .carousel-arrow:hover {
+      background: #d66a00;
+      transform: scale(1.1);
+      box-shadow: 0 12px 28px rgba(191, 87, 0, 0.4);
+    }
+
+    .carousel-arrow:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+
+    .carousel-arrow-left {
+      order: -1;
+    }
+
+    .carousel-arrow-right {
+      order: 1;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(135deg, #fff, #fdf9f5);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+      display: grid;
+      gap: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(191, 87, 0, 0.16);
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(191, 87, 0, 0.12);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .project-link {
+      justify-self: start;
+      padding: 10px 14px;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover .project-link {
+      background: var(--orange);
+      color: #fff;
+      border-color: var(--orange);
+      box-shadow: 0 12px 24px rgba(191, 87, 0, 0.2);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
     @media (max-width: 720px) {
       .page {
-        padding: 120px 16px 110px;
+        padding: 65px 16px 110px;
       }
 
       .hero {
         padding: 42px;
+      }
+
+      .carousel-container {
+        margin: 18px -16px 0 -16px;
+        padding: 10px 16px;
+      }
+
+      .carousel-track {
+        gap: 0;
+      }
+
+      .carousel-track .project-card,
+      .carousel-track .issue-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      .carousel-arrow {
+        width: 40px;
+        height: 40px;
       }
     }
   </style>
@@ -204,90 +423,232 @@
 <body>
   <div class="page">
     <section class="hero">
-      <p class="eyebrow">Media & Newsletter Hub</p>
-      <h1>BOSSO Newsletter Archive & Podcast</h1>
+      <p class="eyebrow">Portfolio</p>
+      <h1>BOSSO Projects & Media</h1>
       <div class="hero-actions">
-        <a class="btn primary" href="https://docs.google.com/forms/d/1jMR-KpWR46873mDVbxaI9najP-QKDfgtN4dNEGWJAOg/viewform" target="_blank" rel="noopener">Subscribe</a>
-        <a class="btn secondary" href="#podcast">Podcast</a>
+        <a class="btn primary" href="https://docs.google.com/forms/d/1jMR-KpWR46873mDVbxaI9najP-QKDfgtN4dNEGWJAOg/viewform" target="_blank" rel="noopener">Subscribe to Newsletter</a>
+        <a class="btn secondary" href="https://open.spotify.com/episode/5pwRD3AKI0gP8fpwR2X1Ma?si=tVH1AYX6RhSqHrgZwM3QkQ&t=0&pi=nUhihQJQToyme" target="_blank" rel="noopener">Listen to Podcast</a>
       </div>
       <div class="meta">
         <div class="meta-card">
-          <span>Issues Published</span>
-          <strong>4 newsletters</strong>
+          <span>Projects</span>
+          <strong>6 active consulting & research builds</strong>
+        </div>
+        <div class="meta-card">
+          <span>Newsletter</span>
+          <strong>4 issues published</strong>
         </div>
         <div class="meta-card">
           <span>Podcast</span>
           <strong>Episode 1 with Wyatt Mumfrey</strong>
         </div>
-        <div class="meta-card">
-          <span>Contents</span>
-          <strong>Events, projects, spotlights, UT sports</strong>
-        </div>
       </div>
     </section>
 
-    <section id="podcast" class="section podcast-card">
-      <p class="eyebrow">Podcast Spotlight</p>
-      <h2>BOSSO's very first podcast episode</h2>
-      <p class="lead">Check out our sit-down with Wyatt Mumfrey, an NFLPA certified agent.</p>
-      <div class="pill-row">
-        <span class="pill">Episode 1</span>
-        <span class="pill">Interview</span>
-        <span class="pill">Now streaming</span>
+    <!-- Consulting Projects Section -->
+    <section id="consulting-projects" class="section">
+      <div class="projects-header">
+        <div>
+          <p class="eyebrow">Consulting</p>
+          <h2>Consulting Projects</h2>
+        </div>
       </div>
-      <br>
-      <a class="btn secondary" href="https://open.spotify.com/episode/5pwRD3AKI0gP8fpwR2X1Ma?si=tVH1AYX6RhSqHrgZwM3QkQ&t=0&pi=nUhihQJQToyme" target="_blank" rel="noopener">Listen on Spotify</a>
+      <div class="carousel-container">
+        <button class="carousel-arrow carousel-arrow-left" data-carousel="consulting">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="projects-carousel" data-carousel="consulting">
+          <div class="carousel-track">
+            <article class="project-card">
+              <h3>Sporting Real Estate Investment Viability</h3>
+              <p>Data-driven framework to identify the most viable sporting real estate assets for renovation and adjacent land development.</p>
+              <a class="project-link" href="pages/projects/project1.html">View project</a>
+            </article>
+
+            <article class="project-card">
+              <h3>Athletes Unlimited Fan Engagement</h3>
+              <p>Comprehensive fan engagement and retention strategy to help Athletes Unlimited Softball grow its audience heading into season two.</p>
+              <a class="project-link" href="pages/projects/project2.html">View project</a>
+            </article>
+
+            <article class="project-card">
+              <h3>First Touch Soccer Academy</h3>
+              <p>Strategic marketing and website optimization to transform a youth soccer program into a digitally-driven powerhouse.</p>
+              <a class="project-link" href="pages/projects/project3.html">View project</a>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow-right" data-carousel="consulting">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Research Projects Section -->
+    <section id="research-projects" class="section">
+      <div class="projects-header">
+        <div>
+          <p class="eyebrow">Research</p>
+          <h2>Research Projects</h2>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <button class="carousel-arrow carousel-arrow-left" data-carousel="research">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="projects-carousel" data-carousel="research">
+          <div class="carousel-track">
+            <article class="project-card">
+              <h3>MLB Draft Signing Bonus Prediction</h3>
+              <p>Predictive model using college performance metrics to forecast MLB Draft signing bonuses for Texas Baseball recruiting.</p>
+              <a class="project-link" href="pages/projects/project4.html">View project</a>
+            </article>
+
+            <article class="project-card">
+              <h3>Predicting NFL Success Through Psychology</h3>
+              <p>NLP and machine learning to analyze player interviews and forecast NFL success based on psychological traits.</p>
+              <a class="project-link" href="pages/projects/project5.html">View project</a>
+            </article>
+
+            <article class="project-card">
+              <h3>Predictive WNBA Draft Model</h3>
+              <p>Data-driven framework to empower WNBA front offices with enhanced decision-making for the 2026 draft.</p>
+              <a class="project-link" href="pages/projects/project6.html">View project</a>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow-right" data-carousel="research">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </section>
 
     <section class="section">
-      <p class="eyebrow">Newsletter Archive</p>
-      <h2>All Published Issues</h2>
-      <div class="issue-list">
-        <article class="issue-card">
-          <div class="issue-meta">
-            <span class="pill">Podcast</span>
-            <span class="pill">Projects</span>
-            <span class="pill">Community</span>
-          </div>
-          <h3>Issue #4 - Recruitment season + Podcast announcement</h3>
-          <p><strong>Dec 8, 2025.</strong> Podcast debut, BOSS Leaders lecture, Texas Baseball project, Lucia spotlight, and UT sports updates.</p>
-          <a class="btn secondary" href="newsletter_issue_4.html">Read Issue</a>
-        </article>
+      <div class="projects-header">
+        <div>
+          <p class="eyebrow">Media</p>
+          <h2>All Published Issues</h2>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <button class="carousel-arrow carousel-arrow-left" data-carousel="newsletter">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="projects-carousel" data-carousel="newsletter">
+          <div class="carousel-track">
+            <article class="issue-card">
+              <h3>Issue #4 - Recruitment season + Podcast announcement</h3>
+              <p><strong>Dec 8, 2025.</strong> Podcast debut, BOSS Leaders lecture, Texas Baseball project, Lucia spotlight, and UT sports updates.</p>
+              <a class="btn secondary" href="pages/newsletters/newsletter_issue_4.html">Read Issue</a>
+            </article>
 
-        <article class="issue-card">
-          <div class="issue-meta">
-            <span class="pill">Speaker</span>
-            <span class="pill">Projects</span>
-            <span class="pill">Spotlight</span>
-          </div>
-          <h3>Issue #3 - Mark Pannes lecture + AUSL project launch</h3>
-          <p><strong>Nov 17, 2025.</strong> Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
-          <a class="btn secondary" href="newsletter_issue_3.html">Read Issue</a>
-        </article>
+            <article class="issue-card">
+              <h3>Issue #3 - Mark Pannes lecture + AUSL project launch</h3>
+              <p><strong>Nov 17, 2025.</strong> Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
+              <a class="btn secondary" href="pages/newsletters/newsletter_issue_3.html">Read Issue</a>
+            </article>
 
-        <article class="issue-card">
-          <div class="issue-meta">
-            <span class="pill">Speaker</span>
-            <span class="pill">Research</span>
-            <span class="pill">Spotlight</span>
-          </div>
-          <h3>Issue #2 - Kevin Xu lecture + NFL research project</h3>
-          <p><strong>Nov 3, 2025.</strong> San Antonio Spurs guest lecture, NFL predictive model project, Matt Gelb spotlight, and UT sports roundup.</p>
-          <a class="btn secondary" href="newsletter_issue_2.html">Read Issue</a>
-        </article>
+            <article class="issue-card">
+              <h3>Issue #2 - Kevin Xu lecture + NFL research project</h3>
+              <p><strong>Nov 3, 2025.</strong> San Antonio Spurs guest lecture, NFL predictive model project, Matt Gelb spotlight, and UT sports roundup.</p>
+              <a class="btn secondary" href="pages/newsletters/newsletter_issue_2.html">Read Issue</a>
+            </article>
 
-        <article class="issue-card">
-          <div class="issue-meta">
-            <span class="pill">Events</span>
-            <span class="pill">Consulting</span>
-            <span class="pill">Spotlight</span>
+            <article class="issue-card">
+              <h3>Issue #1 - Kickoff issue + Ashish Basu spotlight</h3>
+              <p><strong>Oct 20, 2025.</strong> Concorde stadium project, Ashish Q&A, and early UT athletics pulse.</p>
+              <a class="btn secondary" href="pages/newsletters/newsletter_issue_1.html">Read Issue</a>
+            </article>
           </div>
-          <h3>Issue #1 - Kickoff issue + Ashish Basu spotlight</h3>
-          <p><strong>Oct 20, 2025.</strong> Concorde stadium project, Ashish Q&A, and early UT athletics pulse.</p>
-          <a class="btn secondary" href="newsletter_issue_1.html">Read Issue</a>
-        </article>
+        </div>
+        <button class="carousel-arrow carousel-arrow-right" data-carousel="newsletter">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
     </section>
   </div>
+
+  <script>
+    // Carousel functionality
+    function initCarousel(carouselType) {
+      const carousel = document.querySelector(`.projects-carousel[data-carousel="${carouselType}"]`);
+      const track = carousel.querySelector('.carousel-track');
+      const leftArrow = document.querySelector(`.carousel-arrow-left[data-carousel="${carouselType}"]`);
+      const rightArrow = document.querySelector(`.carousel-arrow-right[data-carousel="${carouselType}"]`);
+
+      // Get all cards (both project cards and issue cards)
+      const cards = track.querySelectorAll('.project-card, .issue-card');
+
+      let currentPage = 0;
+      const isMobile = window.innerWidth <= 720;
+      const cardsPerPage = isMobile ? 1 : 3;
+      const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+      function updateCarousel() {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = isMobile ? 0 : 18;
+        const offset = currentPage * (cardsPerPage * cardWidth + (cardsPerPage - 1) * gap);
+        track.style.transform = `translateX(-${offset}px)`;
+
+        // Update arrow states - hide arrows if only one page
+        if (totalPages <= 1) {
+          leftArrow.style.display = 'none';
+          rightArrow.style.display = 'none';
+        } else {
+          leftArrow.style.display = 'flex';
+          rightArrow.style.display = 'flex';
+          leftArrow.disabled = currentPage === 0;
+          rightArrow.disabled = currentPage >= totalPages - 1;
+        }
+      }
+
+      leftArrow.addEventListener('click', () => {
+        if (currentPage > 0) {
+          currentPage--;
+          updateCarousel();
+        }
+      });
+
+      rightArrow.addEventListener('click', () => {
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          updateCarousel();
+        }
+      });
+
+      // Handle window resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const newIsMobile = window.innerWidth <= 720;
+          if (newIsMobile !== isMobile) {
+            location.reload();
+          }
+        }, 250);
+      });
+
+      updateCarousel();
+    }
+
+    // Initialize all carousels
+    document.addEventListener('DOMContentLoaded', () => {
+      initCarousel('consulting');
+      initCarousel('research');
+      initCarousel('newsletter');
+    });
+  </script>
 </body>
 </html>

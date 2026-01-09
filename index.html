@@ -3,11 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/logo.png">
-  <title>Business of Sports Student Organization</title>
-  <script src="header-component.js"></script>
-  <script src="footer-component.js"></script>
+
+  <!-- Primary Meta Tags -->
+  <title>BOSSO - Business of Sports Student Organization | UT Austin Sports Analytics</title>
+  <meta name="title" content="BOSSO - Business of Sports Student Organization | UT Austin Sports Analytics">
+  <meta name="description" content="BOSSO is UT Austin's premier sports analytics and business organization. We provide consulting, research, education, and media services to sports organizations through data-driven insights.">
+  <meta name="keywords" content="sports analytics, UT Austin sports, sports business, BOSSO, sports consulting, sports research, McCombs sports, University of Texas sports, sports data analytics, sports management">
+  <meta name="author" content="Business of Sports Student Organization">
+  <link rel="canonical" href="https://txbosso.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://txbosso.com/">
+  <meta property="og:title" content="BOSSO - Business of Sports Student Organization | UT Austin Sports Analytics">
+  <meta property="og:description" content="UT Austin's premier sports analytics and business organization. Consulting, research, education, and media services powered by data-driven insights.">
+  <meta property="og:image" content="https://txbosso.com/assets/images/home.JPG">
+  <meta property="og:site_name" content="BOSSO">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://txbosso.com/">
+  <meta name="twitter:title" content="BOSSO - Business of Sports Student Organization | UT Austin Sports Analytics">
+  <meta name="twitter:description" content="UT Austin's premier sports analytics and business organization. Consulting, research, education, and media services powered by data-driven insights.">
+  <meta name="twitter:image" content="https://txbosso.com/assets/images/home.JPG">
+
+  <!-- Additional SEO Tags -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#bf5700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <script src="assets/js/header-component.js"></script>
+  <script src="assets/js/footer-component.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Business of Sports Student Organization",
+    "alternateName": "BOSSO",
+    "url": "https://txbosso.com",
+    "logo": "https://txbosso.com/assets/images/logo.png",
+    "description": "UT Austin's premier sports analytics and business student organization providing consulting, research, education, and media services.",
+    "foundingDate": "2025",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Texas at Austin",
+      "url": "https://www.utexas.edu"
+    },
+    "department": {
+      "@type": "Organization",
+      "name": "McCombs School of Business",
+      "url": "https://www.mccombs.utexas.edu"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Business of Sports Institute"
+    },
+    "sameAs": [
+      "https://www.instagram.com/utbosso/",
+      "https://www.linkedin.com/company/ut-bosso/"
+    ]
+  }
+  </script>
   <style>
     html, body {
       margin: 0;
@@ -167,39 +237,177 @@
   </div>
 
   <!-- Hero Banner -->
-  <div style="position: relative; height: 100vh; background-image: url('home.JPG'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+  <header role="banner" style="position: relative; height: 100vh; background-image: url('assets/images/home.JPG'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
     <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(0,0,0,0.55); z-index: 1;"></div>
     <div style="position: relative; z-index: 2; text-align: center; color: white; padding: 0 20px;">
-      <h1 style="font-size: 64px; font-weight: 700; margin-bottom: 20px;">Business of Sports<br>Student Organization</h1>
+      <h1 style="font-size: 64px; font-weight: 700; margin-bottom: 20px;">Business of Sports Student Organization</h1>
       <p style="font-size: 24px; font-weight: 400;">Premier Sports Analytics and Business Group at UT Austin</p>
     </div>
-  </div>
+  </header>
+
+  <!-- Where We Work Section -->
+  <section style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 80px 0; overflow: hidden; width: 100%;">
+    <div style="width: 100%;">
+      <h2 style="text-align: center; font-size: 42px; font-weight: 700; color: white; margin-bottom: 20px; letter-spacing: 1px; padding: 0 20px;">Where We Work</h2>
+      <p style="text-align: center; font-size: 18px; color: rgba(255, 255, 255, 0.7); margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; padding: 0 20px;">Our members have landed positions at industry-leading organizations</p>
+
+      <div class="logo-carousel-container" style="position: relative; width: 100%; overflow: hidden; padding: 20px 0;">
+        <div class="logo-track" id="logoTrack" style="display: flex; gap: 80px;">
+          <!-- First set of logos -->
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/mckinsey.png" alt="McKinsey" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/apple.jpg" alt="Apple" style="max-width: 130%; max-height: 130%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/deloitte.jpg" alt="Deloitte" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/austinfc.png" alt="Austin FC" style="max-width: 140%; max-height: 140%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/spurs.png" alt="Spurs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/goldman sachs.png" alt="Goldman Sachs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/texaslonghorns.png" alt="Texas Longhorns" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/draftkings.png" alt="DraftKings" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/robinhood.png" alt="Robinhood" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/circuitoftheamericas.png" alt="Circuit of the Americas" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/usdepartmentofstate.png" alt="U.S. Department of State" style="max-width: 140%; max-height: 140%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/villarealcf.png" alt="Villareal CF" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/dailytexan.png" alt="Daily Texan" style="max-width: 130%; max-height: 130%; object-fit: contain;">
+          </div>
+
+          <!-- Duplicate set for seamless loop -->
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/mckinsey.png" alt="McKinsey" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/apple.jpg" alt="Apple" style="max-width: 130%; max-height: 130%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/deloitte.jpg" alt="Deloitte" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/austinfc.png" alt="Austin FC" style="max-width: 140%; max-height: 140%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/spurs.png" alt="Spurs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/goldman sachs.png" alt="Goldman Sachs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/texaslonghorns.png" alt="Texas Longhorns" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/draftkings.png" alt="DraftKings" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/robinhood.png" alt="Robinhood" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/circuitoftheamericas.png" alt="Circuit of the Americas" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/usdepartmentofstate.png" alt="U.S. Department of State" style="max-width: 140%; max-height: 140%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/logos/villarealcf.png" alt="Villareal CF" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="logo-item" style="min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;">
+            <img src="assets/images/logos/dailytexan.png" alt="Daily Texan" style="max-width: 130%; max-height: 130%; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Seamless infinite carousel
+    const track = document.getElementById('logoTrack');
+    const logos = Array.from(track.children);
+
+    // Clone all logos and append to create seamless loop
+    logos.forEach(logo => {
+      const clone = logo.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    let position = 0;
+    const speed = 1.5; // pixels per frame
+    const logoWidth = 200 + 80; // logo width + gap
+    const totalWidth = logoWidth * logos.length;
+    let isPaused = false;
+    let animationId;
+
+    function animate() {
+      if (!isPaused) {
+        position -= speed;
+
+        // Reset position when first set has scrolled completely
+        if (Math.abs(position) >= totalWidth) {
+          position = 0;
+        }
+
+        track.style.transform = `translateX(${position}px)`;
+      }
+      animationId = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Pause on hover
+    track.parentElement.addEventListener('mouseenter', () => {
+      isPaused = true;
+    });
+
+    track.parentElement.addEventListener('mouseleave', () => {
+      isPaused = false;
+    });
+  </script>
 
   <!-- Mission & Pillars -->
-  <div id="next-section" style="padding: 40px 20px 120px 20px; background: white; box-sizing: border-box;">
+  <main role="main" id="next-section" style="padding: 40px 20px 120px 20px; background: white; box-sizing: border-box;">
     <div style="max-width: 1000px; margin: auto;">
-      <div class="fade-in" style="background: #bf5700; color: black; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 40px; opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
+      <section class="fade-in" style="background: #bf5700; color: black; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 40px; opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
         <h2 style="font-size: 30px; margin-bottom: 15px; font-weight: 700;">Mission Statement</h2>
         <p style="font-size: 17px; line-height: 1.6; font-weight: 400;">
           The Business of Sports Student Organization (BOSSO) aims to leverage advanced data analytics and research methodologies to provide actionable insights and strategic recommendations within the business of sports through these key pillars:
         </p>
-      </div>
+      </section>
 
       <div style="display: flex; flex-direction: column; gap: 25px;">
-        <div class="fade-in" style="background: #111; color: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
-          <h2 style="margin: 0 0 5px; font-size: 26px; font-weight: 600;">01</h2>
+        <article class="fade-in" style="background: #111; color: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
+          <span style="margin: 0 0 5px; font-size: 26px; font-weight: 600; display: block;">01</span>
           <h3 style="margin: 0 0 15px; font-size: 24px; font-weight: 700;">Consulting</h3>
           <p style="font-size: 16px; line-height: 1.6; font-weight: 400;">Partner with real sports organizations to solve challenges in fan engagement, performance, and business strategy. Turn data into impact, both on and off the field.</p>
-        </div>
+        </article>
 
-        <div class="fade-in" style="background: #f5f5f5; color: #bf5700; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
-          <h2 style="margin: 0 0 5px; font-size: 26px; font-weight: 600; color: #bf5700;">02</h2>
+        <article class="fade-in" style="background: #f5f5f5; color: #bf5700; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
+          <span style="margin: 0 0 5px; font-size: 26px; font-weight: 600; color: #bf5700; display: block;">02</span>
           <h3 style="margin: 0 0 15px; font-size: 24px; font-weight: 700; color: #bf5700;">Research</h3>
           <p style="font-size: 16px; line-height: 1.6; font-weight: 400; color: #333;">Dive into player efficiency, team metrics, and the data behind the game. Build insights that fuel portfolios, research, and real-world results.</p>
-        </div>
+        </article>
 
-        <div class="fade-in" style="background: #111; color: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
-          <h2 style="margin: 0 0 5px; font-size: 26px; font-weight: 600;">03</h2>
+        <article class="fade-in" style="background: #111; color: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
+          <span style="margin: 0 0 5px; font-size: 26px; font-weight: 600; display: block;">03</span>
           <h3 style="margin: 0 0 25px; font-size: 24px; font-weight: 700;">Education</h3>
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
@@ -233,16 +441,47 @@
               }
             }
           </style>
-        </div>
+        </article>
 
-        <div class="fade-in" style="background: #f5f5f5; color: #bf5700; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
-          <h2 style="margin: 0 0 5px; font-size: 26px; font-weight: 600; color: #bf5700;">04</h2>
+        <article class="fade-in" style="background: #f5f5f5; color: #bf5700; padding: 30px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; transform: translateY(40px); transition: all 0.8s ease;">
+          <span style="margin: 0 0 5px; font-size: 26px; font-weight: 600; color: #bf5700; display: block;">04</span>
           <h3 style="margin: 0 0 15px; font-size: 24px; font-weight: 700; color: #bf5700;">Media</h3>
           <p style="font-size: 16px; line-height: 1.6; font-weight: 400; color: #333;">Amplify the voices of sports analytics through our comprehensive media initiatives. Conduct in-depth interviews with industry leaders, executives, and innovators to uncover insights and stories that shape the business of sports. Share these conversations and cutting-edge analysis through our dedicated podcast series, creating a platform where data meets storytelling.</p>
-        </div>
+        </article>
       </div>
     </div>
-  </div>
+  </main>
+
+  <style>
+    .logo-item:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 32px rgba(191, 87, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .logo-carousel-container h2 {
+        font-size: 32px !important;
+      }
+
+      .logo-carousel-container p {
+        font-size: 16px !important;
+      }
+
+      .logo-track {
+        gap: 40px !important;
+      }
+
+      .logo-item {
+        min-width: 160px !important;
+        height: 80px !important;
+        padding: 20px !important;
+      }
+
+      .logo-item div {
+        font-size: 18px !important;
+      }
+    }
+  </style>
 
   <script>
     const observer = new IntersectionObserver(
@@ -262,11 +501,11 @@
     // Preloader Script
     window.addEventListener('load', function() {
       const preloader = document.getElementById('preloader');
-      
+
       // Add a minimum display time for better UX (1.5 seconds)
       setTimeout(function() {
         preloader.classList.add('fade-out');
-        
+
         // Remove preloader from DOM after fade animation completes
         setTimeout(function() {
           preloader.style.display = 'none';

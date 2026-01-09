@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <title>Projects - BOSSO</title>
+  <script src="../assets/js/header-component.js"></script>
+  <script src="../assets/js/footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Red Hat Display', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rounded-section {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .footer-container {
+      background-color: #0a0a0a;
+      color: white;
+      padding: 60px 40px;
+      width: 100vw;
+      max-width: 100%;
+      margin-top: -60px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column p {
+      margin: 0 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link {
+      display: block;
+      margin: 0 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column p:hover,
+    .footer-link:hover {
+      color: #bf5700;
+      cursor: pointer;
+    }
+
+    .footer-column input[type="email"] {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-column label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column button {
+      background: white;
+      color: black;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .orange-section {
+      background-color: #bf5700;
+      color: black;
+      padding: 60px 20px 100px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      max-width: 100%;
+      margin: -60px auto 0;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .button-redhat {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .category-buttons {
+        gap: 8px;
+        padding: 0 10px;
+      }
+      
+      .category-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: 70px;
+      }
+      
+      .projects-header {
+        font-size: 28px;
+      }
+      
+      .projects-container {
+        gap: 20px;
+      }
+      
+      .project-card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+    .projects-section {
+      padding: 40px 20px 100px 20px;
+      flex: 1;
+    }
+
+    .projects-header {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .project-card {
+      width: 300px;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-left: 4px solid #bf5700;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 24px rgba(191, 87, 0, 0.3);
+      border-left-width: 6px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 15px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0a0a0a;
+    }
+
+    .project-card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .category-buttons {
+      text-align: center;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+    }
+
+    .category-button {
+      padding: 12px 20px;
+      background-color: #0a0a0a;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      flex-shrink: 0;
+      min-width: 80px;
+    }
+
+    .category-button:hover,
+    .category-button.active {
+      background-color: #bf5700;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .no-projects-message {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #555;
+      width: 100%;
+      padding: 40px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Projects Section -->
+  <div class="projects-section">
+    <h2 class="projects-header">Our Projects</h2>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button class="category-button active" onclick="filterProjects('all', this)">All</button>
+      <button class="category-button" onclick="filterProjects('consulting', this)">Consulting</button>
+      <button class="category-button" onclick="filterProjects('research', this)">Research</button>
+    </div>
+
+    <!-- Project Cards Container -->
+    <div class="projects-container" id="projects-list">
+      <!-- Project 1: Sporting Real Estate Investment -->
+      <div class="project-card consulting" onclick="window.location.href='projects/project1.html'">
+        <h3>Sporting Real Estate Investment Viability</h3>
+        <p>Data-driven framework to identify the most viable sporting real estate assets for renovation and adjacent land development.</p>
+      </div>
+      
+      <!-- Project 2: Athletes Unlimited Softball -->
+      <div class="project-card consulting" onclick="window.location.href='projects/project2.html'">
+        <h3>Athletes Unlimited Fan Engagement</h3>
+        <p>Comprehensive fan engagement and retention strategy to help Athletes Unlimited Softball grow its audience heading into season two.</p>
+      </div>
+
+      <!-- Project 3: First Touch Soccer Academy -->
+      <div class="project-card consulting" onclick="window.location.href='projects/project3.html'">
+        <h3>First Touch Soccer Academy</h3>
+        <p>Strategic marketing and comprehensive website optimization to transform a local youth soccer program into a digitally-driven powerhouse.</p>
+      </div>
+
+      <!-- Project 4: MLB Draft Prediction -->
+      <div class="project-card research" onclick="window.location.href='projects/project4.html'">
+        <h3>MLB Draft Signing Bonus Prediction</h3>
+        <p>Predictive model using college performance metrics to forecast MLB Draft signing bonuses for Texas Baseball recruiting.</p>
+      </div>
+
+      <!-- Project 5: NFL Psychological Prediction -->
+      <div class="project-card research" onclick="window.location.href='projects/project5.html'">
+        <h3>Predicting NFL Success Through Psychology</h3>
+        <p>Using NLP and machine learning to analyze player interviews and forecast NFL success based on psychological and behavioral traits.</p>
+      </div>
+
+      <!-- Project 6: WNBA Draft Model -->
+      <div class="project-card research" onclick="window.location.href='projects/project6.html'">
+        <h3>Predictive WNBA Draft Model</h3>
+        <p>Building a data-driven framework to empower WNBA front offices with enhanced decision-making capabilities for the 2026 draft.</p>
+      </div>
+
+      <!-- No Projects Message -->
+      <div id="no-projects-message" class="no-projects-message hidden">Coming soon...</div>
+    </div>
+  </div>
+
+  <script>
+    // Filter Projects by Category
+    function filterProjects(category, button) {
+      const projects = document.querySelectorAll('.project-card');
+      const noProjectsMessage = document.getElementById('no-projects-message');
+      const buttons = document.querySelectorAll('.category-button');
+      let visibleProjects = 0;
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      projects.forEach(project => {
+        if (category === 'all') {
+          project.classList.remove('hidden');
+          visibleProjects++;
+        } else {
+          if (project.classList.contains(category)) {
+            project.classList.remove('hidden');
+            visibleProjects++;
+          } else {
+            project.classList.add('hidden');
+          }
+        }
+      });
+
+      if (visibleProjects === 0) {
+        noProjectsMessage.classList.remove('hidden');
+      } else {
+        noProjectsMessage.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
