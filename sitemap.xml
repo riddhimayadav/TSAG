@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://txbosso.com/</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- About Page -->
   <url>
     <loc>https://txbosso.com/pages/about.html</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Newsletter Hub -->
   <url>
     <loc>https://txbosso.com/newsletter.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- Contact/Partnership Page -->
   <url>
     <loc>https://txbosso.com/pages/contact.html</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -36,7 +36,7 @@
   <!-- Projects Page -->
   <url>
     <loc>https://txbosso.com/pages/projects.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +44,7 @@
   <!-- Join Us Application Page (Primary Recruitment) -->
   <url>
     <loc>https://txbosso.com/pages/joinus_app.html</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
