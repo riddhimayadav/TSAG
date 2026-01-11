@@ -24,8 +24,8 @@ function loadHeader() {
                 <a href="/pages/about.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">About</a>
                 <a href="/newsletter.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Portfolio</a>
                 <a href="/pages/joinus_app.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Join Us</a>
-                <a href="https://bosso-portal.vercel.app" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Portal</a>
-                <a href="/pages/contact.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; display: block; text-align: center;">Sponsor Us</a>
+                <a href="/pages/contact.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; border-bottom: 1px solid #333; display: block; text-align: center;">Sponsor Us</a>
+                <a href="https://bosso-portal.vercel.app" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; padding: 16px 24px; display: block; text-align: center;">Member Portal</a>
             </nav>
         </header>
         
