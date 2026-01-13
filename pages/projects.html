@@ -258,9 +258,87 @@
       padding: 40px 0;
     }
 
+    .featured-clients-section {
+      padding: 60px 20px 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .clients-header {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a0a0a;
+    }
+
+    .clients-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .client-logo {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .client-logo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 24px rgba(191, 87, 0, 0.2);
+    }
+
+    .client-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .clients-container {
+        gap: 30px;
+      }
+
+      .client-logo {
+        width: 140px;
+        height: 140px;
+      }
+
+      .clients-header {
+        font-size: 28px;
+      }
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- Featured Clients Section -->
+  <div class="featured-clients-section">
+    <h2 class="clients-header">Featured Clients</h2>
+    <div class="clients-container">
+      <div class="client-logo">
+        <img src="../assets/images/logos/austinfc.png" alt="Austin FC">
+      </div>
+      <div class="client-logo">
+        <img src="../assets/images/logos/texaslonghorns.png" alt="UT Austin">
+      </div>
+      <div class="client-logo">
+        <img src="../assets/images/logos/houstontexans.png" alt="Houston Texans">
+      </div>
+    </div>
+  </div>
 
   <!-- Projects Section -->
   <div class="projects-section">
