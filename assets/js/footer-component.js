@@ -33,11 +33,11 @@ function loadFooter() {
                         <a href="https://linktr.ee/txbosso" target="_blank" class="footer-link">LinkTree</a>
                         <a href="https://www.instagram.com/txbosso/" target="_blank" class="footer-link">Instagram</a>
                         <a href="https://www.linkedin.com/company/txbosso/" target="_blank" class="footer-link">LinkedIn</a>
-                        <a href="https://open.spotify.com/episode/5pwRD3AKI0gP8fpwR2X1Ma?si=tVH1AYX6RhSqHrgZwM3QkQ&t=0&pi=nUhihQJQToyme" target="_blank" class="footer-link">Podcast</a>
+                        <a href="https://open.spotify.com/show/16Nnwts9OfKgd134xZtdMu" target="_blank" class="footer-link">Spotify</a>
                     </div>
                     <div class="footer-column">
                         <p style="font-weight: 600;">CONTACT</p>
-                        <p>external@txbosso.com</p>
+                        <p>board@txbosso.com</p>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ function loadHeader() {
             </div>
             
             <!-- Hamburger Button -->
-            <button id="hamburger-btn" style="display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 30px; background: transparent; border: none; cursor: pointer; padding: 0;">
+            <button id="hamburger-btn" style="display: flex; flex-direction: column; justify-content: center; gap: 6px; width: 30px; height: 30px; background: transparent; border: none; cursor: pointer; padding: 0;">
                 <span class="hamburger-line" style="width: 100%; height: 3px; background-color: white; border-radius: 2px; transition: all 0.3s ease;"></span>
                 <span class="hamburger-line" style="width: 100%; height: 3px; background-color: white; border-radius: 2px; transition: all 0.3s ease;"></span>
                 <span class="hamburger-line" style="width: 100%; height: 3px; background-color: white; border-radius: 2px; transition: all 0.3s ease;"></span>
@@ -37,7 +37,7 @@ function loadHeader() {
             
             /* Hamburger menu styles */
             #hamburger-btn.active .hamburger-line:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
+                transform: translateY(9px) rotate(45deg);
             }
             
             #hamburger-btn.active .hamburger-line:nth-child(2) {
@@ -45,7 +45,7 @@ function loadHeader() {
             }
             
             #hamburger-btn.active .hamburger-line:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
+                transform: translateY(-9px) rotate(-45deg);
             }
             
             /* Active menu state */
