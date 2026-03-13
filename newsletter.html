@@ -245,6 +245,51 @@
       gap: 8px;
     }
 
+    .article-card {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+      background: linear-gradient(135deg, #fff, #fdf9f5);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+      display: grid;
+      gap: 12px;
+    }
+
+    .article-label {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    .article-card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+
+    .article-subhead,
+    .article-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .article-byline {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .article-notes {
+      display: grid;
+      gap: 6px;
+      padding-top: 4px;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
     /* Projects */
     .projects-header {
       margin-bottom: 24px;
@@ -279,7 +324,8 @@
     }
 
     .carousel-track .project-card,
-    .carousel-track .issue-card {
+    .carousel-track .issue-card,
+    .carousel-track .article-card {
       flex: 0 0 calc((100% - 36px) / 3);
       min-width: calc((100% - 36px) / 3);
       max-width: calc((100% - 36px) / 3);
@@ -478,7 +524,8 @@
       }
 
       .carousel-track .project-card,
-      .carousel-track .issue-card {
+      .carousel-track .issue-card,
+      .carousel-track .article-card {
         flex: 0 0 100%;
         min-width: 100%;
         max-width: 100%;
@@ -523,8 +570,8 @@
           <strong>6 active consulting & research builds</strong>
         </div>
         <div class="meta-card">
-          <span>Newsletter</span>
-          <strong>4 issues published</strong>
+          <span>Articles</span>
+          <strong>3 UT articles published</strong>
         </div>
         <div class="meta-card">
           <span>Podcast</span>
@@ -639,7 +686,7 @@
       <div class="projects-header">
         <div>
           <p class="eyebrow">Media</p>
-          <h2>All Published Issues</h2>
+          <h2>Articles</h2>
         </div>
       </div>
       <div class="carousel-container">
@@ -650,28 +697,22 @@
         </button>
         <div class="projects-carousel" data-carousel="newsletter">
           <div class="carousel-track">
-            <article class="issue-card">
-              <h3>Issue #4 - Recruitment season + Podcast announcement</h3>
-              <p><strong>Dec 8, 2025.</strong> Podcast debut, BOSS Leaders lecture, Texas Baseball project, Lucia spotlight, and UT sports updates.</p>
-              <a class="btn secondary" href="pages/newsletters/newsletter_issue_4.html">Read Issue</a>
+            <article class="article-card">
+              <h3>Kevin Durant's alleged burner account can affect his future on and off the court</h3>
+              <p class="article-byline">By: Cody Feldman</p>
+              <a class="btn secondary" href="pages/articles/kevin-durant-burner-account.html">Read Article</a>
             </article>
 
-            <article class="issue-card">
-              <h3>Issue #3 - Mark Pannes lecture + AUSL project launch</h3>
-              <p><strong>Nov 17, 2025.</strong> Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
-              <a class="btn secondary" href="pages/newsletters/newsletter_issue_3.html">Read Issue</a>
+            <article class="article-card">
+              <h3>Lottery over Loyalty: Is Tanking Good for the NBA?</h3>
+              <p class="article-byline">By: Manav Mehta</p>
+              <a class="btn secondary" href="pages/articles/lottery-over-loyalty.html">Read Article</a>
             </article>
 
-            <article class="issue-card">
-              <h3>Issue #2 - Kevin Xu lecture + NFL research project</h3>
-              <p><strong>Nov 3, 2025.</strong> San Antonio Spurs guest lecture, NFL predictive model project, Matt Gelb spotlight, and UT sports roundup.</p>
-              <a class="btn secondary" href="pages/newsletters/newsletter_issue_2.html">Read Issue</a>
-            </article>
-
-            <article class="issue-card">
-              <h3>Issue #1 - Kickoff issue + Ashish Basu spotlight</h3>
-              <p><strong>Oct 20, 2025.</strong> Concorde stadium project, Ashish Q&A, and early UT athletics pulse.</p>
-              <a class="btn secondary" href="pages/newsletters/newsletter_issue_1.html">Read Issue</a>
+            <article class="article-card">
+              <h3>New Era of College Sports: NIL</h3>
+              <p class="article-byline">By: Almudena Gonzalez</p>
+              <a class="btn secondary" href="pages/articles/new-era-of-college-sports-nil.html">Read Article</a>
             </article>
           </div>
         </div>
@@ -692,8 +733,8 @@
       const leftArrow = document.querySelector(`.carousel-arrow-left[data-carousel="${carouselType}"]`);
       const rightArrow = document.querySelector(`.carousel-arrow-right[data-carousel="${carouselType}"]`);
 
-      // Get all cards (both project cards and issue cards)
-      const cards = track.querySelectorAll('.project-card, .issue-card');
+      // Get all cards used in the shared carousel layouts.
+      const cards = track.querySelectorAll('.project-card, .issue-card, .article-card');
 
       let currentPage = 0;
       const isMobile = window.innerWidth <= 720;
