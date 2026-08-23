@@ -177,7 +177,6 @@ JavaScript-powered infinite carousel on homepage:
 
 ### Recruitment Page (pages/joinus_app.html)
 - Spring 2026 recruitment information
-- Interest form integration
 - Application requirements and timeline
 - Coffee chat encouragement
 - Embedded Google Calendar for events
@@ -340,7 +339,6 @@ The website includes comprehensive SEO features:
 ## Form Integration
 
 ### Google Forms
-- Interest form: Embedded in `joinus_app.html`
 - Newsletter signup: Footer call-to-action
 - Contact form: Partnership inquiries on `contact.html`
 

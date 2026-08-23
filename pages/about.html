@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <title>About BOSSO | UT Austin's Premier Sports Analytics Organization</title>
   <meta name="title" content="About BOSSO | UT Austin's Premier Sports Analytics Organization">
-  <meta name="description" content="Learn about BOSSO, founded in 2025 at UT Austin. Meet our team of directors and faculty advisors driving innovation in sports analytics, consulting, and research at the McCombs School of Business.">
+  <meta name="description" content="Learn about BOSSO, founded in 2025 at UT Austin, and meet the team advancing consulting, research, education, media, and philanthropy in sports business.">
   <meta name="keywords" content="BOSSO team, UT Austin sports organization, sports analytics team, McCombs sports, Kirk Goldsberry, Mark Pannes, sports business students, University of Texas sports">
   <meta name="author" content="Business of Sports Student Organization">
   <link rel="canonical" href="https://txbosso.com/pages/about.html">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://txbosso.com/pages/about.html">
   <meta property="og:title" content="About BOSSO | UT Austin's Premier Sports Analytics Organization">
-  <meta property="og:description" content="Meet the team behind BOSSO - UT Austin's premier sports analytics organization. Founded in 2025 at the McCombs School of Business.">
+  <meta property="og:description" content="Meet the team advancing consulting, research, education, media, and philanthropy through the business of sports at UT Austin.">
   <meta property="og:image" content="https://txbosso.com/assets/images/group.JPG">
   <meta property="og:site_name" content="BOSSO">
 
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://txbosso.com/pages/about.html">
   <meta name="twitter:title" content="About BOSSO | UT Austin's Premier Sports Analytics Organization">
-  <meta name="twitter:description" content="Meet the team behind BOSSO - UT Austin's premier sports analytics organization. Founded in 2025 at the McCombs School of Business.">
+  <meta name="twitter:description" content="Meet the team advancing consulting, research, education, media, and philanthropy through the business of sports at UT Austin.">
   <meta name="twitter:image" content="https://txbosso.com/assets/images/group.JPG">
 
   <!-- Additional SEO Tags -->
@@ -45,7 +45,7 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About BOSSO",
-    "description": "Learn about the Business of Sports Student Organization at UT Austin",
+    "description": "Learn about the team advancing consulting, research, education, media, and philanthropy through the Business of Sports Student Organization at UT Austin",
     "url": "https://txbosso.com/pages/about.html",
     "mainEntity": {
       "@type": "Organization",
@@ -387,6 +387,20 @@
       display: block;
     }
 
+    .person-image-placeholder {
+      width: 100%;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f4eee9 0%, #e6d7ca 100%);
+      color: #8f3f00;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     /* Fix specifically for Kirk's image */
     .person-image.kirk-image {
       object-position: center top;
@@ -395,6 +409,21 @@
     /* Fix specifically for Rushil's image */
     .person-image.rushil-image {
       object-position: center 20%;
+    }
+
+    /* Keep Matthew slightly lower within the team-card crop */
+    .person-image.matthew-image {
+      object-position: center 35%;
+    }
+
+    /* Keep Jenna slightly higher within the team-card crop */
+    .person-image.jenna-image {
+      object-position: center 65%;
+    }
+
+    /* Keep Declan slightly lower within the team-card crop */
+    .person-image.declan-image {
+      object-position: center 40%;
     }
 
     .person-details {
@@ -688,7 +717,7 @@
       BOSSO was established to bridge the gap between raw data and real-world decision-making in the sports industry. By leveraging cutting-edge analytics, statistical modeling, and research methodologies, our members develop strategic insights that drive performance on the field/court/track and value off of it. We aim to make a measurable impact across all areas of the sports business landscape.
     </p>
     <p class="about-text">
-      Our work does not stop at theory - we aspire to deliver hands-on experiences for our members, working directly with professional teams, collegiate programs, representative agencies, startups, and beyond through consulting projects, education outreach, and collaborative research. At BOSSO, we are not just analyzing sports - we are helping shape their future.
+      Our work does not stop at theory—we create hands-on experiences through consulting, collaborative research, technical and career-focused education, multimedia storytelling, and community service. Our members work with professional teams, collegiate programs, agencies, startups, and other industry partners while using sports as a vehicle for mentorship, inclusion, and positive social impact. At BOSSO, we are not just analyzing sports—we are helping shape the industry’s future.
     </p>
     <button onclick="document.getElementById('our-people').scrollIntoView({ behavior: 'smooth' });" class="cta-button">
       Meet Our Team
@@ -696,7 +725,8 @@
   </div>
 
   <!-- Journey/Events Section -->
-  <div style="background: white; padding: 30px 20px 50px 20px; width: 100vw; max-width: 100%; margin: 0 auto; box-sizing: border-box;">
+  <!-- Temporarily hidden until the journey and event milestones are ready to publish. -->
+  <div hidden aria-hidden="true" data-status="temporarily-hidden" style="background: white; padding: 30px 20px 50px 20px; width: 100vw; max-width: 100%; margin: 0 auto; box-sizing: border-box;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: 40px;">
         <h2 style="font-size: 2.5rem; font-weight: 700; color: #111; margin-bottom: 15px;">OUR JOURNEY / EVENTS</h2>
@@ -740,12 +770,12 @@
       <h2 class="section-title fade-in">OUR TEAM</h2>
 
       <!-- Team Section -->
-      <h3 class="subsection-title fade-in">Directors</h3>
+      <h3 class="subsection-title fade-in">Leadership Team</h3>
 
       <!-- Organization Photo -->
       <div class="people-grid">
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/ashish.JPG" alt="Ashish Basu - BOSSO President, Business Analytics and Psychology student at UT Austin" class="person-image"/>
+        <div class="person-card fade-in" style="order: 15;">
+          <img src="../assets/images/team/ashish.JPG" alt="Ashish Basu - BOSSO Senior Advisor, Business Analytics and Psychology student at UT Austin" class="person-image"/>
           <div class="person-details">
             <h4>
               Ashish Basu
@@ -755,7 +785,7 @@
                 </svg>
               </a>
             </h4>
-            <p>President</p>
+            <p>Senior Advisor</p>
             <p><b>Major:</b> Business Analytics + Psychology</p>
             <p><b>Year:</b> Junior (2027)</p>
             <p><b>Favorite Team:</b> Liverpool FC</p>
@@ -763,7 +793,7 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
+        <div class="person-card fade-in" style="order: 2;">
           <img src="../assets/images/team/gurdas.JPG" alt="Gurdas Kakar - BOSSO External Vice President, Mathematics student at UT Austin" class="person-image" />
           <div class="person-details">
             <h4>
@@ -782,8 +812,8 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/harsh.JPG" alt="Harsh Patel - BOSSO Internal Vice President, Finance student at UT Austin" class="person-image" />
+        <div class="person-card fade-in" style="order: 14;">
+          <img src="../assets/images/team/harsh.JPG" alt="Harsh Patel - BOSSO Senior Advisor, Finance student at UT Austin" class="person-image" />
           <div class="person-details">
             <h4>
               Harsh Patel
@@ -793,7 +823,7 @@
                 </svg>
               </a>
             </h4>
-            <p>Internal Vice President</p>
+            <p>Senior Advisor</p>
             <p><b>Major:</b> Finance</p>
             <p><b>Year:</b> Junior (2027)</p>
             <p><b>Favorite Team:</b> Manchester City</p>
@@ -801,8 +831,8 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/ricardo.JPG" alt="Ricardo Vazquez - BOSSO Consulting Director, Sport Management and Economics student at UT Austin" class="person-image">
+        <div class="person-card fade-in" style="order: 1;">
+          <img src="../assets/images/team/ricardo.JPG" alt="Ricardo Vazquez - BOSSO President, Sport Management and Economics student at UT Austin" class="person-image">
           <div class="person-details">
             <h4>
               Ricardo Vazquez
@@ -812,7 +842,7 @@
                 </svg>
               </a>
             </h4>
-            <p>Consulting Director</p>
+            <p>President</p>
             <p><b>Major:</b> Sport Management + Economics</p>
             <p><b>Year:</b> Junior (2027)</p>
             <p><b>Favorite Team:</b> Real Madrid CF</p>
@@ -820,26 +850,26 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/ale.JPG" alt="Alejandra Merodio" class="person-image"/>
+        <div class="person-card fade-in" style="order: 6;">
+          <img src="../assets/images/team/angela.jpeg" alt="Angela Stables" class="person-image" />
           <div class="person-details">
             <h4>
-              Alejandra Merodio
-              <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.linkedin.com%2Fin%2Falejandramerodio&sa=D&sntz=1&usg=AOvVaw0aH9yBDt93IRsIKbnm1xtQ" target="_blank" class="linkedin-icon">
+              Angela Stables
+              <a href="https://www.linkedin.com/in/angela-stables-9a639a300/" target="_blank" class="linkedin-icon">
                 <svg viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
             </h4>
-            <p>Research Director</p>
-            <p><b>Major:</b> Corporate Communications + Psychology</p>
-            <p><b>Year:</b> Senior (2026)</p>
-            <p><b>Favorite Team:</b> Scuderia Ferrari</p>
-            <p><b>Career Interest:</b> Consulting/Sports Marketing</p>
+            <p>Consulting Director</p>
+            <p><b>Major:</b> International Relations</p>
+            <p><b>Year:</b> 2028 (Junior)</p>
+            <p><b>Favorite Team:</b> Liverpool FC</p>
+            <p><b>Career Interest:</b> Soccer International Relations</p>
           </div>
         </div>
 
-        <div class="person-card fade-in">
+        <div class="person-card fade-in" style="order: 3;">
           <img src="../assets/images/team/freya.JPG" alt="Freya Laronga" class="person-image"/>
           <div class="person-details">
             <h4>
@@ -850,7 +880,7 @@
                 </svg>
               </a>
             </h4>
-            <p>Media Director</p>
+            <p>Internal Vice President</p>
             <p><b>Major:</b> Unspecified Business (Marketing)</p>
             <p><b>Year:</b> Sophomore (2028)</p>
             <p><b>Favorite Team:</b> Houston Astros</p>
@@ -858,7 +888,7 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
+        <div class="person-card fade-in" style="order: 5;">
           <img src="../assets/images/team/doug.JPG" alt="Douglas Brito" class="person-image" />
           <div class="person-details">
             <h4>
@@ -869,7 +899,7 @@
                 </svg>
               </a>
             </h4>
-            <p>Education Director</p>
+            <p>Membership Director</p>
             <p><b>Major:</b> Economics</p>
             <p><b>Year:</b> Junior (2027)</p>
             <p><b>Favorite Team:</b> Chelsea FC</p>
@@ -877,7 +907,7 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
+        <div class="person-card fade-in" style="order: 4;">
           <img src="../assets/images/team/riddhima.JPG" alt="Riddhima Yadav" class="person-image" />
           <div class="person-details">
             <h4>
@@ -896,26 +926,26 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/davit.JPG" alt="Davit Hakobyan" class="person-image" />
+        <div class="person-card fade-in" style="order: 7;">
+          <img src="../assets/images/team/varun-v2.JPG" alt="Varun Ramanathan - BOSSO Research Director, Statistics and Data Science and Plan II student at UT Austin" class="person-image" />
           <div class="person-details">
             <h4>
-              Davit Hakobyan
-              <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdavit-hakobyan-052771291%2F&sa=D&sntz=1&usg=AOvVaw3buHgDa7HJC0J-0l6yqkdH" target="_blank" class="linkedin-icon">
+              Varun Ramanathan
+              <a href="https://www.linkedin.com/in/varun-ramanathan" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="Varun Ramanathan on LinkedIn">
                 <svg viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
             </h4>
-            <p>Financial Director</p>
-            <p><b>Major:</b> International Relations + Finance</p>
-            <p><b>Year:</b> Sophomore (2028)</p>
-            <p><b>Favorite Team:</b> FC Barcelona</p>
-            <p><b>Career Interest:</b> Corporate Law</p>
+            <p>Research Director</p>
+            <p><b>Major:</b> Statistics and Data Science + Plan II</p>
+            <p><b>Year:</b> 2027</p>
+            <p><b>Favorite Team:</b> San Antonio Spurs</p>
+            <p><b>Career Interest:</b> Football Analytics</p>
           </div>
         </div>
 
-        <div class="person-card fade-in">
+        <div class="person-card fade-in" style="order: 8;">
           <img src="../assets/images/team/allison.JPG" alt="Allison Chadwell" class="person-image">
           <div class="person-details">
             <h4>
@@ -926,7 +956,7 @@
                 </svg>
               </a>
             </h4>
-            <p>Philanthropy Director</p>
+            <p>Media Director</p>
             <p><b>Major:</b> Government</p>
             <p><b>Year:</b> Freshman (2029)</p>
             <p><b>Favorite Team:</b> Oscar Piastri</p>
@@ -934,41 +964,91 @@
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/anjali.JPG" alt="Anjali Bandi" class="person-image" />
+        <div class="person-card fade-in" style="order: 9;">
+          <img src="../assets/images/team/matthew-original-crop.JPG" alt="Matthew Teinert - BOSSO Education Director and Finance student at UT Austin" class="person-image matthew-image" />
           <div class="person-details">
             <h4>
-              Anjali Bandi
-              <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fanjalibandi%2F&sa=D&sntz=1&usg=AOvVaw1wC0GcEmUNAVTc2yOXVCRY" target="_blank" class="linkedin-icon">
+              Matthew Teinert
+              <a href="https://www.linkedin.com/in/matthewteinert" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="Matthew Teinert on LinkedIn">
                 <svg viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
             </h4>
-            <p>Events Director</p>
-            <p><b>Major:</b> Economics</p>
-            <p><b>Year:</b> Sophomore (2028)</p>
-            <p><b>Favorite Team:</b> UConn Huskies WBB</p>
-            <p><b>Career Interest:</b> Sustainability Accounting</p>
+            <p>Education Director</p>
+            <p><b>Major:</b> Finance</p>
+            <p><b>Year:</b> Senior</p>
+            <p><b>Favorite Team:</b> Texas Football</p>
+            <p><b>Career Interest:</b> Sports IB/Private Equity</p>
           </div>
         </div>
 
-        <div class="person-card fade-in">
-          <img src="../assets/images/team/lucia.JPG" alt="Lucia Olaechea" class="person-image"/>
+        <div class="person-card fade-in" style="order: 10;">
+          <div class="person-image-placeholder" role="img" aria-label="Photo coming soon for Preesha">Photo Coming Soon</div>
+          <div class="person-details">
+            <h4>Preesha</h4>
+            <p>Professional Director</p>
+            <p><b>Major:</b> Information coming soon</p>
+            <p><b>Year:</b> Information coming soon</p>
+            <p><b>Favorite Team:</b> Information coming soon</p>
+            <p><b>Career Interest:</b> Information coming soon</p>
+          </div>
+        </div>
+
+        <div class="person-card fade-in" style="order: 11;">
+          <img src="../assets/images/team/sam-v4.JPG" alt="Sam Ismailer - BOSSO Social Director and Business and Sport Management student at UT Austin" class="person-image" />
           <div class="person-details">
             <h4>
-              Lucia Olaechea
-              <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fluciaolaechea%2F&sa=D&sntz=1&usg=AOvVaw1b8KbsRLdvPG4-Chf5P7wO" target="_blank" class="linkedin-icon">
+              Sam Ismailer
+              <a href="https://www.linkedin.com/in/sam-ismailer" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="Sam Ismailer on LinkedIn">
                 <svg viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
             </h4>
-            <p>Recruitment Director</p>
+            <p>Social Director</p>
+            <p><b>Major:</b> Undecided Business and Sport Management</p>
+            <p><b>Year:</b> Sophomore (Class of 2029)</p>
+            <p><b>Favorite Team:</b> Golden State Warriors</p>
+            <p><b>Career Interest:</b> Sports Marketing</p>
+          </div>
+        </div>
+
+        <div class="person-card fade-in" style="order: 12;">
+          <img src="../assets/images/team/jenna-original-crop.JPG" alt="Jenna Lau - BOSSO Philanthropy Director and Economics student at UT Austin" class="person-image jenna-image" />
+          <div class="person-details">
+            <h4>
+              Jenna Lau
+              <a href="https://www.linkedin.com/in/jenna-lau-" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="Jenna Lau on LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </h4>
+            <p>Philanthropy Director</p>
             <p><b>Major:</b> Economics</p>
-            <p><b>Year:</b> Sophomore (2028)</p>
-            <p><b>Favorite Team:</b> Dallas Mavericks</p>
-            <p><b>Career Interest:</b> International Law</p>
+            <p><b>Year:</b> Junior</p>
+            <p><b>Favorite Team:</b> Dallas Cowboys</p>
+            <p><b>Career Interest:</b> Sports Analytics</p>
+          </div>
+        </div>
+
+        <div class="person-card fade-in" style="order: 13;">
+          <img src="../assets/images/team/declan-original-crop.JPG" alt="Declan O’Bryan - BOSSO Financial Director and Business student at UT Austin" class="person-image declan-image" />
+          <div class="person-details">
+            <h4>
+              Declan O’Bryan
+              <a href="https://www.linkedin.com/in/declan-obryan" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="Declan O’Bryan on LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </h4>
+            <p>Financial Director</p>
+            <p><b>Major:</b> Business (Unspecified)</p>
+            <p><b>Year:</b> Sophomore</p>
+            <p><b>Favorite Team:</b> Los Angeles Chargers</p>
+            <p><b>Career Interest:</b> Sports Private Equity</p>
           </div>
         </div>
       </div>
@@ -1080,13 +1160,23 @@
         { src: '../assets/images/logos/newyorkknicks.png', alt: 'New York Knicks', size: '100%' },
         { src: '../assets/images/logos/sandiegopadres.png', alt: 'San Diego Padres', size: '100%' },
         { src: '../assets/images/logos/draftkings.png', alt: 'DraftKings', size: '100%' },
-        { src: '../assets/images/logos/robinhood.png', alt: 'Robinhood', size: '100%' },
         { src: '../assets/images/logos/dell.png', alt: 'Dell Technologies', size: '100%' },
         { src: '../assets/images/logos/circuitoftheamericas.png', alt: 'Circuit of the Americas', size: '100%' },
         { src: '../assets/images/logos/usdepartmentofstate.png', alt: 'U.S. Department of State', size: '140%', overflow: true },
         { src: '../assets/images/logos/villarealcf.png', alt: 'Villareal CF', size: '100%' },
         { src: '../assets/images/logos/theathletic.png', alt: 'The Athletic', size: '150%', overflow: true },
-        { src: '../assets/images/logos/dailytexan.png', alt: 'Daily Texan', size: '130%', overflow: true }
+        { src: '../assets/images/logos/dailytexan.png', alt: 'Daily Texan', size: '130%', overflow: true },
+        { src: '../assets/images/logos/inner-market-media.webp', alt: 'Inner Market Media, LLC', size: '100%' },
+        { src: '../assets/images/logos/pepsico.svg', alt: 'PepsiCo', size: '90%' },
+        { src: '../assets/images/logos/american-express.svg', alt: 'American Express', size: '90%' },
+        { src: '../assets/images/logos/aws.svg', alt: 'AWS', size: '75%' },
+        { src: '../assets/images/logos/baltimore-ravens.svg', alt: 'Baltimore Ravens', size: '100%' },
+        { src: '../assets/images/logos/carnegie-mellon.png', alt: 'Carnegie Mellon University', size: '100%' },
+        { src: '../assets/images/logos/capital-one.svg', alt: 'Capital One', size: '100%' },
+        { src: '../assets/images/logos/bank-of-hawaii.svg', alt: 'Bank of Hawaiʻi', size: '100%' },
+        { src: '../assets/images/logos/center-health-care-services.png', alt: 'The Center for Health Care Services', size: '100%' },
+        { src: '../assets/images/logos/blackrock.svg', alt: 'BlackRock', size: '100%' },
+        { src: '../assets/images/logos/snapback-sports.svg', alt: 'Snapback Sports', size: '100%' }
       ];
 
       logos.forEach(logo => {
@@ -1094,12 +1184,21 @@
         div.className = 'logo-item';
         div.style.cssText = `min-width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;${logo.overflow ? ' overflow: hidden;' : ''}`;
 
-        const img = document.createElement('img');
-        img.src = logo.src;
-        img.alt = logo.alt;
-        img.style.cssText = `max-width: ${logo.size}; max-height: ${logo.size}; object-fit: contain;`;
+        if (logo.src) {
+          const img = document.createElement('img');
+          img.src = logo.src;
+          img.alt = logo.alt;
+          img.style.cssText = `max-width: ${logo.size}; max-height: ${logo.size}; object-fit: contain;`;
+          div.appendChild(img);
+        } else {
+          const placeholder = document.createElement('div');
+          placeholder.className = 'company-logo-placeholder';
+          placeholder.setAttribute('role', 'img');
+          placeholder.setAttribute('aria-label', logo.alt);
+          placeholder.textContent = logo.text;
+          div.appendChild(placeholder);
+        }
 
-        div.appendChild(img);
         track.appendChild(div);
       });
 
@@ -1112,31 +1211,27 @@
 
       let position = 0;
       const speed = 1.5;
-      const logoWidth = 200 + 80;
-      const totalWidth = logoWidth * logoElements.length;
-      let isPaused = false;
-      let animationId;
+      let loopWidth = 0;
+
+      function updateLoopWidth() {
+        const firstClone = track.children[logoElements.length];
+        loopWidth = firstClone ? firstClone.offsetLeft - track.children[0].offsetLeft : 0;
+      }
+
+      updateLoopWidth();
+      window.addEventListener('resize', updateLoopWidth);
+      track.style.willChange = 'transform';
 
       function animate() {
-        if (!isPaused) {
-          position -= speed;
-          if (Math.abs(position) >= totalWidth) {
-            position = 0;
-          }
-          track.style.transform = `translateX(${position}px)`;
+        position -= speed;
+        if (loopWidth > 0 && -position >= loopWidth) {
+          position += loopWidth;
         }
-        animationId = requestAnimationFrame(animate);
+        track.style.transform = `translate3d(${position}px, 0, 0)`;
+        requestAnimationFrame(animate);
       }
 
       animate();
-
-      track.parentElement.addEventListener('mouseenter', () => {
-        isPaused = true;
-      });
-
-      track.parentElement.addEventListener('mouseleave', () => {
-        isPaused = false;
-      });
     }
 
     // Intersection Observer for fade-in animations

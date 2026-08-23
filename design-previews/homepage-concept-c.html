@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOSSO Homepage Preview — Concept C</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --orange: #bf5700; --black: #101010; --sand: #eee8df; --green: #d8ff68; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--black); font-family: "Red Hat Display", sans-serif; background: var(--sand); }
+    a { color: inherit; }
+    .preview-bar { min-height: 38px; padding: 9px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--orange); color: white; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .preview-bar a { text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.7); }
+    .site-nav { height: 76px; padding: 0 clamp(22px, 5vw, 72px); display: flex; align-items: center; justify-content: space-between; gap: 30px; background: white; border-bottom: 1px solid #d9d2c8; }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; font-weight: 800; letter-spacing: .1em; }
+    .brand img { width: 44px; height: 44px; object-fit: contain; filter: invert(1); }
+    .nav-links { display: flex; gap: 28px; font-size: 13px; font-weight: 700; }
+    .nav-links a { text-decoration: none; }
+    .hero { min-height: calc(92vh - 114px); padding: clamp(55px, 8vw, 110px) clamp(24px, 6vw, 88px); position: relative; display: grid; grid-template-columns: .92fr 1.08fr; gap: 30px; align-items: center; overflow: hidden; background-color: var(--sand); background-image: linear-gradient(rgba(16,16,16,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(16,16,16,.055) 1px, transparent 1px); background-size: 42px 42px; }
+    .hero::before { content: ""; width: 470px; height: 470px; position: absolute; left: -235px; top: 50%; transform: translateY(-50%); border: 2px solid rgba(191,87,0,.25); border-radius: 50%; }
+    .hero-copy { position: relative; z-index: 2; }
+    .eyebrow { margin: 0 0 20px; color: var(--orange); font-size: 12px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(51px, 6.5vw, 98px); line-height: .92; letter-spacing: -.06em; text-transform: uppercase; }
+    h1 .outline { color: transparent; -webkit-text-stroke: 2px var(--black); }
+    .hero-copy > p:last-of-type { max-width: 590px; margin: 30px 0; font-size: 19px; line-height: 1.55; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .hero-tags span { padding: 9px 13px; background: white; border: 1px solid #d5cec4; border-radius: 100px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .hero-visual { min-height: min(640px, 70vh); position: relative; z-index: 1; }
+    .photo { position: absolute; inset: 0 0 42px 40px; background: url('../assets/images/home.JPG') center / cover no-repeat; border-radius: 190px 16px 16px 16px; box-shadow: 24px 24px 0 var(--orange); }
+    .scorecard { position: absolute; left: 0; bottom: 0; width: 215px; padding: 20px; background: var(--black); color: white; border-radius: 14px; box-shadow: 0 14px 35px rgba(0,0,0,.22); }
+    .scorecard small { display: block; margin-bottom: 10px; color: #aaa; font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .scorecard strong { display: block; color: var(--green); font-size: 52px; line-height: .9; }
+    .scorecard span { font-size: 13px; font-weight: 700; }
+    .purpose { padding: clamp(85px, 11vw, 150px) clamp(24px, 6vw, 88px); background: var(--black); color: white; }
+    .purpose-wrap { max-width: 1220px; margin: auto; }
+    .purpose-heading { margin-bottom: 48px; display: grid; grid-template-columns: .65fr 1.35fr; gap: 40px; }
+    .purpose-heading h2 { margin: 0; font-size: clamp(41px, 5.5vw, 76px); line-height: 1; letter-spacing: -.045em; }
+    .mission { padding: clamp(32px, 5vw, 60px); display: grid; grid-template-columns: 170px 1fr; gap: 38px; background: var(--orange); border-radius: 16px; }
+    .label { font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .mission p { max-width: 900px; margin: 0; font-size: clamp(23px, 3vw, 37px); line-height: 1.34; font-weight: 600; letter-spacing: -.02em; }
+    .vision { margin-top: 18px; padding: 34px; display: grid; grid-template-columns: 170px 1fr; gap: 38px; border: 1px solid #464646; border-radius: 16px; }
+    .vision .label { color: var(--green); }
+    .vision p { margin: 0; color: #ccc; font-size: 16px; line-height: 1.75; }
+    .pillars { padding: clamp(80px, 11vw, 150px) clamp(24px, 6vw, 88px); background-color: var(--sand); background-image: radial-gradient(rgba(16,16,16,.16) 1px, transparent 1px); background-size: 18px 18px; }
+    .pillars-wrap { max-width: 1220px; margin: auto; }
+    .pillars-head { margin-bottom: 44px; display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+    .pillars-head h2 { margin: 0; font-size: clamp(42px, 6vw, 82px); line-height: .95; letter-spacing: -.05em; text-transform: uppercase; }
+    .pillars-head p { max-width: 380px; margin: 0; font-weight: 600; line-height: 1.6; }
+    .play-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+    .play { min-height: 330px; padding: 28px; position: relative; display: flex; flex-direction: column; background: white; border: 1px solid #d6d0c6; border-radius: 15px; box-shadow: 7px 7px 0 rgba(16,16,16,.12); }
+    .play:nth-child(1), .play:nth-child(2) { grid-column: span 3; }
+    .play.education { grid-column: span 6; min-height: 360px; background: var(--orange); color: white; border-color: var(--orange); }
+    .play:nth-child(4), .play:nth-child(5) { grid-column: span 3; }
+    .play-number { width: 46px; height: 46px; display: grid; place-items: center; background: var(--black); color: var(--green); border-radius: 50%; font-size: 12px; font-weight: 800; }
+    .play h3 { margin: auto 0 14px; font-size: clamp(30px, 3.5vw, 45px); line-height: 1; letter-spacing: -.04em; text-transform: uppercase; }
+    .play > p { margin: 0; color: #4a4742; font-size: 16px; line-height: 1.65; }
+    .education .play-number { background: white; color: var(--orange); }
+    .education h3 { margin: 52px 0 22px; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; }
+    .education-grid div + div { padding-left: 38px; border-left: 1px solid rgba(255,255,255,.35); }
+    .education h4 { margin: 0 0 10px; color: var(--green); font-size: 17px; }
+    .education p { margin: 0; font-size: 16px; line-height: 1.65; }
+    .closing { padding: 72px 24px; background: white; text-align: center; }
+    .closing small { color: var(--orange); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .closing h2 { max-width: 850px; margin: 14px auto 0; font-size: clamp(32px, 4.8vw, 62px); line-height: 1.06; letter-spacing: -.04em; }
+    footer { padding: 28px 24px; background: var(--black); color: #aaa; text-align: center; font-size: 13px; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 580px; }
+      .purpose-heading { grid-template-columns: 1fr; }
+      .mission, .vision { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .preview-bar { align-items: flex-start; flex-direction: column; }
+      .hero-visual { min-height: 470px; }
+      .photo { inset: 0 0 35px 12px; border-radius: 110px 14px 14px; }
+      .scorecard { width: 175px; }
+      .play:nth-child(1), .play:nth-child(2), .play.education, .play:nth-child(4), .play:nth-child(5) { grid-column: span 6; }
+      .education-grid { grid-template-columns: 1fr; }
+      .education-grid div + div { padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,.35); border-left: 0; }
+      .pillars-head { display: block; }
+      .pillars-head p { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar"><span>Concept C · Sports Playbook</span><a href="index.html">View all concepts</a></div>
+  <nav class="site-nav" aria-label="Preview navigation">
+    <a class="brand" href="../index.html"><img src="../assets/images/logo.png" alt="BOSSO logo"><span>BOSSO</span></a>
+    <div class="nav-links"><a href="#purpose">Purpose</a><a href="#pillars">Our Plays</a><a href="../pages/about.html">About</a><a href="../pages/joinus_app.html">Join</a></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Business of Sports · UT Austin</p>
+      <h1>Built for the <span class="outline">Business</span> of Sports.</h1>
+      <p>Data-driven thinking. Real-world opportunities. A community shaping what comes next.</p>
+      <div class="hero-tags"><span>Analytics</span><span>Strategy</span><span>Leadership</span><span>Community</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo" role="img" aria-label="BOSSO students at UT Austin"></div>
+      <div class="scorecard"><small>Our Foundation</small><strong>05</strong><span>Connected pillars</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="purpose" id="purpose">
+      <div class="purpose-wrap">
+        <div class="purpose-heading"><p class="eyebrow">The Game Plan</p><h2>A mission for today.<br>A vision for what’s next.</h2></div>
+        <article class="mission"><span class="label">Mission Statement</span><p>The Business of Sports Student Organization (BOSSO) aims to leverage advanced data analytics and research methodologies to provide actionable insights and strategic recommendations within the business of sports through these five key pillars:</p></article>
+        <article class="vision"><span class="label">Vision Statement</span><p>Become the premier student organization for the business of sports at UT Austin and beyond, uniting students across multiple undergraduate programs and disciplines through a shared passion for sports, data, and innovation. Build a close-knit network of relationships with professional, collegiate, and industry sports organizations while creating meaningful pathways for students to gain real-world experience, develop lasting connections, and make an impact across the sports industry. Ultimately, establish BOSSO as a recognized pipeline of talent, innovation, and leadership for the future of sports business.</p></article>
+      </div>
+    </section>
+
+    <section class="pillars" id="pillars">
+      <div class="pillars-wrap">
+        <div class="pillars-head"><h2>Our Starting Five</h2><p>This direction leans furthest into the sports identity, using playbook graphics and a more energetic card system.</p></div>
+        <div class="play-grid">
+          <article class="play"><span class="play-number">01</span><h3>Consulting</h3><p>Partner with real sports organizations to solve challenges across every corner of the sports industry. Turn data into impact, both on and off the field.</p></article>
+          <article class="play"><span class="play-number">02</span><h3>Research</h3><p>Dive into player efficiency, team metrics, and the data behind the game. Build insights that fuel portfolios, research, and real-world results.</p></article>
+          <article class="play education">
+            <span class="play-number">03</span><h3>Education</h3>
+            <div class="education-grid">
+              <div><h4>Workshops</h4><p>Master the tools of the trade through comprehensive technical workshops covering analytics software, statistical modeling, and data visualization. Complement your technical skills by building career readiness through workshops that cover networking, resume support, career strategy, and alumni connections that prepare members for internships and full-time roles.</p></div>
+              <div><h4>BOSS Leaders Lectures</h4><p>Gain exclusive access to industry leaders through our BOSS Leaders lecture series. Learn directly from executives, analysts, and innovators who are shaping the future of sports business, as they share insights, experiences, and strategic wisdom from the frontlines of the industry.</p></div>
+            </div>
+          </article>
+          <article class="play"><span class="play-number">04</span><h3>Media</h3><p>Amplify the voices of sports analytics through podcasts, newsletters, articles, and social media. Uncover the insights and stories shaping the business of sports and share them across multiple platforms, building a community where data meets storytelling.</p></article>
+          <article class="play"><span class="play-number">05</span><h3>Philanthropy</h3><p>Drive meaningful community impact through service initiatives and partnerships that reflect BOSSO’s values both on and off campus. Extend BOSSO’s reach throughout the greater Austin area by creating pathways for students to use sports as a vehicle for mentorship, inclusion, and positive social change.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="closing"><small>Business of Sports Student Organization</small><h2>Turning preparation into opportunity.</h2></section>
+  <footer>Concept preview only · The current homepage has not been changed.</footer>
+</body>
+</html>
