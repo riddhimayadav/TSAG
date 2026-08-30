@@ -30,7 +30,7 @@ function loadFooter() {
                     <div class="footer-column">
                         <p style="font-weight: 600;">SOCIAL</p>
                         <a href="https://utexas.campuslabs.com/engage/organization/txbosso" target="_blank" class="footer-link">HornsLink</a>
-                        <a href="https://linktr.ee/txbosso" target="_blank" class="footer-link">LinkTree</a>
+                        <a href="https://linktr.ee/texasbosso" target="_blank" class="footer-link">LinkTree</a>
                         <a href="https://www.instagram.com/txbosso/" target="_blank" class="footer-link">Instagram</a>
                         <a href="https://www.linkedin.com/company/txbosso/" target="_blank" class="footer-link">LinkedIn</a>
                         <a href="https://open.spotify.com/show/16Nnwts9OfKgd134xZtdMu" target="_blank" class="footer-link">Spotify</a>
