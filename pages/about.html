@@ -426,6 +426,16 @@
       object-position: center 40%;
     }
 
+    /* Keep Matt slightly lower within the team-card crop */
+    .person-image.matt-image {
+      object-position: center 20%;
+    }
+
+    /* Top-align faculty card text so name/role/title/department rows line up across cards */
+    .faculty-details {
+      justify-content: flex-start !important;
+    }
+
     .person-details {
       background: #111;
       color: white;
@@ -984,7 +994,7 @@
         </div>
 
         <div class="person-card fade-in" style="order: 10;">
-          <div class="person-image-placeholder" role="img" aria-label="Photo coming soon for Preesha">Photo Coming Soon</div>
+          <img src="../assets/images/team/preesha.JPEG" alt="Preesha Manduva - BOSSO Professional Director and Advertising student at UT Austin" class="person-image" />
           <div class="person-details">
             <h4>
               Preesha Manduva
@@ -1062,10 +1072,10 @@
 
       <!-- Faculty Advisors Section -->
       <h3 class="subsection-title fade-in">Faculty Advisors</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 80px; max-width: 720px; margin-left: auto; margin-right: auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 80px; max-width: 1200px; margin-left: auto; margin-right: auto;">
         <div class="person-card fade-in">
           <img src="../assets/images/faculty/kirk.jpeg" alt="Kirk Goldsberry - BOSSO Faculty Advisor, Clinical Assistant Professor at McCombs School of Business" class="person-image kirk-image"/>
-          <div class="person-details">
+          <div class="person-details faculty-details">
             <h4>
               Kirk Goldsberry
               <div style="display: flex; gap: 8px; margin-left: 10px;">
@@ -1089,13 +1099,12 @@
             <p>Faculty Advisor</p>
             <p><b>Title:</b> Clinical Assistant Professor</p>
             <p><b>Department:</b> Management, Red McCombs School of Business</p>
-            <p style="visibility: hidden; margin: 4px 0; font-size: 14px; line-height: 1.4; color: #ccc;">Placeholder text to maintain height</p>
           </div>
         </div>
 
         <div class="person-card fade-in">
           <img src="../assets/images/faculty/mark.png" alt="Mark Pannes - BOSSO Faculty Advisor, Lecturer in Communication Studies at UT Austin" class="person-image" />
-          <div class="person-details">
+          <div class="person-details faculty-details">
             <h4>
               Mark Pannes
               <div style="display: flex; gap: 8px; margin-left: 10px;">
@@ -1109,7 +1118,7 @@
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </a>
-                <a href="mailto:board@txbosso.com" target="_blank" class="linkedin-icon" title="Email">
+                <a href="mailto:mpannes@utexas.edu" target="_blank" class="linkedin-icon" title="Email">
                   <svg viewBox="0 0 24 24">
                     <path d="M12 13.065 1.5 6.75V18h21V6.75L12 13.065zm0-2.13 9.75-6.435H2.25L12 10.935z"/>
                   </svg>
@@ -1119,7 +1128,35 @@
             <p>Faculty Advisor</p>
             <p><b>Title:</b> Lecturer</p>
             <p><b>Department:</b> Department of Communication Studies</p>
-            <p style="visibility: hidden; margin: 4px 0; font-size: 14px; line-height: 1.4; color: #ccc;">Placeholder text to maintain height</p>
+          </div>
+        </div>
+
+        <div class="person-card fade-in">
+          <img src="../assets/images/faculty/matt.JPG" alt="Matt Bowers - BOSSO Faculty Advisor at UT Austin" class="person-image matt-image" />
+          <div class="person-details faculty-details">
+            <h4>
+              Matt Bowers
+              <div style="display: flex; gap: 8px; margin-left: 10px;">
+                <a href="https://fisd.utexas.edu/provosts-teaching-fellows/matt-bowers" target="_blank" class="linkedin-icon" title="Profile">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mattbowersphd/" target="_blank" class="linkedin-icon" title="LinkedIn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a href="mailto:mattbowers@austin.utexas.edu" target="_blank" class="linkedin-icon" title="Email">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 13.065 1.5 6.75V18h21V6.75L12 13.065zm0-2.13 9.75-6.435H2.25L12 10.935z"/>
+                  </svg>
+                </a>
+              </div>
+            </h4>
+            <p>Faculty Advisor</p>
+            <p><b>Title:</b> Managing Director, Business of Sports Institute</p>
+            <p><b>Department:</b> Texas McCombs School of Business</p>
           </div>
         </div>
       </div>
