@@ -8,9 +8,14 @@ function loadFooter() {
                 <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
                     Subscribe to our newsletter for updates on events, opportunities, and insights from the world of sports analytics.
                 </p>
-                <a href="https://bosso-portal.vercel.app/newsletter/subscribe" target="_blank" class="button-redhat" style="display: inline-block; background: white; color: #bf5700; padding: 15px 40px; font-size: 1.1rem; font-weight: 600; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.3s ease;">
-                    Subscribe to Newsletter →
-                </a>
+                <form class="subscribe-form" novalidate style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: flex-start; max-width: 440px; margin: 0 auto;">
+                    <input type="email" name="email" required placeholder="you@email.com" class="subscribe-input" aria-label="Email address" style="flex: 1; min-width: 200px; padding: 14px 20px; border-radius: 999px; border: none; font-size: 1rem; font-family: 'Red Hat Display', sans-serif;">
+                    <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+                    <button type="submit" class="button-redhat" style="display: inline-block; background: white; color: #bf5700; padding: 14px 30px; font-size: 1.05rem; font-weight: 600; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; white-space: nowrap;">
+                        Subscribe →
+                    </button>
+                    <span class="subscribe-message" hidden style="display: block; width: 100%; color: #fff; font-size: 0.9rem;"></span>
+                </form>
             </div>
         </section>
 
@@ -72,10 +77,16 @@ function loadFooter() {
                 box-sizing: border-box;
             }
 
-            .newsletter-section a:hover {
+            .newsletter-section a:hover,
+            .newsletter-section button:hover {
                 background: #f0f0f0 !important;
                 transform: translateY(-2px);
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .newsletter-section .subscribe-success {
+                font-weight: 700;
+                color: #ffffff;
             }
 
             .footer-container {
@@ -160,3 +171,53 @@ function loadFooter() {
 
 // Load footer when DOM is ready
 document.addEventListener('DOMContentLoaded', loadFooter);
+
+// Handles any .subscribe-form on the page (footer, newsletter.html hero,
+// newsletter.html subscribe banner) so people can sign up without ever
+// leaving the site. Delegated on document so it works even for the
+// footer's form, which is injected after this script runs.
+document.addEventListener('submit', function (event) {
+    var form = event.target.closest('.subscribe-form');
+    if (!form) return;
+    event.preventDefault();
+
+    var emailInput = form.querySelector('input[type="email"]');
+    var honeypot = form.querySelector('input[name="website"]');
+    var button = form.querySelector('button');
+    var message = form.querySelector('.subscribe-message');
+
+    if (honeypot && honeypot.value) return;
+    var email = emailInput ? emailInput.value.trim() : '';
+    if (!email) return;
+
+    var originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Subscribing…';
+    if (message) {
+        message.hidden = true;
+        message.textContent = '';
+    }
+
+    fetch('https://bosso-portal.vercel.app/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, website: honeypot ? honeypot.value : '' })
+    })
+        .then(function (response) {
+            return response.json().catch(function () { return {}; }).then(function (data) {
+                return { ok: response.ok, data: data };
+            });
+        })
+        .then(function (result) {
+            if (!result.ok) throw new Error((result.data && result.data.error) || 'Something went wrong. Please try again.');
+            form.innerHTML = '<span class="subscribe-success">You&rsquo;re subscribed! &#10003;</span>';
+        })
+        .catch(function (error) {
+            button.disabled = false;
+            button.textContent = originalText;
+            if (message) {
+                message.textContent = error.message;
+                message.hidden = false;
+            }
+        });
+});

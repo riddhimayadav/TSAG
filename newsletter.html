@@ -196,6 +196,50 @@
       color: var(--border);
     }
 
+    /* ---------- Inline subscribe form ---------- */
+
+    .subscribe-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .subscribe-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--ink);
+      background: var(--canvas);
+    }
+
+    .subscribe-input:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+
+    .subscribe-honeypot {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .subscribe-message {
+      display: block;
+      width: 100%;
+      font-size: 0.85rem;
+      color: #b3261e;
+      margin-top: 2px;
+    }
+
+    .subscribe-success {
+      font-weight: 700;
+      color: var(--orange);
+    }
+
     /* ---------- Featured clients ---------- */
 
     .clients {
@@ -534,7 +578,12 @@
     <h1>BOSSO Projects &amp; Media</h1>
     <p class="lead">Consulting and research work, our newsletter, and the conversations we're having with people across the sports industry.</p>
     <div class="hero-actions">
-      <a class="btn primary" href="https://bosso-portal.vercel.app/newsletter/subscribe" target="_blank" rel="noopener">Subscribe to Newsletter</a>
+      <form class="subscribe-form" novalidate>
+        <input type="email" name="email" required placeholder="you@email.com" class="subscribe-input" aria-label="Email address">
+        <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn primary">Subscribe to Newsletter</button>
+        <span class="subscribe-message" hidden></span>
+      </form>
       <a class="btn secondary" href="https://open.spotify.com/show/16Nnwts9OfKgd134xZtdMu" target="_blank" rel="noopener">Listen to Podcast</a>
     </div>
     <div class="stat-row">
@@ -609,7 +658,12 @@
 
       <div class="subscribe-banner">
         <p>Get the next issue straight to your inbox.</p>
-        <a class="btn primary" href="https://bosso-portal.vercel.app/newsletter/subscribe" target="_blank" rel="noopener">Subscribe to Newsletter</a>
+        <form class="subscribe-form" novalidate>
+          <input type="email" name="email" required placeholder="you@email.com" class="subscribe-input" aria-label="Email address">
+          <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn primary">Subscribe</button>
+          <span class="subscribe-message" hidden></span>
+        </form>
       </div>
     </div>
   </section>
