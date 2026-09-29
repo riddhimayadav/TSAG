@@ -8,7 +8,7 @@ function loadFooter() {
                 <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
                     Subscribe to our newsletter for updates on events, opportunities, and insights from the world of sports analytics.
                 </p>
-                <a href="https://docs.google.com/forms/d/1jMR-KpWR46873mDVbxaI9najP-QKDfgtN4dNEGWJAOg/viewform" target="_blank" class="button-redhat" style="display: inline-block; background: white; color: #bf5700; padding: 15px 40px; font-size: 1.1rem; font-weight: 600; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.3s ease;">
+                <a href="https://bosso-portal.vercel.app/newsletter/subscribe" target="_blank" class="button-redhat" style="display: inline-block; background: white; color: #bf5700; padding: 15px 40px; font-size: 1.1rem; font-weight: 600; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.3s ease;">
                     Subscribe to Newsletter →
                 </a>
             </div>
