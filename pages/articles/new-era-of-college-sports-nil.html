@@ -7,15 +7,19 @@
   <title>New Era of College Sports: NIL</title>
   <script src="../../assets/js/header-component.js"></script>
   <script src="../../assets/js/footer-component.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --orange: #bf5700;
-      --canvas: #f7f7f5;
-      --surface: #ffffff;
-      --text: #0a0a0a;
-      --muted: rgba(10, 10, 10, 0.65);
-      --border: rgba(10, 10, 10, 0.08);
+      --canvas: #ffffff;
+      --ink: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.62);
+      --faint: rgba(10, 10, 10, 0.42);
+      --border: rgba(10, 10, 10, 0.09);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
     html, body {
@@ -23,86 +27,84 @@
       padding: 0;
       font-family: 'Red Hat Display', sans-serif;
       background: var(--canvas);
-      color: var(--text);
+      color: var(--ink);
     }
 
-    .page {
-      max-width: 860px;
-      padding: 140px 22px 120px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .masthead {
+      padding: 64px 24px 40px;
+      max-width: 720px;
       margin: 0 auto;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 50px;
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
-      display: grid;
-      gap: 16px;
+      text-align: center;
     }
 
     .eyebrow {
-      letter-spacing: 0.28em;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--orange);
       font-weight: 700;
-      font-size: 0.8rem;
-      margin: 0;
+      font-size: 0.78rem;
+      margin: 0 0 18px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      line-height: 1.08;
+    .masthead h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
     .subhead {
-      margin: 0;
+      margin: 0 0 18px;
       color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.5;
     }
 
     .byline {
-      margin: 0;
-      font-weight: 700;
+      margin: 0 0 26px;
+      color: var(--faint);
+      font-weight: 600;
+      font-size: 0.9rem;
     }
 
     .cta {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 12px 18px;
-      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 20px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      background: var(--surface);
       text-decoration: none;
-      color: var(--text);
+      color: var(--ink);
       font-weight: 700;
-      width: fit-content;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .cta:hover,
     .cta:focus-visible {
-      border-color: rgba(191, 87, 0, 0.5);
-      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      border-color: var(--orange);
       transform: translateY(-1px);
     }
 
     .article-body {
-      margin-top: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      border-top: 1px solid var(--border);
     }
 
     .article-body p {
-      margin: 0 0 18px;
-      color: var(--text);
-      line-height: 1.8;
-      font-size: 1.02rem;
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.08rem;
     }
 
     .article-body p:last-child {
@@ -110,64 +112,59 @@
     }
 
     .article-figure {
-      margin: 30px 0 24px;
-      text-align: center;
+      margin: 32px 0;
     }
 
     .article-figure img {
-      display: block;
       width: 100%;
-      max-width: 720px;
-      margin: 0 auto 12px;
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+      border-radius: 14px;
     }
 
     .article-figure figcaption {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-      text-align: center;
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--faint);
+      font-style: italic;
+      text-align: right;
     }
 
     @media (max-width: 700px) {
-      .page {
-        padding: 120px 16px 110px;
+      .masthead {
+        padding: 48px 20px 32px;
       }
 
-      .hero,
       .article-body {
-        padding: 28px;
+        padding: 32px 20px 120px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <section class="hero">
-      <p class="eyebrow">UT Article</p>
-      <h1>New Era of College Sports: NIL</h1>
-      <p class="subhead">How name, likeness, and image are reshaping Collegiate Sports</p>
-      <p class="byline">By: Almudena Gonzalez</p>
-      <a class="cta" href="/newsletter.html">Back to portfolio</a>
-    </section>
 
-    <article class="article-body">
-      <p>College sports are beginning to change. Why? The biggest reason is NIL. College athletics were built around athletes competing for their schools, earning scholarships and representing their colleges, but with all this hard work and dedication, they were not allowed to make money off their own talent.</p>
+  <section class="masthead">
+    <p class="eyebrow">Article</p>
+    <h1>New Era of College Sports: NIL</h1>
+    <p class="subhead">How name, likeness, and image are reshaping collegiate sports</p>
+    <p class="byline">By Almudena Gonzalez &middot; April 7, 2026</p>
+    <a class="cta" href="/newsletter.html">&larr; Back to portfolio</a>
+  </section>
 
-      <p>The NCAA used to focus on “preserving the purity of college sports.” (Collins) Universities were making millions from media and ticket sales, while student-athletes couldn’t earn anything beyond their scholarship. As Marcus Collins describes in Forbes, “It was a system that generated billions in revenue while student-athletes—the very individuals at the heart of this economic engine—were prohibited from earning a dime from their talents beyond their school scholarships.” NIL came into play to help balance that fix.</p>
+  <article class="article-body">
+    <p>College sports are beginning to change. Why? The biggest reason is NIL. College athletics were built around athletes competing for their schools, earning scholarships and representing their colleges, but with all this hard work and dedication, they were not allowed to make money off their own talent.</p>
 
-      <p>NIL now allows athletes to “take on added duties to maintain their image, negotiate deals, effectively engage with brands, and sign agreements that are compliant with various rules and laws” (Hughes). This is a huge change in how college athletics are viewed: athletes are no longer just teammates; they are now individual brands. This shift now gives athletes an advantage that older generations never had. Student-athletes are now able to build connections and gain business knowledge that will be helpful even after their collegiate careers end.</p>
+    <p>The NCAA used to focus on &ldquo;preserving the purity of college sports.&rdquo; (Collins) Universities were making millions from media and ticket sales, while student-athletes couldn&rsquo;t earn anything beyond their scholarship. As Marcus Collins describes in Forbes, &ldquo;It was a system that generated billions in revenue while student-athletes, the very individuals at the heart of this economic engine, were prohibited from earning a dime from their talents beyond their school scholarships.&rdquo; NIL came into play to help balance that fix.</p>
 
-      <figure class="article-figure">
-        <img src="../../assets/images/articles/8ee7d0c8-328d-4734-8f81-a5fc0d03cace_590x340.jpg" alt="Graphic showing the top 10 highest-paid NIL student athletes">
-        <figcaption>Graphic Via Volt</figcaption>
-      </figure>
+    <p>NIL now allows athletes to &ldquo;take on added duties to maintain their image, negotiate deals, effectively engage with brands, and sign agreements that are compliant with various rules and laws&rdquo; (Hughes). This is a huge change in how college athletics are viewed: athletes are no longer just teammates; they are now individual brands. This shift now gives athletes an advantage that older generations never had. Student-athletes are now able to build connections and gain business knowledge that will be helpful even after their collegiate careers end.</p>
 
-      <p>Although NIL has had its positives, it has made college sports into a more professional setting. Michael Hughes explains how “Primary impacts of NIL rights are how it introduces elements of professional sports into the college arena” (Hughes). Student-athletes aren’t just student-athletes; they now have added responsibilities, such as maintaining their image and following certain rules, and, on top of all that, they must attend school and practice. Another major impact of NIL is that athletes are now choosing where to play based on which program offers the best NIL opportunities. In most cases, the financial side of their recruiting might be the deciding factor rather than the school team or traditions. This shows how much the line of what college sports used to be to what they are becoming.</p>
+    <figure class="article-figure">
+      <img src="../../assets/images/articles/8ee7d0c8-328d-4734-8f81-a5fc0d03cace_590x340.jpg" alt="Graphic showing the top 10 highest-paid NIL student athletes">
+      <figcaption>Graphic via Volt</figcaption>
+    </figure>
 
-      <p>Overall, NIL has helped to give athletes a voice, but it has drastically changed the purity of what college sports were. Student-athletes today aren’t just balancing athletics and academics, but also the business side of their sports. College athletics have shifted to branding and money. However, there are positives to NIL, including greater financial freedom and the ability to gain real-world business knowledge. Whether this change is good or bad, the only thing that is clear is how much the image of a student athlete has changed permanently.</p>
-    </article>
-  </div>
+    <p>Although NIL has had its positives, it has made college sports into a more professional setting. Michael Hughes explains how &ldquo;Primary impacts of NIL rights are how it introduces elements of professional sports into the college arena&rdquo; (Hughes). Student-athletes aren&rsquo;t just student-athletes; they now have added responsibilities, such as maintaining their image and following certain rules, and, on top of all that, they must attend school and practice. Another major impact of NIL is that athletes are now choosing where to play based on which program offers the best NIL opportunities. In most cases, the financial side of their recruiting might be the deciding factor rather than the school team or traditions. This shows how much the line of what college sports used to be to what they are becoming.</p>
+
+    <p>Overall, NIL has helped to give athletes a voice, but it has drastically changed the purity of what college sports were. Student-athletes today aren&rsquo;t just balancing athletics and academics, but also the business side of their sports. College athletics have shifted to branding and money. However, there are positives to NIL, including greater financial freedom and the ability to gain real-world business knowledge. Whether this change is good or bad, the only thing that is clear is how much the image of a student athlete has changed permanently.</p>
+  </article>
+
 </body>
 </html>

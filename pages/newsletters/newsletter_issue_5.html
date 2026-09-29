@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+  <title>BOSSO Newsletter | Welcome Back, BOSSO!</title>
+  <script src="../../assets/js/header-component.js"></script>
+  <script src="../../assets/js/footer-component.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #bf5700;
+      --canvas: #ffffff;
+      --ink: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.62);
+      --faint: rgba(10, 10, 10, 0.42);
+      --border: rgba(10, 10, 10, 0.09);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+      background: var(--canvas);
+      color: var(--ink);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Masthead ---------- */
+
+    .masthead {
+      padding: 64px 24px 56px;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 0.78rem;
+      margin: 0 0 18px;
+    }
+
+    .masthead h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .masthead .issue-date {
+      margin: 0 0 22px;
+      color: var(--faint);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .masthead .lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      border-color: var(--orange);
+      transform: translateY(-1px);
+    }
+
+    /* ---------- In this issue nav ---------- */
+
+    .toc {
+      max-width: 720px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
+    }
+
+    .toc-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0 0 14px;
+    }
+
+    .toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .toc-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 2px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .toc-list a:hover,
+    .toc-list a:focus-visible {
+      color: var(--orange);
+    }
+
+    .toc-tag {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    /* ---------- Articles ---------- */
+
+    .issue-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .story {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 100px;
+    }
+
+    .story:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .story-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 0 0 12px;
+    }
+
+    .story h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .byline {
+      margin: 0 0 28px;
+      color: var(--faint);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .story p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.08rem;
+    }
+
+    .story p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story figure {
+      margin: 32px 0;
+    }
+
+    .story-image {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--faint);
+      font-style: italic;
+      text-align: right;
+    }
+
+    .story blockquote {
+      margin: 28px 0;
+      padding: 4px 0 4px 22px;
+      border-left: 3px solid var(--orange);
+      color: var(--ink);
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .story blockquote p {
+      margin: 0;
+      color: var(--ink);
+      font-size: inherit;
+    }
+
+    .back-to-top {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .masthead {
+        padding: 48px 20px 36px;
+      }
+
+      .story {
+        padding: 40px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="masthead">
+    <p class="eyebrow">Newsletter</p>
+    <h1>Welcome Back, BOSSO!</h1>
+    <p class="issue-date">Sept 29, 2026</p>
+    <p class="lead">Kicking off the semester with everything happening in the world of sports: record-breaking NFL scoring, Arch Manning’s apology, MLB’s looming lockout, McLaren’s new partnership, Holger Rune’s comeback, and Mbapp&eacute;’s move to On Soccer.</p>
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </section>
+
+  <nav class="toc">
+    <p class="toc-label">In This Issue</p>
+    <ul class="toc-list">
+      <li><a href="#nfl-scoring">NFL Week 1 Sees Record Scoring Numbers <span class="toc-tag">NFL</span></a></li>
+      <li><a href="#manning-apology">Manning Faces Backlash Over AI Video Comments <span class="toc-tag">College Football</span></a></li>
+      <li><a href="#mlb-labor">Baseball’s Last October? <span class="toc-tag">MLB</span></a></li>
+      <li><a href="#f1-mclaren">The Fastest Cars Are Never Finished <span class="toc-tag">Formula 1</span></a></li>
+      <li><a href="#rune-return">Advantage In: Holger Rune’s Return <span class="toc-tag">Tennis</span></a></li>
+      <li><a href="#mbappe-on">Mbapp&eacute; Leaves Nike to Join On Soccer <span class="toc-tag">Soccer</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="issue-body">
+
+    <article class="story" id="nfl-scoring">
+      <p class="story-tag">NFL</p>
+      <h2>NFL Week 1 Sees Record Scoring Numbers, What Does This Mean?</h2>
+      <p class="byline">By Gavin Resendez Lopez</p>
+
+      <p>In week 1 of the NFL season, every team combined for a total of 791 points scored, tying a record established in 2012 for the most points scored in the first week.</p>
+
+      <p>Over the last few seasons, a big point of discussion between fans and experts alike has been the decline of offensive production. Many have cited the decline of 4,000-yard passers.</p>
+
+      <p>On Sept. 9, the 2026-27 season kicked off with a Super Bowl rematch between the Seattle Seahawks and New England Patriots. The final score was 13-10, a defensive struggle that led fans to continue these discussions.</p>
+
+      <p>When the final game of the week concluded, a new conversation began. Despite multiple premier offenses such as the Rams, Cowboys, Falcons, Seahawks, Chargers, and Broncos all scoring 20 or fewer points, the scoring record was tied.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-nfl-scoring.png" alt="Scatter chart of NFL team offensive and defensive EPA per play tiers for the 2026 season">
+        <figcaption>Graphic via Yahoo Sports</figcaption>
+      </figure>
+
+      <p>NFL defenses have evolved to prevent explosive passing attacks, prioritizing preventing long yardage plays through multiple safeties and sending creative blitz packages.</p>
+
+      <p>Multiple key performances from Week 1 were running backs; the players include Jahmyr Gibbs, Breece Hall, Derrick Henry, D&rsquo;Andre Swift, Bijan Robinson, David Montgomery, Ashton Jeanty, and Chuba Hubbard, who all had a touchdown and 100 total yards, except for Montgomery and Hubbard.</p>
+
+      <p>The shift to prioritizing the rushing attack was also highlighted by teams being under center on 42.5% of plays, the highest since 2013. Teams are using heavier formations and plays to counter new defenses, allowing continued success as well in week 2, with 8 teams scoring 30 or more points.</p>
+
+      <p>All eyes will be on week 3 to see if defenses will respond, or if the return to form for NFL offenses will continue.</p>
+    </article>
+
+    <article class="story" id="manning-apology">
+      <p class="story-tag">College Football</p>
+      <h2>Manning Faces Backlash Over AI Video Comments</h2>
+      <p class="byline">By Cody Feldman</p>
+
+      <p>Last week, star QB Arch Manning came under fire for comments he made about an AI video circulating on X after Texas defeated Ohio State.</p>
+
+      <p>After the win, ESPN reporter Holly Rowe attempted to interview Texas head coach Steve Sarkisian on the field. Instead, Sarkisian stormed away from the interview, exclaiming &ldquo;Hook Em&rdquo; before leaving Rowe on the field without a quote. Many criticized Sarkisian for leaving Rowe on the field, believing it was disrespectful to leave the reporter after such a win.</p>
+
+      <p>In a presser the next Monday, Manning laughed about an AI-edited video, which depicted Sarkisian hitting Rowe on the field. The video, which had many online talking about the way it portrayed domestic violence, drew the laughs of not only Manning but the rest of the predominantly male press room. Manning was heavily criticized for his humorous interpretation of the video. He gave an apology on his Instagram story the next day for his comments.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-manning-apology.png" alt="Texas quarterback Arch Manning in a Texas Longhorns hoodie">
+        <figcaption>Photo via Yahoo Sports</figcaption>
+      </figure>
+
+      <blockquote>
+        <p>&ldquo;There is nothing funny about it. It&rsquo;s easy to say that I didn&rsquo;t mean it, but I know my words and actions were hurtful to a lot of people,&rdquo; Manning wrote in his story. &ldquo;I specifically want to apologize to Holly Rowe for what she has personally had to deal with because of my comments.&rdquo;</p>
+      </blockquote>
+
+      <p>Rowe wrote on her X account that she had a conversation with Arch and appreciated his apology. With the lapse in judgment behind him, Manning will look to keep the ball rolling for the 3-0 Longhorns when they take on Tennessee on the road on Saturday.</p>
+    </article>
+
+    <article class="story" id="mlb-labor">
+      <p class="story-tag">MLB</p>
+      <h2>Baseball’s Last October?</h2>
+      <p class="byline">By Shreyan Dey</p>
+
+      <p>Major League Baseball’s postseason starts this week, but the biggest fight in the sport won’t happen on a field this time.</p>
+
+      <p>MLB’s labor deal expires Dec. 1, and a lockout is what looks likely. The dispute centers on a salary cap, which is something baseball has never had.</p>
+
+      <p>Owners have proposed capping team spending at $245.3 million next year, with a payroll floor of $171.2 million. For context, the Mets opened 2026 with a payroll above $352 million. Under the capping plan, eight clubs would have to cut payroll by a combined $578 million, while twelve would have to add $617 million to reach the floor.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-mlb-labor.png" alt="MLB 2026 Postseason Picture bracket graphic">
+        <figcaption>Photo via MLB</figcaption>
+      </figure>
+
+      <p>Owners argue it would help small teams keep homegrown stars. Critics say the real motive is the belief that being the only uncapped major North American league hurts franchise values.</p>
+
+      <p>History provides a big picture too. Rob Manfred was a junior lawyer on the owners’ side the last time MLB pushed for a cap, in 1994, which led to a strike that canceled that year’s World Series.</p>
+
+      <p>So concerns rise this October. If owners and players don’t agree on a deal by December 1, owners are expected to lock the players out, which could shut MLB down until a deal gets done.</p>
+    </article>
+
+    <article class="story" id="f1-mclaren">
+      <p class="story-tag">Formula 1</p>
+      <h2>The Fastest Cars Are Never Finished</h2>
+      <p class="byline">By Deepti Adhyam</p>
+
+      <p>An F1 car can travel at more than 200 miles per hour. But what makes it fast isn’t just speed; it’s the willingness to find what isn’t working and change it.</p>
+
+      <p>McLaren Racing announced a new partnership with SharkNinja on September 15, bringing the two companies together around a shared focus on innovation and consistent improvement. The multi-year partnership makes SharkNinja an official partner across McLaren’s Formula 1, IndyCar, Hypercar and F1 Academy teams.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-f1-mclaren.png" alt="Orange McLaren race car on track">
+        <figcaption>Photo via McLaren</figcaption>
+      </figure>
+
+      <p>In Formula 1, a car is never truly finished. Teams are always analyzing data and making adjustments to improve performance. SharkNinja follows a similar approach with its products, using consumer feedback and innovation to develop and improve what it creates.</p>
+
+      <p>Through the partnership, SharkNinja will also take part in McLaren’s Racing Accelerator Programme, which will give the company access to McLaren’s engineering expertise as it works on future product development.</p>
+
+      <p>But the idea of constant improvement extends beyond racing and technology.</p>
+
+      <p>College can make it feel like we’re supposed to have everything figured out. We’re expected to know what we want to study, what career we want, and who we want to become. But maybe we aren’t meant to arrive at one final version of ourselves.</p>
+
+      <p>Maybe life works more like engineering.</p>
+
+      <p>You build. You learn. You adjust. Then repeat all over again.</p>
+
+      <p>There is no finished version of anything, including ourselves. And that isn’t something to be afraid of. Maybe that’s the point.</p>
+    </article>
+
+    <article class="story" id="rune-return">
+      <p class="story-tag">Tennis</p>
+      <h2>Advantage In: Holger Rune’s Return</h2>
+      <p class="byline">By Emily Cheong</p>
+
+      <p>On September 18th, 2026, the highest-ranked male Danish player in tennis history stepped back onto the hard court. Holger Rune made his reappearance at the Davis Cup, the men’s international team tennis event, aiding Team Denmark in securing the win over Bulgaria with two singles victories in two days.</p>
+
+      <p>This marked Rune’s first official game back after an 11-month hiatus from a devastating Achilles injury last fall against Ugo Humbert. With a career-high ranking of world No. 4 in 2023, Rune currently sits around the top 140s in the current ATP Tour singles rankings.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-rune-return.png" alt="Holger Rune reacting during a tennis match">
+        <figcaption>Photo via The Guardian</figcaption>
+      </figure>
+
+      <p>Since Rune’s injury, the world of men’s tennis has faced major shifts in its atmosphere: Carlos Alcaraz faced multiple Grand Slam withdrawals, Alexander Zverev won his first two Grand Slam singles titles, and Novak Djokovic is no longer in the top 10.</p>
+
+      <p>With all of this happening, it leaves the current ATP tour vulnerable to a rankings disturbance, giving underdogs and steady competitors a chance to climb out on top.</p>
+
+      <p>Could Rune reclaim a top position once again with this change in dynamics?</p>
+
+      <p>His most recent match had him winning a three-set thriller against Grigor Dimitrov, who was able to defeat Mensik and Berrettini at Wimbledon before ultimately falling. If he is able to keep up with his current recovery status and maintain this streak of competitiveness in ATP competitions, men’s tennis may face the resurgence of Holger Rune once again.</p>
+    </article>
+
+    <article class="story" id="mbappe-on">
+      <p class="story-tag">Soccer</p>
+      <h2>Mbapp&eacute; Leaves 20-Year Partnership With Nike to Join On Soccer</h2>
+      <p class="byline">By Nico Borrelli</p>
+
+      <p>On September 18th, Kylian Mbapp&eacute; announced via Instagram that he is leaving his 20-year partnership with Nike and joining the new On Soccer division. This switch signifies both a breakthrough in the world of soccer equipment and a change in the structure of player endorsements.</p>
+
+      <p>Mbappe first signed for Nike at just 8 years old and has been partnered with the brand for the past 20 years. This switch marks the first sponsorship change in his professional career.</p>
+
+      <figure>
+        <img class="story-image" src="../../assets/images/newsletters/issue5-mbappe-on.png" alt="Person wearing an On jacket with the On logo visible">
+        <figcaption>Photo via ON</figcaption>
+      </figure>
+
+      <p>The Swiss brand On recently announced its new branch in the soccer market. They look to use the design innovations that quickly made them a household name in the running market to establish themselves as a marquee soccer brand and rival major brands like Nike and Adidas. The On Soccer cleats set to be released in 2027 will utilize On’s highly innovative LightSpray technology, which sprays a lightweight, single-piece upper directly onto the structural base of the cleat, according to On.</p>
+
+      <p>Mbappe reportedly turned down a 10-year contract renewal with Nike worth more than 20 million a year in favor of joining the On project. We do not know the salary Mbapp&eacute; accepted with On, but it is assumed that the equity offered by On played a big role in his decision. This decision highlights the shift in modern-day sports endorsements where players are valuing equity and involvement with a company more than just the paycheck itself. With On, Mbapp&eacute; joins as a global ambassador and shareholder as they launch the new brand, an opportunity that comes from joining a new brand rather than an already established company like Nike.</p>
+    </article>
+
+  </div>
+
+  <div class="back-to-top">
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </div>
+
+</body>
+</html>

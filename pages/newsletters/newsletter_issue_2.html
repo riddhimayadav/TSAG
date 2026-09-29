@@ -4,18 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="../../assets/images/logo.png">
-  <title>BOSSO Newsletter Issue #2</title>
+  <title>BOSSO Newsletter | Sarah Baumgartner lecture + NFL research project</title>
   <script src="../../assets/js/header-component.js"></script>
   <script src="../../assets/js/footer-component.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --orange: #bf5700;
-      --canvas: #f7f7f5;
-      --surface: #ffffff;
-      --text: #0a0a0a;
-      --muted: rgba(10, 10, 10, 0.65);
-      --border: rgba(10, 10, 10, 0.08);
+      --canvas: #ffffff;
+      --ink: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.62);
+      --faint: rgba(10, 10, 10, 0.42);
+      --border: rgba(10, 10, 10, 0.09);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
     html, body {
@@ -23,161 +27,306 @@
       padding: 0;
       font-family: 'Red Hat Display', sans-serif;
       background: var(--canvas);
-      color: var(--text);
+      color: var(--ink);
     }
 
-    .page {
-      max-width: 1100px;
-      padding: 140px 22px 120px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Masthead ---------- */
+
+    .masthead {
+      padding: 64px 24px 56px;
+      max-width: 720px;
       margin: 0 auto;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 50px;
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
-      display: grid;
-      gap: 18px;
+      text-align: center;
     }
 
     .eyebrow {
-      letter-spacing: 0.28em;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--orange);
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
+      margin: 0 0 18px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.3rem, 4vw, 3.6rem);
+    .masthead h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
       line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
-    .lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .issue-date {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(191, 87, 0, 0.1);
-      color: var(--text);
+    .masthead .issue-date {
+      margin: 0 0 22px;
+      color: var(--faint);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .masthead .lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
     }
 
     .cta {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 12px 18px;
-      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 20px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      background: var(--surface);
       text-decoration: none;
-      color: var(--text);
+      color: var(--ink);
       font-weight: 700;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .cta:hover,
     .cta:focus-visible {
-      border-color: rgba(191, 87, 0, 0.5);
-      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      border-color: var(--orange);
       transform: translateY(-1px);
     }
 
-    .body {
-      margin-top: 32px;
-      display: grid;
-      gap: 18px;
+    /* ---------- In this issue nav ---------- */
+
+    .toc {
+      max-width: 720px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    .toc-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0 0 14px;
     }
 
-    .card h2 {
+    .toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .toc-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 2px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .toc-list a:hover,
+    .toc-list a:focus-visible {
+      color: var(--orange);
+    }
+
+    .toc-tag {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    /* ---------- Articles ---------- */
+
+    .issue-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .story {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 100px;
+    }
+
+    .story:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .story-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
       margin: 0 0 12px;
-      font-size: 1.4rem;
     }
 
-    .card p {
-      margin: 0 0 10px;
+    .story h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .byline {
+      margin: 0 0 28px;
+      color: var(--faint);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .story p {
+      margin: 0 0 20px;
       color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.08rem;
+    }
+
+    .story p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story figure {
+      margin: 32px 0;
+    }
+
+    .story-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f4eee9 0%, #e9dccb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #a56a2c;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--faint);
+      font-style: italic;
+      text-align: right;
+    }
+
+    .story blockquote {
+      margin: 28px 0;
+      padding: 4px 0 4px 22px;
+      border-left: 3px solid var(--orange);
+      color: var(--ink);
+      font-style: italic;
+      font-size: 1.15rem;
       line-height: 1.6;
     }
 
+    .story blockquote p {
+      margin: 0;
+      color: var(--ink);
+      font-size: inherit;
+    }
+
+    .back-to-top {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+      text-align: center;
+    }
+
     @media (max-width: 700px) {
-      .page {
-        padding: 120px 16px 110px;
+      .masthead {
+        padding: 48px 20px 36px;
       }
 
-      .hero {
-        padding: 36px;
+      .story {
+        padding: 40px 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <section class="hero">
-      <p class="eyebrow">Issue #2</p>
-      <h1>Kevin Xu lecture + NFL research project</h1>
-      <p class="issue-date">Nov 3, 2025</p>
-      <p class="lead">San Antonio Spurs guest lecture, NFL predictive model project, Matt Gelb spotlight, and UT sports roundup.</p>
-      <div class="pill-row">
-        <span class="pill">Speaker</span>
-        <span class="pill">Research</span>
-        <span class="pill">Spotlight</span>
-      </div>
-      <a class="cta" href="/newsletter.html">Back to archive</a>
-    </section>
 
-    <div class="body">
-      <article class="card">
-        <h2>Previous Events</h2>
-        <p>Guest Speaker</p>
-        <p>This past week, BOSSO had a special guest speaker come out and speak on sports: Sarah Baumgartner. Sarah is the Executive Senior Associate Athletics Director for Texas Athletics. She began her role in August 2021, and within her role, she provides supervision of head coaches, directors of operations, and program administrators for all 20 sports. She is the liaison to all areas within the athletics department that interact and support sports programs and is responsible for monitoring student-athlete recruitment, experience, academic progress, and welfare. Prior to her role at the Forty Acres, she served five years as deputy director of athletics at Rutgers University (2016-2021).</p>
-      </article>
+  <section class="masthead">
+    <p class="eyebrow">Newsletter</p>
+    <h1>Sarah Baumgartner lecture + NFL research project</h1>
+    <p class="issue-date">Nov 3, 2025</p>
+    <p class="lead">Sarah Baumgartner guest lecture, NFL predictive model project, Matt Gelb spotlight, and UT sports roundup.</p>
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </section>
 
-      <article class="card">
-        <h2>Research Project</h2>
-        <p>BOSSO has also recently launched an internal football research project, utilizing a predictive model to forecast NFL player success from a psychological and behavioral perspective. This project utilizes natural-language processing (NLP) and machine learning to analyze interview transcripts of college football players, identifying linguistic and emotional patterns tied to performance, longevity, and leadership potential within the NFL. By combining psychological insights with regular data, the team is aiming to enhance draft strategy and overall player evaluation. The current focus is on collecting and transcribing interview data using tools such as Python, R, SQL, and sports data APIs, with expected deliverables including a predictive model, methodology report, and an interactive dashboard for model outputs. BOSSO’s overarching role within the project is to apply data analytics and psychological modeling to enhance how teams evaluate a player’s potential, ultimately advancing the goal of integrating behavioral insights into sports decision-making.</p>
-      </article>
+  <nav class="toc">
+    <p class="toc-label">In This Issue</p>
+    <ul class="toc-list">
+      <li><a href="#previous-events">Previous Events <span class="toc-tag">Speaker</span></a></li>
+      <li><a href="#research-project">Research Project <span class="toc-tag">Research</span></a></li>
+      <li><a href="#member-spotlight">Member Spotlight: Matt Gelb <span class="toc-tag">Spotlight</span></a></li>
+      <li><a href="#around-ut">Around UT <span class="toc-tag">UT Sports</span></a></li>
+    </ul>
+  </nav>
 
-      <article class="card">
-        <h2>Member Spotlight</h2>
-        <p>For our next member spotlight, meet Matt Gelb! Matt is a freshman Media Analyst from Los Angeles, California. Matt is planning on majoring in BHP and Finance with a minor in Analytics and Business of Sports. Despite being from California, Matt is a fan of northeast teams like the Yankees and Patriots. Matt is a part of the podcast team, which involves reaching out to potential guests, conducting research, editing sound bites, and creating promotional content. Despite Matt being excited to develop the podcast at greater length and hear from more industry professionals, he is most excited about the member research projects. He’s excited to navigate the ropes of data analysis in baseball with his team. His favorite part of BOSSO so far is the opportunity to meet other incredible students. Finally, Matt is extremely knowledgeable in Fantasy Football and can name the top-scoring fantasy football players at each position from the past five years.</p>
-      </article>
+  <div class="issue-body">
 
-      <article class="card">
-        <h2>Around UT</h2>
-        <p><strong>UT Football Stays Alive with Impressive Win vs. Vanderbilt:</strong> After a dominant first half and a shaky fourth quarter, UT picks up its second win of the season against a top-10 opponent at home.</p>
-        <p><strong>Longhorns Battle Hard in Five-Set Thriller Against Texas A&amp;M:</strong> UT’s Women’s Volleyball suffers its first loss against A&amp;M, but has a tough game against ranked 3 Kentucky at home.</p>
-        <p><strong>Texas Men Shine in the Pool:</strong> The Texas Men’s swim team delivered an impressive performance against Tennessee, winning 120 points to 65 points.</p>
-        <p><strong>Longhorns Dominate Volunteers, Set Records in 135‑51 Victory:</strong> Texas women’s swimming &amp; diving swept 10 events, and Freshman Eva Okaro set a school record in the 100 free, completing the overall sweep against Tennessee.</p>
-      </article>
-    </div>
+    <article class="story" id="previous-events">
+      <p class="story-tag">Speaker</p>
+      <h2>Previous Events</h2>
+      <p class="byline">Guest Speaker: Sarah Baumgartner</p>
+
+      <p>This past week, BOSSO had a special guest speaker come out and speak on sports: Sarah Baumgartner. Sarah is the Executive Senior Associate Athletics Director for Texas Athletics. She began her role in August 2021, and within her role, she provides supervision of head coaches, directors of operations, and program administrators for all 20 sports. She is the liaison to all areas within the athletics department that interact and support sports programs and is responsible for monitoring student-athlete recruitment, experience, academic progress, and welfare. Prior to her role at the Forty Acres, she served five years as deputy director of athletics at Rutgers University (2016-2021).</p>
+    </article>
+
+    <article class="story" id="research-project">
+      <p class="story-tag">Research</p>
+      <h2>Research Project</h2>
+
+      <p>BOSSO has also recently launched an internal football research project, utilizing a predictive model to forecast NFL player success from a psychological and behavioral perspective. This project utilizes natural-language processing (NLP) and machine learning to analyze interview transcripts of college football players, identifying linguistic and emotional patterns tied to performance, longevity, and leadership potential within the NFL. By combining psychological insights with regular data, the team is aiming to enhance draft strategy and overall player evaluation. The current focus is on collecting and transcribing interview data using tools such as Python, R, SQL, and sports data APIs, with expected deliverables including a predictive model, methodology report, and an interactive dashboard for model outputs. BOSSO's overarching role within the project is to apply data analytics and psychological modeling to enhance how teams evaluate a player's potential, ultimately advancing the goal of integrating behavioral insights into sports decision-making.</p>
+    </article>
+
+    <article class="story" id="member-spotlight">
+      <p class="story-tag">Spotlight</p>
+      <h2>Member Spotlight: Matt Gelb</h2>
+
+      <p>For our next member spotlight, meet Matt Gelb! Matt is a freshman Media Analyst from Los Angeles, California. Matt is planning on majoring in BHP and Finance with a minor in Analytics and Business of Sports. Despite being from California, Matt is a fan of northeast teams like the Yankees and Patriots. Matt is a part of the podcast team, which involves reaching out to potential guests, conducting research, editing sound bites, and creating promotional content. Despite Matt being excited to develop the podcast at greater length and hear from more industry professionals, he is most excited about the member research projects. He's excited to navigate the ropes of data analysis in baseball with his team. His favorite part of BOSSO so far is the opportunity to meet other incredible students. Finally, Matt is extremely knowledgeable in Fantasy Football and can name the top-scoring fantasy football players at each position from the past five years.</p>
+    </article>
+
+    <article class="story" id="around-ut">
+      <p class="story-tag">UT Sports</p>
+      <h2>Around UT</h2>
+
+      <p><strong>UT Football Stays Alive with Impressive Win vs. Vanderbilt:</strong> After a dominant first half and a shaky fourth quarter, UT picks up its second win of the season against a top-10 opponent at home.</p>
+      <p><strong>Longhorns Battle Hard in Five-Set Thriller Against Texas A&amp;M:</strong> UT's Women's Volleyball suffers its first loss against A&amp;M, but has a tough game against ranked 3 Kentucky at home.</p>
+      <p><strong>Texas Men Shine in the Pool:</strong> The Texas Men's swim team delivered an impressive performance against Tennessee, winning 120 points to 65 points.</p>
+      <p><strong>Longhorns Dominate Volunteers, Set Records in 135-51 Victory:</strong> Texas women's swimming &amp; diving swept 10 events, and Freshman Eva Okaro set a school record in the 100 free, completing the overall sweep against Tennessee.</p>
+    </article>
+
   </div>
+
+  <div class="back-to-top">
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </div>
+
 </body>
 </html>

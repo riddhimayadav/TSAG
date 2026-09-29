@@ -4,18 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="../../assets/images/logo.png">
-  <title>BOSSO Newsletter Issue #3</title>
+  <title>BOSSO Newsletter | Mark Pannes lecture + AUSL project launch</title>
   <script src="../../assets/js/header-component.js"></script>
   <script src="../../assets/js/footer-component.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --orange: #bf5700;
-      --canvas: #f7f7f5;
-      --surface: #ffffff;
-      --text: #0a0a0a;
-      --muted: rgba(10, 10, 10, 0.65);
-      --border: rgba(10, 10, 10, 0.08);
+      --canvas: #ffffff;
+      --ink: #0a0a0a;
+      --muted: rgba(10, 10, 10, 0.62);
+      --faint: rgba(10, 10, 10, 0.42);
+      --border: rgba(10, 10, 10, 0.09);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
     html, body {
@@ -23,162 +27,308 @@
       padding: 0;
       font-family: 'Red Hat Display', sans-serif;
       background: var(--canvas);
-      color: var(--text);
+      color: var(--ink);
     }
 
-    .page {
-      max-width: 1100px;
-      padding: 140px 22px 120px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Masthead ---------- */
+
+    .masthead {
+      padding: 64px 24px 56px;
+      max-width: 720px;
       margin: 0 auto;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, rgba(191, 87, 0, 0.1), #fff);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 50px;
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.06);
-      display: grid;
-      gap: 18px;
+      text-align: center;
     }
 
     .eyebrow {
-      letter-spacing: 0.28em;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--orange);
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
+      margin: 0 0 18px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.3rem, 4vw, 3.6rem);
+    .masthead h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
       line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
-    .lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .issue-date {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(191, 87, 0, 0.1);
-      color: var(--text);
+    .masthead .issue-date {
+      margin: 0 0 22px;
+      color: var(--faint);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .masthead .lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
     }
 
     .cta {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 12px 18px;
-      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 20px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      background: var(--surface);
       text-decoration: none;
-      color: var(--text);
+      color: var(--ink);
       font-weight: 700;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .cta:hover,
     .cta:focus-visible {
-      border-color: rgba(191, 87, 0, 0.5);
-      box-shadow: 0 12px 26px rgba(191, 87, 0, 0.18);
+      border-color: var(--orange);
       transform: translateY(-1px);
     }
 
-    .body {
-      margin-top: 32px;
-      display: grid;
-      gap: 18px;
+    /* ---------- In this issue nav ---------- */
+
+    .toc {
+      max-width: 720px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    .toc-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0 0 14px;
     }
 
-    .card h2 {
+    .toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .toc-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 2px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .toc-list a:hover,
+    .toc-list a:focus-visible {
+      color: var(--orange);
+    }
+
+    .toc-tag {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    /* ---------- Articles ---------- */
+
+    .issue-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .story {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 100px;
+    }
+
+    .story:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .story-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
       margin: 0 0 12px;
-      font-size: 1.4rem;
     }
 
-    .card p {
-      margin: 0 0 10px;
+    .story h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .byline {
+      margin: 0 0 28px;
+      color: var(--faint);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .story p {
+      margin: 0 0 20px;
       color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.08rem;
+    }
+
+    .story p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story figure {
+      margin: 32px 0;
+    }
+
+    .story-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f4eee9 0%, #e9dccb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #a56a2c;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--faint);
+      font-style: italic;
+      text-align: right;
+    }
+
+    .story blockquote {
+      margin: 28px 0;
+      padding: 4px 0 4px 22px;
+      border-left: 3px solid var(--orange);
+      color: var(--ink);
+      font-style: italic;
+      font-size: 1.15rem;
       line-height: 1.6;
     }
 
+    .story blockquote p {
+      margin: 0;
+      color: var(--ink);
+      font-size: inherit;
+    }
+
+    .back-to-top {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+      text-align: center;
+    }
+
     @media (max-width: 700px) {
-      .page {
-        padding: 120px 16px 110px;
+      .masthead {
+        padding: 48px 20px 36px;
       }
 
-      .hero {
-        padding: 36px;
+      .story {
+        padding: 40px 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <section class="hero">
-      <p class="eyebrow">Issue #3</p>
-      <h1>Mark Pannes lecture + AUSL project launch</h1>
-      <p class="issue-date">Nov 17, 2025</p>
-      <p class="lead">Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
-      <div class="pill-row">
-        <span class="pill">Speaker</span>
-        <span class="pill">Projects</span>
-        <span class="pill">Spotlight</span>
-      </div>
-      <a class="cta" href="/newsletter.html">Back to archive</a>
-    </section>
 
-    <div class="body">
-      <article class="card">
-        <h2>Past Events</h2>
-        <p>This week, BOSSO hosted another special speaker who came out to speak on what it takes to build a sports business career, among many other things: Mark Pannes. Mark began his career within the global sports industry, working with the Knicks, AC Roma, Whitecaps, and many other organizations within the NBA and MLS. Currently the managing partner at Inner Market Media and renowned as a global sports media executive, Mark gave insights on the evolution of commercial strategy within pro sports, how teams and leagues drive growth in a rapidly growing market, and the current state of the overall sports media landscape.</p>
-      </article>
+  <section class="masthead">
+    <p class="eyebrow">Newsletter</p>
+    <h1>Mark Pannes lecture + AUSL project launch</h1>
+    <p class="issue-date">Nov 17, 2025</p>
+    <p class="lead">Inner Market Media insights, AUSL fan engagement work, Hudson Harp spotlight, and UT athletics highlights.</p>
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </section>
 
-      <article class="card">
-        <h2>AUSL Project</h2>
-        <p>In addition, BOSSO has recently launched a fan engagement project in partnership with Athletes Unlimited Softball League (AUSL). In this project, BOSSO is aiming to grow AUSL’s fan engagement by analyzing digital fan behavior, sports consumption trends, and live-game experiences to hone in on strategies that will expand reach and fan retention. With AUSL’s promising brand identity (only pro softball league; ESPN recognized) and the rising interest in women’s softball, the advancement of this project will drive brand new avenues and merchandise improvements within AUSL’s marketing structure. By doing so, unique opportunities such as further channels to feed AUSL’s social media, content differentiation, community engagement, and pushing one of the first big leagues in women’s softball will soon be capitalized on.</p>
-      </article>
+  <nav class="toc">
+    <p class="toc-label">In This Issue</p>
+    <ul class="toc-list">
+      <li><a href="#past-events">Past Events: Mark Pannes <span class="toc-tag">Speaker</span></a></li>
+      <li><a href="#ausl-project">AUSL Project <span class="toc-tag">Projects</span></a></li>
+      <li><a href="#member-spotlight">Member Spotlight: Hudson Harp <span class="toc-tag">Spotlight</span></a></li>
+      <li><a href="#around-ut">Around UT <span class="toc-tag">UT Sports</span></a></li>
+    </ul>
+  </nav>
 
-      <article class="card">
-        <h2>Member Spotlight</h2>
-        <p>For our next membership spotlight, meet Hudson Harp from Waco, Texas. Hudson is a freshman Communication and Leadership major. Despite being from Texas, Hudson’s favorite sports teams include the Atlanta Falcons, Braves, and Liverpool FC. Hudson is currently a general member working on the football project, focusing on statistical answers to questions about the sport. He is looking forward to networking and learning more from those in professional roles. Hudson’s favorite memory of BOSSO thus far was attending the Business of Sports Summit, where he got to meet many talented people and network. Hudson’s hottest take is that no team should ever go for it on 4th down unless it's absolutely necessary. He believes that being aggressive can be fun when it works out, but ultimately proves more detrimental in the long run.</p>
-      </article>
+  <div class="issue-body">
 
-      <article class="card">
-        <h2>Around UT</h2>
-        <p><strong>Texas Faces Harsh Reality in Blowout Loss vs Georgia:</strong> In an SEC clash between two top-10 teams, Georgia defeated Texas for the third straight year, potentially ending the Longhorns’ playoff hopes.</p>
-        <p><strong>Texas Outlasts Auburn in Electric Away Victory:</strong> Torrey Stafford’s career-high 32 kills lifted the Longhorns to a five-set classic, securing their 20th win of the season.</p>
-        <p><strong>Texas Stays Hot, Rolling Past FDU and Kansas City:</strong> UT’s men’s basketball team stayed perfect at home, moving to 3–0 after blowout wins over FDU and Kansas City that showed improved ball movement and growing depth.</p>
-        <p><strong>Longhorns Start 3–0, Showing Depth and Dominance Early:</strong> Looking to make another deep March Madness run, Texas Women’s Basketball cruised to three dominant victories, winning by an average of 54 points.</p>
-        <p><strong>Texas Takes Second Place at Texas Diving Invitational:</strong> After the three-day invitational, Texas men’s swimming secured multiple individual top finishes, including a seventh-place showing from Jacob Jones, to earn second place overall.</p>
-        <p><strong>Texas Women’s Sweeps the Home Diving Invitational:</strong> Not only did Texas claim the overall title, but the women’s team also captured their crown, highlighted by Sarah Carruthers’ second-place finish in the women’s platform.</p>
-      </article>
-    </div>
+    <article class="story" id="past-events">
+      <p class="story-tag">Speaker</p>
+      <h2>Past Events</h2>
+      <p class="byline">Guest Speaker: Mark Pannes</p>
+
+      <p>This week, BOSSO hosted another special speaker who came out to speak on what it takes to build a sports business career, among many other things: Mark Pannes. Mark began his career within the global sports industry, working with the Knicks, AC Roma, Whitecaps, and many other organizations within the NBA and MLS. Currently the managing partner at Inner Market Media and renowned as a global sports media executive, Mark gave insights on the evolution of commercial strategy within pro sports, how teams and leagues drive growth in a rapidly growing market, and the current state of the overall sports media landscape.</p>
+    </article>
+
+    <article class="story" id="ausl-project">
+      <p class="story-tag">Projects</p>
+      <h2>AUSL Project</h2>
+
+      <p>In addition, BOSSO has recently launched a fan engagement project in partnership with Athletes Unlimited Softball League (AUSL). In this project, BOSSO is aiming to grow AUSL's fan engagement by analyzing digital fan behavior, sports consumption trends, and live-game experiences to hone in on strategies that will expand reach and fan retention. With AUSL's promising brand identity (only pro softball league; ESPN recognized) and the rising interest in women's softball, the advancement of this project will drive brand new avenues and merchandise improvements within AUSL's marketing structure. By doing so, unique opportunities such as further channels to feed AUSL's social media, content differentiation, community engagement, and pushing one of the first big leagues in women's softball will soon be capitalized on.</p>
+    </article>
+
+    <article class="story" id="member-spotlight">
+      <p class="story-tag">Spotlight</p>
+      <h2>Member Spotlight: Hudson Harp</h2>
+
+      <p>For our next membership spotlight, meet Hudson Harp from Waco, Texas. Hudson is a freshman Communication and Leadership major. Despite being from Texas, Hudson's favorite sports teams include the Atlanta Falcons, Braves, and Liverpool FC. Hudson is currently a general member working on the football project, focusing on statistical answers to questions about the sport. He is looking forward to networking and learning more from those in professional roles. Hudson's favorite memory of BOSSO thus far was attending the Business of Sports Summit, where he got to meet many talented people and network. Hudson's hottest take is that no team should ever go for it on 4th down unless it's absolutely necessary. He believes that being aggressive can be fun when it works out, but ultimately proves more detrimental in the long run.</p>
+    </article>
+
+    <article class="story" id="around-ut">
+      <p class="story-tag">UT Sports</p>
+      <h2>Around UT</h2>
+
+      <p><strong>Texas Faces Harsh Reality in Blowout Loss vs Georgia:</strong> In an SEC clash between two top-10 teams, Georgia defeated Texas for the third straight year, potentially ending the Longhorns' playoff hopes.</p>
+      <p><strong>Texas Outlasts Auburn in Electric Away Victory:</strong> Torrey Stafford's career-high 32 kills lifted the Longhorns to a five-set classic, securing their 20th win of the season.</p>
+      <p><strong>Texas Stays Hot, Rolling Past FDU and Kansas City:</strong> UT's men's basketball team stayed perfect at home, moving to 3&ndash;0 after blowout wins over FDU and Kansas City that showed improved ball movement and growing depth.</p>
+      <p><strong>Longhorns Start 3&ndash;0, Showing Depth and Dominance Early:</strong> Looking to make another deep March Madness run, Texas Women's Basketball cruised to three dominant victories, winning by an average of 54 points.</p>
+      <p><strong>Texas Takes Second Place at Texas Diving Invitational:</strong> After the three-day invitational, Texas men's swimming secured multiple individual top finishes, including a seventh-place showing from Jacob Jones, to earn second place overall.</p>
+      <p><strong>Texas Women's Sweeps the Home Diving Invitational:</strong> Not only did Texas claim the overall title, but the women's team also captured their crown, highlighted by Sarah Carruthers' second-place finish in the women's platform.</p>
+    </article>
+
   </div>
+
+  <div class="back-to-top">
+    <a class="cta" href="/newsletter.html">&larr; Back to archive</a>
+  </div>
+
 </body>
 </html>
